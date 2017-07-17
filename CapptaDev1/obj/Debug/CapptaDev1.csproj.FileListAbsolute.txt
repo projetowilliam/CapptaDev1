@@ -7,3 +7,9 @@ C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\obj\Debug\CapptaD
 C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\obj\Debug\CapptaDev1.csproj.GenerateResource.Cache
 C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\obj\Debug\CapptaDev1.exe
 C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\obj\Debug\CapptaDev1.pdb
+C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\bin\Debug\EntityFramework.dll
+C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\bin\Debug\EntityFramework.xml
+C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\bin\Debug\MySql.Data.dll
+C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\bin\Debug\MySql.Data.xml
