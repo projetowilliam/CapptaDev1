@@ -1,0 +1,9 @@
+C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\bin\Debug\CapptaDev1.exe.config
+C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\bin\Debug\CapptaDev1.exe
+C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\bin\Debug\CapptaDev1.pdb
+C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\obj\Debug\CapptaDev1.csprojResolveAssemblyReference.cache
+C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\obj\Debug\CapptaDev1.Home.resources
+C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\obj\Debug\CapptaDev1.Properties.Resources.resources
+C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\obj\Debug\CapptaDev1.csproj.GenerateResource.Cache
+C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\obj\Debug\CapptaDev1.exe
+C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\obj\Debug\CapptaDev1.pdb
