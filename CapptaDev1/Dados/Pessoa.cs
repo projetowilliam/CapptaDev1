@@ -24,10 +24,14 @@ namespace CapptaDev1
 
         public abstract void comprar();
 
-        public abstract void alterarcadastro();
+        public abstract void alterarCadastro();
+        //public override  void alterarCliente(Cliente cliente)
 
-        public abstract void incluir( Cliente cliente);
-        
+        public abstract void incluir( );
+
+        public abstract Pessoa pesquisarPorNome(string nome);
+
+
 
 
     }
