@@ -69,11 +69,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bean\Carro.cs" />
-    <Compile Include="Bean\CarroPopular.cs" />
+    <Compile Include="Dados\CarroPopular.cs" />
     <Compile Include="Bean\Cliente.cs" />
     <Compile Include="ConectaBanco.cs" />
-    <Compile Include="Dados\Dal.cs" />
-    <Compile Include="DB.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

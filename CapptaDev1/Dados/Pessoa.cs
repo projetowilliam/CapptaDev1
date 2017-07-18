@@ -27,8 +27,8 @@ namespace CapptaDev1
         public abstract void alterarCadastro();
         //public override  void alterarCliente(Cliente cliente)
 
-        public abstract void incluir( );
-
+        public abstract void incluir(Pessoa pessoa);
+       
         public abstract Pessoa pesquisarPorNome(string nome);
 
 

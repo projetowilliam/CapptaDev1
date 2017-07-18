@@ -15,9 +15,9 @@ namespace CapptaDev1
 
         
         //metodo para incluir cliente no banco
-        public override void incluir()
+        public override void incluir(Pessoa cliente)
         {
-            Cliente cliente = new Cliente();
+        // = new Cliente();
             string sql = "insert into clientes (nome, telefone, cpf,rua, numero,cidade,estado) values(@nome,@telefone,@cpf,@rua,@numero,@cidade,@estado)";
             try
             {
@@ -32,7 +32,8 @@ namespace CapptaDev1
                 cb.comand.Parameters.AddWithValue("@cidade", cliente.cidade);
                 cb.comand.Parameters.AddWithValue("@estado", cliente.estado);
 
-                cb.comand.ExecuteNonQuery();
+               cb.comand.ExecuteNonQuery();
+                
             }
             catch (Exception mensagem)
             {
