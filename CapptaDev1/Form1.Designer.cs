@@ -31,16 +31,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvEstoque = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.botaoRegistrarCliente = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxProduto = new System.Windows.Forms.ComboBox();
             this.textoPreco = new System.Windows.Forms.TextBox();
             this.textoAno = new System.Windows.Forms.TextBox();
             this.textoModelo = new System.Windows.Forms.TextBox();
@@ -70,6 +68,11 @@
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.botaoRegistraCarro = new System.Windows.Forms.Button();
+            this.botaoComfirmarPedido = new System.Windows.Forms.Button();
+            this.comboBoxVendedor = new System.Windows.Forms.ComboBox();
+            this.venda = new System.Windows.Forms.Label();
+            this.vendedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstoque)).BeginInit();
@@ -81,9 +84,11 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.venda);
+            this.panel1.Controls.Add(this.comboBoxVendedor);
+            this.panel1.Controls.Add(this.botaoComfirmarPedido);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.menuStrip1);
@@ -110,15 +115,6 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Limpar";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(19, 493);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(182, 32);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Confirmar Pedido";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -186,9 +182,9 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.button5);
+            this.panel4.Controls.Add(this.botaoRegistraCarro);
             this.panel4.Controls.Add(this.label13);
-            this.panel4.Controls.Add(this.comboBox1);
+            this.panel4.Controls.Add(this.comboBoxProduto);
             this.panel4.Controls.Add(this.textoPreco);
             this.panel4.Controls.Add(this.textoAno);
             this.panel4.Controls.Add(this.textoModelo);
@@ -202,32 +198,22 @@
             this.panel4.Size = new System.Drawing.Size(511, 232);
             this.panel4.TabIndex = 14;
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(186, 154);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(162, 32);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "Registrar Carro";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(59, 28);
+            this.label13.Location = new System.Drawing.Point(59, 25);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(56, 20);
             this.label13.TabIndex = 23;
             this.label13.Text = "Produto";
             // 
-            // comboBox1
+            // comboBoxProduto
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(140, 20);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(277, 28);
-            this.comboBox1.TabIndex = 22;
+            this.comboBoxProduto.FormattingEnabled = true;
+            this.comboBoxProduto.Location = new System.Drawing.Point(140, 20);
+            this.comboBoxProduto.Name = "comboBoxProduto";
+            this.comboBoxProduto.Size = new System.Drawing.Size(277, 28);
+            this.comboBoxProduto.TabIndex = 22;
             // 
             // textoPreco
             // 
@@ -434,7 +420,8 @@
             this.manutençãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuáriosToolStripMenuItem,
             this.clientesToolStripMenuItem,
-            this.produtosToolStripMenuItem});
+            this.produtosToolStripMenuItem,
+            this.vendedorToolStripMenuItem});
             this.manutençãoToolStripMenuItem.Name = "manutençãoToolStripMenuItem";
             this.manutençãoToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
             this.manutençãoToolStripMenuItem.Text = "Manutenção";
@@ -442,20 +429,64 @@
             // usuáriosToolStripMenuItem
             // 
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.usuáriosToolStripMenuItem.Text = "Usuários";
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // produtosToolStripMenuItem
             // 
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.produtosToolStripMenuItem.Text = "Produtos";
+            // 
+            // botaoRegistraCarro
+            // 
+            this.botaoRegistraCarro.Location = new System.Drawing.Point(186, 157);
+            this.botaoRegistraCarro.Name = "botaoRegistraCarro";
+            this.botaoRegistraCarro.Size = new System.Drawing.Size(162, 32);
+            this.botaoRegistraCarro.TabIndex = 24;
+            this.botaoRegistraCarro.Text = "Registrar Carro";
+            this.botaoRegistraCarro.UseVisualStyleBackColor = true;
+            this.botaoRegistraCarro.Click += new System.EventHandler(this.botaoRegistraCarro_Click);
+            // 
+            // botaoComfirmarPedido
+            // 
+            this.botaoComfirmarPedido.Location = new System.Drawing.Point(39, 493);
+            this.botaoComfirmarPedido.Name = "botaoComfirmarPedido";
+            this.botaoComfirmarPedido.Size = new System.Drawing.Size(162, 32);
+            this.botaoComfirmarPedido.TabIndex = 6;
+            this.botaoComfirmarPedido.Text = "Comfirmar pedido";
+            this.botaoComfirmarPedido.UseVisualStyleBackColor = true;
+            this.botaoComfirmarPedido.Click += new System.EventHandler(this.botaoComfirmarPedido_Click);
+            // 
+            // comboBoxVendedor
+            // 
+            this.comboBoxVendedor.FormattingEnabled = true;
+            this.comboBoxVendedor.Location = new System.Drawing.Point(174, 30);
+            this.comboBoxVendedor.Name = "comboBoxVendedor";
+            this.comboBoxVendedor.Size = new System.Drawing.Size(277, 28);
+            this.comboBoxVendedor.TabIndex = 25;
+            // 
+            // venda
+            // 
+            this.venda.AutoSize = true;
+            this.venda.Location = new System.Drawing.Point(100, 33);
+            this.venda.Name = "venda";
+            this.venda.Size = new System.Drawing.Size(69, 20);
+            this.venda.TabIndex = 25;
+            this.venda.Text = "Vendedor";
+            // 
+            // vendedorToolStripMenuItem
+            // 
+            this.vendedorToolStripMenuItem.Name = "vendedorToolStripMenuItem";
+            this.vendedorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.vendedorToolStripMenuItem.Text = "Vendedor";
+            this.vendedorToolStripMenuItem.Click += new System.EventHandler(this.vendedorToolStripMenuItem_Click);
             // 
             // Home
             // 
@@ -491,7 +522,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxProduto;
         private System.Windows.Forms.TextBox textoPreco;
         private System.Windows.Forms.TextBox textoAno;
         private System.Windows.Forms.TextBox textoModelo;
@@ -523,10 +554,13 @@
         private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dgvEstoque;
         private System.Windows.Forms.Button botaoRegistrarCliente;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button botaoRegistraCarro;
+        private System.Windows.Forms.Button botaoComfirmarPedido;
+        private System.Windows.Forms.ComboBox comboBoxVendedor;
+        private System.Windows.Forms.Label venda;
+        private System.Windows.Forms.ToolStripMenuItem vendedorToolStripMenuItem;
     }
 }
 

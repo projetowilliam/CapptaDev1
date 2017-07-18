@@ -24,29 +24,7 @@ namespace CapptaDev1
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            try
-            {
-               
-
-                Dados.Dal dal = new Dados.Dal();
-                CarroPopular carroPopular = new CarroPopular();
-
-                carroPopular.carro = Convert.ToString(textoCarro.Text);
-                carroPopular.modelo = Convert.ToString(textoModelo.Text);
-                carroPopular.ano = Convert.ToString(textoAno.Text);
-                carroPopular.preco = Convert.ToString(textoPreco.Text);
-
-                dal.adicionarCarro(carroPopular);
-            }
-            catch (Exception)
-            {
-
-               throw;
-            }
-        }
-
+        //Registrar cliente
         private void botaoRegistrarCliente_Click(object sender, EventArgs e)
         {
             try
@@ -62,13 +40,65 @@ namespace CapptaDev1
                 cliente.estado = Convert.ToString(textoEstado.Text);
 
                 cliente.incluir(cliente);
-
+                limparCampos();
             }
             catch (Exception)
             {
 
                 throw;
             }
+        }
+
+        //Registrar Carro
+        private void botaoRegistraCarro_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                CarroPopular carroPopular = new CarroPopular();
+
+                carroPopular.carro = Convert.ToString(textoCarro.Text);
+                carroPopular.modelo = Convert.ToString(textoModelo.Text);
+                carroPopular.ano = Convert.ToString(textoAno.Text);
+                carroPopular.preco = Convert.ToString(textoPreco.Text);
+
+                carroPopular.adicionarCarro(carroPopular);
+                limparCampos();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        //metodo para limpar
+        private void limparCampos()
+        {
+            textoCarro.Text = "";
+            textoAno.Text = "";
+            textoCidade.Text = "";
+            textoCpf.Text = "";
+            textoEstado.Text = "";
+            textoModelo.Text = "";
+            textoNome.Text = "";
+            textoNumero.Text = "";
+            textoPreco.Text = "";
+            textoRua.Text = "";
+            textoTelefone.Text = "";
+            
+        }
+
+        //Realizar pedidos
+        private void botaoComfirmarPedido_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void vendedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
