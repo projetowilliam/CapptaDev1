@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapptaDev1
 {
-    public class Carro
+    public abstract class Carro
     {
         public int id { get; set; }
         public string  carro { get; set; }
@@ -18,5 +18,13 @@ namespace CapptaDev1
         {
 
         }
+
+        public  abstract void adicionarCarro(Carro carro);
+
+        public abstract void alterarCarro(Carro carro);
+
+        public abstract Carro pesquisarPorNome(string nome);
+
+
     }
 }
