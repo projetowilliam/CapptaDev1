@@ -13,3 +13,6 @@ C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\bin\Debug\EntityF
 C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\bin\Debug\MySql.Data.dll
 C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\bin\Debug\MySql.Data.xml
+C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\obj\Debug\CapptaDev1.Funcionario.resources
+C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\obj\Debug\CapptaDev1.Carros.resources
+C:\Users\William\Desktop\DesafioCappta_1\CapptaDev1\CapptaDev1\obj\Debug\CapptaDev1.Relatorios.resources
