@@ -1,9 +1,6 @@
 ﻿using CapptaDev1.Dados;
-using CapptaDev1.Dados.Pessoas;
 using CapptaDev1.Data;
-using CapptaDev1.Modelos;
 using CapptaDev1.Models;
-using CapptaDev1.Models.CapptaDev1.Modelos;
 using CapptaDev1.Register;
 using System;
 using System.IO;
