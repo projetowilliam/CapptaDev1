@@ -2,7 +2,7 @@
 
 namespace CapptaDev1.Register
 {
-    public class CarRegister : CarRegister<Car>
+    public class CarRegister : VehiculeRegister<Car>
     {
         public override string tblVehicule
         {
