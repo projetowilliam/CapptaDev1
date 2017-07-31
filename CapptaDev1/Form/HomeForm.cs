@@ -83,42 +83,46 @@ namespace CapptaDev1
             }
 
         }
-        public void listarpessoa()
+        public void clientLister()
         {
-
-        }
-        private void Home_Load(object sender, EventArgs e)
-        {/*
-            var registro = new PeopleRegister("funcionario");
-            var stock = new VehicleRegister();
-            comboBoxVendedor.DataSource = registro.peopleList();
-            comboBoxVendedor.DisplayMember = "name";
-            comboBoxVendedor.ValueMember = "name";
-
-            comboBoxCodigoVendedor.DataSource = registro.nameListPeople(comboBoxVendedor.Text, "funcionario");
-            comboBoxCodigoVendedor.DisplayMember = "code";
-            comboBoxCodigoVendedor.ValueMember = "code";
-
-            comboBoxProduto.DataSource = stock.vehiculeList();
-            dgvEstoqueVeiculos.DataSource = stock.vehiculeList();
-            comboBoxProduto.DisplayMember = "name";
-            comboBoxProduto.ValueMember = "name";
-
-            comboBoxCodigoCarro.DataSource = stock.nameVehiculeList(comboBoxProduto.Text);
-            comboBoxCodigoCarro.DisplayMember = "id";
-            comboBoxCodigoCarro.ValueMember = "id";
-
-         
-            comboBoxCliente.DataSource = registro.peopleList("clientes");
+            var clientRegister=new ClientRegister(); 
+            comboBoxCliente.DataSource = clientRegister.personList();
             comboBoxCliente.DisplayMember = "name";
             comboBoxCliente.ValueMember = "name";
 
-            comboBoxCodigoCliente.DataSource = registro.nameListPeople(comboBoxCliente.Text, "clientes");
+            comboBoxCodigoCliente.DataSource = clientRegister.nameListPerson(comboBoxCliente.Text);
             comboBoxCodigoCliente.DisplayMember = "code";
             comboBoxCodigoCliente.ValueMember = "code";
-            
-            */
+        }
 
+        public void carLister()
+        {
+            var carRegister=new CarRegister();
+            comboBoxProduto.DataSource = carRegister.vehiculeList();
+            dgvEstoqueVeiculos.DataSource = carRegister.vehiculeList();
+            comboBoxProduto.DisplayMember = "name";
+            comboBoxProduto.ValueMember = "name";
+
+            comboBoxCodigoCarro.DataSource = carRegister.nameVehiculeList(comboBoxProduto.Text);
+            comboBoxCodigoCarro.DisplayMember = "id";
+            comboBoxCodigoCarro.ValueMember = "id";
+        }
+        private void salesListe()
+        {
+            var salesRegister = new SalesRegister();
+            comboBoxVendedor.DataSource = salesRegister.personList();
+            comboBoxVendedor.DisplayMember = "name";
+            comboBoxVendedor.ValueMember = "name";
+
+            comboBoxCodigoVendedor.DataSource = salesRegister.nameListPerson(comboBoxVendedor.Text);
+            comboBoxCodigoVendedor.DisplayMember = "code";
+            comboBoxCodigoVendedor.ValueMember = "code";
+        }
+        private void Home_Load(object sender, EventArgs e)
+        {
+            salesListe();
+            carLister();
+            clientLister();
         }
 
         private void botaoRegistrarCliente_Click(object sender, EventArgs e)
