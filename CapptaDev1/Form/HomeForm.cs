@@ -245,8 +245,8 @@ namespace CapptaDev1
 
         private void comboBoxCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var listarRegistro = new ClientRegister();
-            comboBoxCodigoCliente.DataSource = listarRegistro.nameListPerson(comboBoxCliente.Text);
+            var clientRegister = new ClientRegister();
+            comboBoxCodigoCliente.DataSource = clientRegister.nameListPerson(comboBoxCliente.Text);
             comboBoxCodigoCliente.DisplayMember = "code";
             comboBoxCodigoCliente.ValueMember = "code";
         }
@@ -286,16 +286,16 @@ namespace CapptaDev1
 
         private void comboBoxVeiculos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var listarStock = new CarRegister();
-            comboBoxProduto.DataSource = listarStock.vehiculeList();
+            var carRegister = new CarRegister();
+            comboBoxProduto.DataSource = carRegister.vehiculeList();
             comboBoxProduto.DisplayMember = "carro";
             comboBoxProduto.ValueMember = "carro";
 
-            comboBoxCodigoCarro.DataSource = listarStock.nameVehiculeList(comboBoxProduto.Text);
+            comboBoxCodigoCarro.DataSource = carRegister.nameVehiculeList(comboBoxProduto.Text);
             comboBoxCodigoCarro.DisplayMember = "id";
             comboBoxCodigoCarro.ValueMember = "id";
 
-            dgvEstoqueVeiculos.DataSource = listarStock.vehiculeList();
+            dgvEstoqueVeiculos.DataSource = carRegister.vehiculeList();
             dgvEstoqueVeiculos.Update();
             dgvEstoqueVeiculos.Refresh();
         }
