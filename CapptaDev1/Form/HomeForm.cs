@@ -119,7 +119,6 @@ namespace CapptaDev1
             comboBoxCodigoCliente.DataSource = registro.nameListPeople(comboBoxCliente.Text, "clientes");
             comboBoxCodigoCliente.DisplayMember = "code";
             comboBoxCodigoCliente.ValueMember = "code";
-
             
             */
 
@@ -136,7 +135,6 @@ namespace CapptaDev1
             client.number = textoNumero.Text;
             client.city = textoCidade.Text;
             client.state = textoEstado.Text;
-
             clientRegister.personAdd(client);
             limparCampos();
         }
@@ -195,16 +193,16 @@ namespace CapptaDev1
         {
             botaoRegistrarCliente.Visible = false;
             string nome = comboBoxCliente.Text;
-            var registro = new Person();
+            var client = new Client();
             var clientRegister = new ClientRegister();
-            registro = clientRegister.nameSearchPeople(nome);
-            textoNome.Text = registro.name;
-            textoTelefone.Text = registro.phone;
-            textoCpf.Text = registro.cpf;
-            textoRua.Text = registro.street;
-            textoNumero.Text = registro.number;
-            textoCidade.Text = registro.city;
-            textoEstado.Text = registro.state;
+            client = clientRegister.nameSearchPeople(nome);
+            textoNome.Text = client.name;
+            textoTelefone.Text = client.phone;
+            textoCpf.Text = client.cpf;
+            textoRua.Text = client.street;
+            textoNumero.Text = client.number;
+            textoCidade.Text = client.city;
+            textoEstado.Text = client.state;
 
         }
 
