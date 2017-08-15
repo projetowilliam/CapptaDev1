@@ -17,24 +17,9 @@ namespace CapptaDev1
 
         public void atualizarDadosDoForm()
         {
-            /* var novoRegistro = new PeopleRegister();
-             comboBoxVendedor.DataSource = novoRegistro.peopleList();
-             comboBoxVendedor.DisplayMember = "name";
-             comboBoxVendedor.ValueMember = "name";
-
-             var stock = new VehicleRegister();
-             comboBoxProduto.DataSource = stock.vehiculeList();
-             comboBoxProduto.DisplayMember = "name";
-             comboBoxProduto.ValueMember = "name";
-
-             comboBoxCliente.DataSource = novoRegistro.peopleList();
-             comboBoxCliente.DisplayMember = "name";
-             comboBoxCliente.ValueMember = "name";
-
-
-             dgvEstoqueVeiculos.DataSource = stock.vehiculeList();
-             dgvEstoqueVeiculos.Update();
-             dgvEstoqueVeiculos.Refresh();*/
+            clientLister();
+            salesLister();
+            carLister();
         }
 
         public void salvarArquivoPedidos()
@@ -107,7 +92,7 @@ namespace CapptaDev1
             comboBoxCodigoCarro.DisplayMember = "id";
             comboBoxCodigoCarro.ValueMember = "id";
         }
-        private void salesListe()
+        private void salesLister()
         {
             var salesRegister = new SalesRegister();
             comboBoxVendedor.DataSource = salesRegister.personList();
@@ -120,7 +105,7 @@ namespace CapptaDev1
         }
         private void Home_Load(object sender, EventArgs e)
         {
-            salesListe();
+            salesLister();
             carLister();
             clientLister();
         }

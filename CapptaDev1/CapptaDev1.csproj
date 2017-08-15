@@ -69,12 +69,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Car.cs" />
+    <Compile Include="Models\IVehicule.cs" />
+    <Compile Include="Models\Person.cs" />
     <Compile Include="Register\CarRegister.cs" />
     <Compile Include="Register\ClientRegister.cs" />
     <Compile Include="Register\RequestRegister.cs" />
     <Compile Include="Register\PersonRegister.cs" />
     <Compile Include="Register\SalesRegister.cs" />
-    <Compile Include="Register\StockRegister.cs" />
+    <Compile Include="Register\VehiculeRegister.cs" />
     <Compile Include="Interfaces\IPersonRegister.cs" />
     <Compile Include="Connection\DataBaseConnection.cs" />
     <Compile Include="Form\HomeForm.cs">
@@ -90,7 +92,7 @@
       <DependentUpon>EmployeeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Client.cs" />
-    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\IPerson.cs" />
     <Compile Include="Models\Request.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Resources\Mensagem.cs" />
