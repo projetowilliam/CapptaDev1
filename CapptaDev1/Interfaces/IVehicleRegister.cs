@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CapptaDev1.Interfaces
 {
-    interface IVehicleRegister
+    interface VehicleRegister
     {
         void vehiculeAdd(Vehicules vehicles);
 

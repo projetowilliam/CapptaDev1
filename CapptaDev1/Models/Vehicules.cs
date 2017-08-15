@@ -1,6 +1,6 @@
 ﻿namespace CapptaDev1.Modelos
 {
-    public class Vehicules
+    public abstract class Vehicules
     {
         public int id { get; set; }
         public string name { get; set; }

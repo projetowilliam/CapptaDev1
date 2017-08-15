@@ -1,22 +1,21 @@
-﻿using CapptaDev1.Modelos;
-using CapptaDev1.Models.CapptaDev1.Modelos;
+﻿using CapptaDev1.Models.CapptaDev1.Modelos;
 using System.Collections.Generic;
 
 namespace CapptaDev1.Interface
 {
     interface IPersonRegister
     {
-        void peopleAdd(Person clientEntry);
+        void peopleAdd(IPerson clientEntry);
 
-        void peopleChange(Person clientEntry, string people);
+        void peopleChange(IPerson clientEntry, string people);
 
-        List<Person> peopleList();
+        List<IPerson> peopleList();
 
-        List<Person> nameListPeople(string name, string peopleType);
+        List<IPerson> nameListPeople(string name, string peopleType);
 
-        Person nameSearchPeople(string name, string peopleType);
+        IPerson nameSearchPeople(string name, string peopleType);
 
-        Person codeSearchPeople(int id, string peopleType);
+        IPerson codeSearchPeople(int id, string peopleType);
 
 
 
