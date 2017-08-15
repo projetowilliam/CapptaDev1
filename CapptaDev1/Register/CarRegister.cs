@@ -6,9 +6,7 @@ namespace CapptaDev1.Register
     {
         public override string tblVehicule
         {
-            get { return ("carros"); }
+            get { return "carros"; }
         }
-
-        public override string quantity { get; set; }
     }
 }

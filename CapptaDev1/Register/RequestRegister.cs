@@ -10,11 +10,11 @@ namespace CapptaDev1.Dados
         {
             using (var sqlConnection = DataBaseConnection.open())
             {
-                string sql = @"insert into pedidos (data,clientesFk,veiculoFk,funcionarioFk,valor)
-values (@data,@clienteFk,@veiculoFk,@funcionariofk,@valor)";
+                string sql = @"insert into pedidos (data,clientes_codigo,veiculoFk,funcionarioFk,valor)
+values (@data,@clientes_codigo,@veiculoFk,@funcionariofk,@valor)";
                 var comand = new MySqlCommand(sql, sqlConnection);
                 comand.Parameters.AddWithValue("@data", request.date);
-                comand.Parameters.AddWithValue("@clienteFk", request.clientFk);
+                comand.Parameters.AddWithValue("@clientes_codigo", request.clientFk);
                 comand.Parameters.AddWithValue("@veiculoFk", request.vehiculeFk);
                 comand.Parameters.AddWithValue("@funcionariofk", request.employee);
                 comand.Parameters.AddWithValue("@valor", request.value);
@@ -73,7 +73,7 @@ values (@data,@clienteFk,@veiculoFk,@funcionariofk,@valor)";
         {
             using (var sqlConnection = DataBaseConnection.open())
             {
-                var sql = "update veiculos set quantidade = @quantidade  where carro=@nome ";
+                var sql = "update carros set quantidade = @quantidade  where carro=@nome ";
                 var comand = new MySqlCommand(sql, sqlConnection);
                 comand.Parameters.AddWithValue("@quantidade", quantity);
                 comand.Parameters.AddWithValue("@nome", name);

@@ -1,5 +1,5 @@
 ﻿
-using CapptaDev1.Models.CapptaDev1.Modelos;
+using CapptaDev1.Models;
 using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 
@@ -129,19 +129,18 @@ estado from " + tblPerson + " where id=@id";
                 var comand = new MySqlCommand(sql, sqlConnection);
                 comand.Parameters.AddWithValue("@id", id);
                 var dataReader = comand.ExecuteReader();
+                var person = new personType();
                 if (dataReader.Read())
-                {
-                    var person = new personType();
+                {                   
                     person.name = dataReader.GetString("nome");
                     person.phone = dataReader.GetString("telefone");
                     person.cpf = dataReader.GetString("cpf");
                     person.street = dataReader.GetString("rua");
                     person.number = dataReader.GetString("numero");
                     person.city = dataReader.GetString("cidade");
-                    person.state = dataReader.GetString("estado");
-                    return person;
+                    person.state = dataReader.GetString("estado");                   
                 }
-                return null;
+                return person;
             }
         }
 
@@ -154,19 +153,18 @@ from " + tblPerson + " where nome=@nome";
                 var comand = new MySqlCommand(sql, sqlConnection);
                 comand.Parameters.AddWithValue("@nome", name);
                 var dataReader = comand.ExecuteReader();
+                var person = new personType();
                 if (dataReader.Read())
-                {
-                    var person = new personType();
+                {                  
                     person.name = dataReader.GetString("nome");
                     person.phone = dataReader.GetString("telefone");
                     person.cpf = dataReader.GetString("cpf");
                     person.street = dataReader.GetString("rua");
                     person.number = dataReader.GetString("numero");
                     person.city = dataReader.GetString("cidade");
-                    person.state = dataReader.GetString("estado");
-                    return person;
+                    person.state = dataReader.GetString("estado");                  
                 }
-                return null;
+                return person;
             }
         }
     }
