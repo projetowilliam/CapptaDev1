@@ -103,11 +103,11 @@ namespace SinalVeiculos
         {
             if (this.ValidateIfComboBoxClientIsEmpty() == true)
             {
-                var nome = this.comboBoxClient.Text;
+                var name = this.comboBoxClient.Text;
                 var client = new Customer();
                 var clientRegister = new CustomerRegiser();
 
-                client = clientRegister.SearchPersonByName(nome);
+                client = clientRegister.SearchPersonByName(name);
                 this.txtName.Text = client.Name;
                 this.txtPhone.Text = client.Phone;
                 this.txtCpf.Text = client.Cpf;
@@ -138,11 +138,11 @@ namespace SinalVeiculos
         {
             if (this.ValedateIfComboBoxProductsIsEmpty() == true)
             {
-                var nome = (this.comboBoxProduct.Text);
+                var name = (this.comboBoxProduct.Text);
                 var car = new Car();
                 var carRegister = new CarRegister();
 
-                car = carRegister.SearchVehicleByName(nome);
+                car = carRegister.SearchVehicleByName(name);
                 this.idCar = car.id;
                 this.txtCar.Text = car.name;
                 this.txtYear.Text = car.year;
