@@ -42,39 +42,6 @@ namespace SinalVeiculos
             comboBoxSalesman.Items.AddRange((from item in salesmanRegister.GetAll() select item.Name).ToArray());
         }
 
-        private void ClientesShowToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var clientForm = new ClientForm();
-            clientForm.ShowDialog();
-        }
-
-        private void StockShowToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var stockForm = new StockForm();
-            stockForm.ShowDialog();
-        }
-
-        private void EmployeeShowToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var employeeForm = new EmployeeForm();
-            employeeForm.ShowDialog();
-        }
-
-        private void ReportShowoTolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ReportForm reportForm = new ReportForm();
-            reportForm.ShowDialog();
-        }
-
-        private void FieldClean()
-        {
-            this.txtCar.Text = string.Empty;
-            this.txtYear.Text = string.Empty;
-            this.txtModel.Text = string.Empty;
-            this.txtPrice.Text = string.Empty;
-            this.txtQuantity.Text = string.Empty;
-        }
-
         private void BtnComfirmSalesRegister(object sender, EventArgs e)
         {
             if (ValidateInputFieldsSales() == true)
@@ -156,7 +123,31 @@ namespace SinalVeiculos
                 MessageBox.Show("Por favor escolha um produto");
             }
         }
-  
+
+        private void BtnShowClientForm_Click(object sender, EventArgs e)
+        {
+            var clientForm = new ClientForm();
+            clientForm.ShowDialog();
+        }
+
+        private void BtnShowEmployeeForm_Click(object sender, EventArgs e)
+        {
+            var employeeForm = new EmployeeForm();
+            employeeForm.ShowDialog();
+        }
+
+        private void BtnShowStockForm_Click(object sender, EventArgs e)
+        {
+            var stockForm = new StockForm();
+            stockForm.ShowDialog();
+        }
+
+        private void BtnShowReportForm_Click(object sender, EventArgs e)
+        {
+            var reportForm = new ReportForm();
+            reportForm.ShowDialog();
+        }
+
         private int BalanceInStock()
         {
             var currentQuantityInStock = Convert.ToInt32(txtQuantity.Text);
@@ -182,6 +173,15 @@ namespace SinalVeiculos
             { return false; }
             else
             { return true; }
+        }
+
+        private void FieldClean()
+        {
+            this.txtCar.Text = string.Empty;
+            this.txtYear.Text = string.Empty;
+            this.txtModel.Text = string.Empty;
+            this.txtPrice.Text = string.Empty;
+            this.txtQuantity.Text = string.Empty;
         }
     }
 }

@@ -59,5 +59,15 @@ namespace CapptaDev1.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if__30ui_2303135 {
+            get {
+                object obj = ResourceManager.GetObject("if__30ui_2303135", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

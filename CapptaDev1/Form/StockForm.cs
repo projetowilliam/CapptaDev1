@@ -17,6 +17,7 @@ namespace SinalVeiculos
         {
             FieldClean();
         }
+
         private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateInputFieldStock() == true)
