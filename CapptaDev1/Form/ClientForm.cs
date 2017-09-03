@@ -33,17 +33,6 @@ namespace SinalVeiculos
             this.Close();
         }
 
-        private void FieldClean()
-        {
-            txtCity.Text = string.Empty;
-            txtCpf.Text = string.Empty;
-            txtState.Text = string.Empty;
-            txtName.Text = string.Empty;
-            txtNumber.Text = string.Empty;
-            txtStreet.Text = string.Empty;
-            txtPhone.Text = string.Empty;
-        }
-
         private void BtnSearchClient_Click(object sender, EventArgs e)
         {
             var registerCostumer = new CustomerRegiser();
@@ -57,6 +46,12 @@ namespace SinalVeiculos
             txtStreet.Text = custumer.Street;
             txtPhone.Text = custumer.Phone;
         }
+
+        private void BbtnClean_Click(object sender, EventArgs e)
+        {
+            FieldClean();
+        }
+
         private bool ValidateIfTxtSearchClientIsEmpty()
         {
             if (txtSearch.Text == "") { return false; } else { return true; }
@@ -69,6 +64,17 @@ namespace SinalVeiculos
             { return false; }
             else
             { return true; }
+        }
+
+        private void FieldClean()
+        {
+            txtCity.Text = string.Empty;
+            txtCpf.Text = string.Empty;
+            txtState.Text = string.Empty;
+            txtName.Text = string.Empty;
+            txtNumber.Text = string.Empty;
+            txtStreet.Text = string.Empty;
+            txtPhone.Text = string.Empty;
         }
     }
 }
