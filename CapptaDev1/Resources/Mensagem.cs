@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CapptaDev1
+namespace SinalVeiculos
 {
     public  class Mensagem: Exception
     {

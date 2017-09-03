@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapptaDev1
+namespace SinalVeiculos
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace CapptaDev1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Home());
+            Application.Run(new HomeForm());
         }
     }
 }

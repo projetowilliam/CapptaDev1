@@ -1,8 +1,7 @@
-﻿using CapptaDev1.Dados;
-using CapptaDev1.Dados.Pessoas;
-using CapptaDev1.Data;
-using CapptaDev1.Modelos;
-using CapptaDev1.Register;
+﻿using SinalVeiculos.Dados;
+using SinalVeiculos.Dados.Pessoas;
+using SinalVeiculos.Data;
+using SinalVeiculos.Register;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,11 +12,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapptaDev1
+namespace SinalVeiculos
 {
-    public partial class Relatorios : Form
+    public partial class ReportForm : Form
     {
-        public Relatorios()
+        public ReportForm()
         {
             InitializeComponent();
         }
@@ -30,8 +29,8 @@ namespace CapptaDev1
         //metodo para carregar dados de clientes
         private void carregarDadosPrimariosClientes()
         {
-            var listarRegistro = new ClientRegister();
-            dgvCliente.DataSource = listarRegistro.personList();
+            var listarRegistro = new CustomerRegiser();
+            dgvCliente.DataSource = listarRegistro.GetAll();
             dgvCliente.Refresh();
             dgvCliente.Update();
 
@@ -40,8 +39,8 @@ namespace CapptaDev1
         // metodo para carregar dados de funcionarios
         private void carregarVisualizacaoPrimariaFuncionarios()
         {
-            var listarRegistro = new SalesRegister();
-            dgvFuncionario.DataSource = listarRegistro.personList();
+            var listarRegistro = new EmployeerRegister();
+            dgvFuncionario.DataSource = listarRegistro.GetAll();
             dgvFuncionario.Refresh();
             dgvFuncionario.Update();
         }
@@ -51,7 +50,7 @@ namespace CapptaDev1
         private void carregarVisualizacaoPrimariaProdutos()
         {
             var car = new CarRegister();
-            dgvProdutos.DataSource = car.vehiculeList();
+            dgvProdutos.DataSource = car.GetAll();
             dgvProdutos.Update();
             dgvProdutos.Refresh();
         }
@@ -60,8 +59,8 @@ namespace CapptaDev1
         //metodo para carregar dados de vendas
         private void carregarVisualizacaoprimariaVendas()
         {
-            var listarPedido = new RequestRegister();
-            dgvVenda.DataSource = listarPedido.requestList();
+            var requestRegister = new RequestRegister();
+            dgvVenda.DataSource = requestRegister.GetAll();
             dgvVenda.Update();
             dgvVenda.Refresh();
         }
@@ -72,8 +71,8 @@ namespace CapptaDev1
         {
            
                 string nome = textoPesquisaCliente.Text;
-                var listarRegistro = new ClientRegister();
-                dgvCliente.DataSource = listarRegistro.nameListPerson(nome);
+                var listarRegistro = new CustomerRegiser();
+                //dgvCliente.DataSource = listarRegistro.nameListPerson(nome);
                 dgvCliente.Refresh();
                 dgvCliente.Update();
         }
@@ -84,8 +83,8 @@ namespace CapptaDev1
         private void pictureBoxPesquisaFuncionario_Click(object sender, EventArgs e)
         {
                 string nome = textBoxPesquisaNomeFuncionario.Text;
-                var listarpessoa = new SalesRegister();
-                dgvFuncionario.DataSource = listarpessoa.nameListPerson(nome);
+                var listarpessoa = new EmployeerRegister();
+               // dgvFuncionario.DataSource = listarpessoa.nameListPerson(nome);
                 dgvFuncionario.Refresh();
                 dgvFuncionario.Update();
         }
@@ -94,7 +93,7 @@ namespace CapptaDev1
         {
             var listarCarRegister = new CarRegister();
             string nome = textBoxPesquisaPorNomeProduto.Text;
-            dgvProdutos.DataSource = listarCarRegister.nameVehiculeList(nome);
+           // dgvProdutos.DataSource = listarCarRegister.nameVehiculeList(nome);
             dgvProdutos.Update();
             dgvProdutos.Refresh();
         }
@@ -119,7 +118,7 @@ namespace CapptaDev1
         private void pictureBoxPesquisaVenda_Click(object sender, EventArgs e)
         {
             var listarPedidos = new RequestRegister();
-            dgvVenda.DataSource = listarPedidos.dateRequestList(dataVenda.Text);
+           // dgvVenda.DataSource = listarPedidos.dateRequestList(dataVenda.Text);
         }
        
         public void BemVindo()

@@ -1,10 +1,10 @@
 ﻿using MySql.Data.MySqlClient;
 
-namespace CapptaDev1
+namespace SinalVeiculos
 {
     public static class DataBaseConnection
     {
-        public static MySqlConnection open()
+        public static MySqlConnection Open()
         {
             var sql = "server=localhost;user id=root;password=master;database=carros";
             var sqlConnection = new MySqlConnection(sql);

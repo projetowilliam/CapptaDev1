@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CapptaDev1.Properties {
+namespace SinalVeiculos.Properties {
     using System;
     
     

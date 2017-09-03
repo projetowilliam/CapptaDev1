@@ -1,303 +1,189 @@
-﻿using CapptaDev1.Dados;
-using CapptaDev1.Data;
-using CapptaDev1.Models;
-using CapptaDev1.Register;
+﻿using SinalVeiculos.Dados;
+using SinalVeiculos.Data;
+using SinalVeiculos.Models;
+using SinalVeiculos.Register;
 using System;
-using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
-namespace CapptaDev1
+namespace SinalVeiculos
 {
-    public partial class Home : Form
+    public partial class HomeForm : Form
     {
-        public Home()
+        private int idCar;
+
+        public HomeForm()
         {
             InitializeComponent();
         }
 
-        public void atualizarDadosDoForm()
-        {
-            clientLister();
-            salesLister();
-            carLister();
-        }
-
-        public void salvarArquivoPedidos()
-        {
-            FileStream fs = new FileStream(textoNome.Text, FileMode.Create);
-            StreamWriter writer = new StreamWriter(fs);
-            writer.WriteLine("Data:  " + dataTimeData.Text + "    ");
-            writer.WriteLine("Vendedor:  " + comboBoxVendedor.Text + "    ");
-            writer.WriteLine("============================================");
-            writer.WriteLine("Sinal venda de Carros Nacionais e Importados");
-            writer.WriteLine("========================================");
-            writer.WriteLine("O Cliente de nome  :" + textoNome.Text + "     ");
-            writer.WriteLine("***** ****** *****  ** **************  **** ");
-            writer.WriteLine("Produto  :" + textoCarro.Text + "     ");
-            writer.WriteLine("Modelo  :" + textoModelo.Text + "     ");
-            writer.WriteLine("Ano  :" + textoAno.Text + "     ");
-            writer.WriteLine("Preço:  :" + textoPreco.Text + "     ");
-            writer.WriteLine("Marca  :" + textoMarca.Text);
-
-            writer.WriteLine("Endereço  :" + textoRua.Text + "Número: " + textoNumero.Text);
-            writer.WriteLine("Cidade  :" + textoCidade.Text + "     ");
-            writer.WriteLine("Estado  :" + textoEstado.Text + "     ");
-            writer.WriteLine("***** ****** *****  ** **************  **** ");
-            writer.WriteLine("Fica fora deste acordo, o emplacamento e a documentação");
-            writer.Close();
-            fs.Close();
-
-        }
-
-        // mostar ou saida de arquivo
-        public void mostrarArquivoPedidos()
-        {
-            if (File.Exists(textoNome.Text))
-            {
-                Stream mostrar = File.Open(textoNome.Text, FileMode.Open);
-                StreamReader leitor = new StreamReader(mostrar);
-
-                string linha = leitor.ReadLine();
-                while (linha != null)
-                {
-                    textoSaida.Text += $"{linha}\r\n";
-                    linha = leitor.ReadLine();
-                }
-                leitor.Close();
-                mostrar.Close();
-            }
-
-        }
-        public void clientLister()
-        {
-            var clientRegister=new ClientRegister(); 
-            comboBoxCliente.DataSource = clientRegister.personList();
-            comboBoxCliente.DisplayMember = "name";
-            comboBoxCliente.ValueMember = "name";
-
-            comboBoxCodigoCliente.DataSource = clientRegister.nameListPerson(comboBoxCliente.Text);
-            comboBoxCodigoCliente.DisplayMember = "code";
-            comboBoxCodigoCliente.ValueMember = "code";
-        }
-
-        public void carLister()
-        {
-            var carRegister=new CarRegister();
-            comboBoxProduto.DataSource = carRegister.vehiculeList();
-            dgvEstoqueVeiculos.DataSource = carRegister.vehiculeList();
-            comboBoxProduto.DisplayMember = "name";
-            comboBoxProduto.ValueMember = "name";
-
-            comboBoxCodigoCarro.DataSource = carRegister.nameVehiculeList(comboBoxProduto.Text);
-            comboBoxCodigoCarro.DisplayMember = "id";
-            comboBoxCodigoCarro.ValueMember = "id";
-        }
-        private void salesLister()
-        {
-            var salesRegister = new SalesRegister();
-            comboBoxVendedor.DataSource = salesRegister.personList();
-            comboBoxVendedor.DisplayMember = "name";
-            comboBoxVendedor.ValueMember = "name";
-
-            comboBoxCodigoVendedor.DataSource = salesRegister.nameListPerson(comboBoxVendedor.Text);
-            comboBoxCodigoVendedor.DisplayMember = "code";
-            comboBoxCodigoVendedor.ValueMember = "code";
-        }
         private void Home_Load(object sender, EventArgs e)
         {
-            salesLister();
-            carLister();
-            clientLister();
+            this.ListSalesmanName();
+            this.ListCarName();
+            this.ListCustomerName();
         }
 
-        private void botaoRegistrarCliente_Click(object sender, EventArgs e)
+        public void ListCustomerName()
         {
-            var clientRegister = new ClientRegister();
-            var client = new Client();
-            client.name = textoNome.Text;
-            client.phone = textoTelefone.Text;
-            client.cpf = textoCpf.Text;
-            client.street = textoRua.Text;
-            client.number = textoNumero.Text;
-            client.city = textoCidade.Text;
-            client.state = textoEstado.Text;
-            clientRegister.personAdd(client);
-            limparCampos();
+            var customerRegister = new CustomerRegiser();
+            comboBoxClient.Items.AddRange((from item in customerRegister.GetAll() select item.Name).ToArray());
         }
 
-        private void limparCampos()
+        public void ListCarName()
         {
-            textoCarro.Text = "";
-            textoAno.Text = "";
-            textoCidade.Text = "";
-            textoCpf.Text = "";
-            textoEstado.Text = "";
-            textoModelo.Text = "";
-            textoNome.Text = "";
-            textoNumero.Text = "";
-            textoPreco.Text = "";
-            textoRua.Text = "";
-            textoTelefone.Text = "";
-            textoQuantidade.Text = "";
+            var carRegister = new CarRegister();
+            comboBoxProduct.Items.AddRange((from item in carRegister.GetAll() select item.name).ToArray());
         }
 
-        private void botaoComfirmarPedido_Click(object sender, EventArgs e)
+        private void ListSalesmanName()
         {
-            //chama o metodo para salvar os arquivos
-            salvarArquivoPedidos();
-            //chamada de metodo para mostrar arquivo guardado
-            mostrarArquivoPedidos();
-
-            var request = new Request();
-            var newRequest = new RequestRegister();
-            request.date = Convert.ToString(dataTimeData.Text);
-            request.clientFk = Convert.ToInt32(comboBoxCodigoCliente.Text);
-            request.vehiculeFk = Convert.ToInt32(comboBoxCodigoCarro.Text);
-            request.employee = Convert.ToInt32(comboBoxCodigoVendedor.Text);
-            request.value = textoPreco.Text;
-
-            int quantidadeEscolhida = Convert.ToInt32(textoQuantidade.Text) - Convert.ToInt32(textoQuantidadeEscolhida.Text);
-            newRequest.requestMaker(request);
-            newRequest.updateRequestEntry(textoCarro.Text, quantidadeEscolhida);
-            // retirarDoBanco();
-            limparCampos();
-        }
-        // abre o form Funcionário
-        private void funcionarioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Funcionario funcionario = new Funcionario();
-            funcionario.ShowDialog();
-        }
-        // abre o form produtos
-        private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Estoque estoque = new Estoque();
-            estoque.ShowDialog();
-        }
-        //botao para pesquisar cliente
-        private void botaoPesquisaCliente_Click(object sender, EventArgs e)
-        {
-            botaoRegistrarCliente.Visible = false;
-            string nome = comboBoxCliente.Text;
-            var client = new Client();
-            var clientRegister = new ClientRegister();
-            client = clientRegister.nameSearchPeople(nome);
-            textoNome.Text = client.name;
-            textoTelefone.Text = client.phone;
-            textoCpf.Text = client.cpf;
-            textoRua.Text = client.street;
-            textoNumero.Text = client.number;
-            textoCidade.Text = client.city;
-            textoEstado.Text = client.state;
-
+            var salesmanRegister = new EmployeerRegister();
+            comboBoxSalesman.Items.AddRange((from item in salesmanRegister.GetAll() select item.Name).ToArray());
         }
 
-        private void botaoLimpar_Click(object sender, EventArgs e)
+        private void ClientesShowToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            limparCampos();
+            var clientForm = new ClientForm();
+            clientForm.ShowDialog();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void StockShowToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            var stockForm = new StockForm();
+            stockForm.ShowDialog();
         }
 
-        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void EmployeeShowToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            var employeeForm = new EmployeeForm();
+            employeeForm.ShowDialog();
         }
 
-        private void botaoAtualizarTabela_Click(object sender, EventArgs e)
+        private void ReportShowoTolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // chamando metodo para atualizar dados
-            atualizarDadosDoForm();
-            //limpa os campos
-            limparCampos();
-            // mostra o botão registrar cliente
-            botaoRegistrarCliente.Visible = true;
+            ReportForm reportForm = new ReportForm();
+            reportForm.ShowDialog();
         }
 
-        private void relatórioToolStripMenuItem_Click(object sender, EventArgs e)
+        private void FieldClean()
         {
-            Relatorios re = new Relatorios();
-            re.ShowDialog();
-        }
-        private void comboBoxVendedor_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var listaRegistro = new SalesRegister();
-            comboBoxCodigoVendedor.DataSource = listaRegistro.nameListPerson(comboBoxVendedor.Text);
-            comboBoxCodigoVendedor.DisplayMember = "code";
-            comboBoxCodigoVendedor.ValueMember = "code";
+            this.txtCar.Text = string.Empty;
+            this.txtYear.Text = string.Empty;
+            this.txtModel.Text = string.Empty;
+            this.txtPrice.Text = string.Empty;
+            this.txtQuantity.Text = string.Empty;
         }
 
-        private void comboBoxCliente_SelectedIndexChanged(object sender, EventArgs e)
+        private void BtnComfirmSalesRegister(object sender, EventArgs e)
         {
-            var clientRegister = new ClientRegister();
-            comboBoxCodigoCliente.DataSource = clientRegister.nameListPerson(comboBoxCliente.Text);
-            comboBoxCodigoCliente.DisplayMember = "code";
-            comboBoxCodigoCliente.ValueMember = "code";
-        }
-
-        private void comboBoxProduto_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var listarStock = new CarRegister();
-            comboBoxCodigoCarro.DataSource = listarStock.nameVehiculeList(comboBoxProduto.Text);
-            comboBoxCodigoCarro.DisplayMember = "id";
-            comboBoxCodigoCarro.ValueMember = "id";
-        }
-
-        private void botaoBuscarArquivoPedidos_Click(object sender, EventArgs e)
-        {
-            textoSaida.Text = "";
-            if (File.Exists(textoBuscarArquivo.Text))
+            if (ValidateInputFieldsSales() == true)
             {
-                Stream mostrar = File.Open(textoBuscarArquivo.Text, FileMode.Open);
-                StreamReader leitor = new StreamReader(mostrar);
-
-                string linha = leitor.ReadLine();
-                while (linha != null)
+                var requestRegister = new RequestRegister();
+                var request = new Request
                 {
-                    textoSaida.Text += $"{linha}\r\n";
-                    linha = leitor.ReadLine();
-                }
-                leitor.Close();
-                mostrar.Close();
+                    value = Convert.ToInt32(txtPrice.Text),
+                    responsibleForSale = this.comboBoxSalesman.Text,
+                    product = this.comboBoxProduct.Text,
+                    quantity = Convert.ToInt32(this.units.Text),
+                    client = this.txtName.Text,
+                    cpfClient = this.txtCpf.Text,
+                    date = this.date.Text
+                };
+                requestRegister.Add(request);
+                requestRegister.UpdateQauntity(this.BalanceInStock(), this.idCar);
             }
-
+            else
+            {
+                MessageBox.Show("Por favor preencha os campos e tente novamente");
+            }
         }
 
-        public void BemVindo()
+        private void BtnSearchClient(object sender, EventArgs e)
         {
-            MessageBox.Show("Seja bem vindo a sua Dashboard, qualquer dúvida contate o suporte");
+            if (this.ValidateIfComboBoxClientIsEmpty() == true)
+            {
+                var nome = this.comboBoxClient.Text;
+                var client = new Customer();
+                var clientRegister = new CustomerRegiser();
+
+                client = clientRegister.SearchPersonByName(nome);
+                this.txtName.Text = client.Name;
+                this.txtPhone.Text = client.Phone;
+                this.txtCpf.Text = client.Cpf;
+                this.txtStreet.Text = client.Street;
+                this.txtNumber.Text = client.Number;
+                this.txtCity.Text = client.City;
+                this.txtState.Text = client.State;
+            }
+            else
+            {
+                MessageBox.Show("Por favor preencha com um nome o campo de pesquisa");
+            }
         }
 
-        private void comboBoxVeiculos_SelectedIndexChanged(object sender, EventArgs e)
+        private void BtnFieldClean_Click(object sender, EventArgs e)
         {
-            var carRegister = new CarRegister();
-            comboBoxProduto.DataSource = carRegister.vehiculeList();
-            comboBoxProduto.DisplayMember = "carro";
-            comboBoxProduto.ValueMember = "carro";
-
-            comboBoxCodigoCarro.DataSource = carRegister.nameVehiculeList(comboBoxProduto.Text);
-            comboBoxCodigoCarro.DisplayMember = "id";
-            comboBoxCodigoCarro.ValueMember = "id";
-
-            dgvEstoqueVeiculos.DataSource = carRegister.vehiculeList();
-            dgvEstoqueVeiculos.Update();
-            dgvEstoqueVeiculos.Refresh();
+            this.FieldClean();
         }
 
-        private void pictureBoxBuscarVeiculo_Click(object sender, EventArgs e)
+        private void BtnRefreshHome_Click(object sender, EventArgs e)
         {
-            string nome = comboBoxProduto.Text;
-            var car = new Car();
-            var carRegister = new CarRegister();
-            car = carRegister.nameVehiculeSearch(nome);
-            textoCarro.Text = car.name;
-            textoAno.Text = car.year;
-            textoModelo.Text = car.model;
-            textoPreco.Text = car.price;
-            textoMarca.Text = car.mark;
-            textoQuantidade.Text = carRegister.quantity;
+            this.ListSalesmanName();
+            this.ListCustomerName();
+            this.ListSalesmanName();
+        }
+
+        private void BtnSearchVehicule_Click(object sender, EventArgs e)
+        {
+            if (this.ValedateIfComboBoxProductsIsEmpty() == true)
+            {
+                var nome = (this.comboBoxProduct.Text);
+                var car = new Car();
+                var carRegister = new CarRegister();
+
+                car = carRegister.SearchVehicleByName(nome);
+                this.idCar = car.id;
+                this.txtCar.Text = car.name;
+                this.txtYear.Text = car.year;
+                this.txtModel.Text = car.model;
+                this.txtPrice.Text = car.price;
+                this.textoMarca.Text = car.mark;
+                this.txtQuantity.Text = Convert.ToString(carRegister.Quantity);
+            }
+            else
+            {
+                MessageBox.Show("Por favor escolha um produto");
+            }
+        }
+  
+        private int BalanceInStock()
+        {
+            var currentQuantityInStock = Convert.ToInt32(txtQuantity.Text);
+            var unitsSold = Convert.ToInt32(this.units.Text);
+            return currentQuantityInStock - unitsSold;
+        }
+
+        private bool ValedateIfComboBoxProductsIsEmpty()
+        {
+            if (this.comboBoxProduct.Text == "") { return false; } else { return true; }
+        }
+
+        private bool ValidateIfComboBoxClientIsEmpty()
+        {
+            if (this.comboBoxClient.Text == "") { return false; } else { return true; }
+        }
+
+        private bool ValidateInputFieldsSales()
+        {
+            if (txtCity.Text == "" || txtCpf.Text == "" || txtState.Text == "" ||
+               txtNumber.Text == "" || txtStreet.Text == "" || txtPhone.Text == "" ||
+               units.Text == "")
+            { return false; }
+            else
+            { return true; }
         }
     }
 }
+
+

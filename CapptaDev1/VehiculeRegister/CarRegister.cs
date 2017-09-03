@@ -1,10 +1,10 @@
-﻿using CapptaDev1.Models;
+﻿using SinalVeiculos.Models;
 
-namespace CapptaDev1.Register
+namespace SinalVeiculos.Register
 {
     public class CarRegister : VehiculeRegister<Car>
     {
-        public override string tblVehicule
+        public override string NameTable
         {
             get { return "carros"; }
         }

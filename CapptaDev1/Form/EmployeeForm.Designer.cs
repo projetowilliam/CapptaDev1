@@ -1,6 +1,6 @@
-﻿namespace CapptaDev1
+﻿namespace SinalVeiculos
 {
-    partial class Funcionario
+    partial class EmployeeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.botaoCancelar = new System.Windows.Forms.Button();
-            this.botaoLimpar = new System.Windows.Forms.Button();
             this.botaoSalvar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textoEstado = new System.Windows.Forms.TextBox();
@@ -48,16 +47,22 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.textoPesquisa = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.BtnSearcheEmployeer = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnSearcheEmployeer)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.BtnSearcheEmployeer);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.textoPesquisa);
             this.panel1.Controls.Add(this.botaoCancelar);
-            this.panel1.Controls.Add(this.botaoLimpar);
             this.panel1.Controls.Add(this.botaoSalvar);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -65,38 +70,28 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(699, 378);
+            this.panel1.Size = new System.Drawing.Size(699, 440);
             this.panel1.TabIndex = 0;
             // 
             // botaoCancelar
             // 
-            this.botaoCancelar.Location = new System.Drawing.Point(311, 330);
+            this.botaoCancelar.Location = new System.Drawing.Point(531, 378);
             this.botaoCancelar.Name = "botaoCancelar";
             this.botaoCancelar.Size = new System.Drawing.Size(124, 34);
             this.botaoCancelar.TabIndex = 5;
-            this.botaoCancelar.Text = "Cancelar";
+            this.botaoCancelar.Text = "Sair";
             this.botaoCancelar.UseVisualStyleBackColor = true;
-            this.botaoCancelar.Click += new System.EventHandler(this.botaoCancelar_Click);
-            // 
-            // botaoLimpar
-            // 
-            this.botaoLimpar.Location = new System.Drawing.Point(160, 330);
-            this.botaoLimpar.Name = "botaoLimpar";
-            this.botaoLimpar.Size = new System.Drawing.Size(124, 34);
-            this.botaoLimpar.TabIndex = 4;
-            this.botaoLimpar.Text = "Limpar";
-            this.botaoLimpar.UseVisualStyleBackColor = true;
-            this.botaoLimpar.Click += new System.EventHandler(this.botaoLimpar_Click);
+            this.botaoCancelar.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // botaoSalvar
             // 
-            this.botaoSalvar.Location = new System.Drawing.Point(10, 330);
+            this.botaoSalvar.Location = new System.Drawing.Point(4, 378);
             this.botaoSalvar.Name = "botaoSalvar";
             this.botaoSalvar.Size = new System.Drawing.Size(124, 34);
             this.botaoSalvar.TabIndex = 3;
             this.botaoSalvar.Text = "Salvar";
             this.botaoSalvar.UseVisualStyleBackColor = true;
-            this.botaoSalvar.Click += new System.EventHandler(this.botaoSalvar_Click);
+            this.botaoSalvar.Click += new System.EventHandler(this.BotaoSave_Click);
             // 
             // panel3
             // 
@@ -108,7 +103,7 @@
             this.panel3.Controls.Add(this.textoCpf);
             this.panel3.Controls.Add(this.textoTelefone);
             this.panel3.Controls.Add(this.textoNome);
-            this.panel3.Location = new System.Drawing.Point(139, 14);
+            this.panel3.Location = new System.Drawing.Point(139, 64);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(530, 291);
@@ -173,7 +168,7 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(4, 14);
+            this.panel2.Location = new System.Drawing.Point(4, 64);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(116, 291);
@@ -249,23 +244,54 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome";
             // 
-            // Funcionario
+            // textoPesquisa
+            // 
+            this.textoPesquisa.Location = new System.Drawing.Point(139, 10);
+            this.textoPesquisa.Name = "textoPesquisa";
+            this.textoPesquisa.Size = new System.Drawing.Size(370, 26);
+            this.textoPesquisa.TabIndex = 7;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(28, 18);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(78, 18);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Pesquisa:";
+            // 
+            // BtnSearcheEmployeer
+            // 
+            this.BtnSearcheEmployeer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BtnSearcheEmployeer.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
+            this.BtnSearcheEmployeer.Location = new System.Drawing.Point(515, 5);
+            this.BtnSearcheEmployeer.Name = "BtnSearcheEmployeer";
+            this.BtnSearcheEmployeer.Size = new System.Drawing.Size(43, 31);
+            this.BtnSearcheEmployeer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BtnSearcheEmployeer.TabIndex = 28;
+            this.BtnSearcheEmployeer.TabStop = false;
+            this.BtnSearcheEmployeer.Click += new System.EventHandler(this.BtnSearcheEmployeer_Click);
+            // 
+            // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 378);
+            this.ClientSize = new System.Drawing.Size(699, 440);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Funcionario";
+            this.Name = "EmployeeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Funcionario";
             this.Load += new System.EventHandler(this.Funcionario_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnSearcheEmployeer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -274,7 +300,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button botaoCancelar;
-        private System.Windows.Forms.Button botaoLimpar;
         private System.Windows.Forms.Button botaoSalvar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textoEstado;
@@ -292,5 +317,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textoPesquisa;
+        private System.Windows.Forms.PictureBox BtnSearcheEmployeer;
     }
 }

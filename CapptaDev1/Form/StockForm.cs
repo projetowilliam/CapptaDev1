@@ -1,14 +1,14 @@
-﻿using CapptaDev1.Modelos;
-using CapptaDev1.Models;
-using CapptaDev1.Register;
+﻿
+using SinalVeiculos.Models;
+using SinalVeiculos.Register;
 using System;
 using System.Windows.Forms;
 
-namespace CapptaDev1
+namespace SinalVeiculos
 {
-    public partial class Estoque : Form
+    public partial class StockForm : Form
     {
-        public Estoque()
+        public StockForm()
         {
             InitializeComponent();
         }
@@ -36,47 +36,38 @@ namespace CapptaDev1
             car.year = textBoxAno.Text;
             car.price = textBoxPreco.Text;
             car.mark = textBoxMarca.Text;
-            carRegister.quantity = textBoxQuantidade.Text;
-            carRegister.vehiculeAdd(car);
+            carRegister.Quantity = Convert.ToInt32(textBoxQuantidade.Text);
+            carRegister.Add(car);
             limparCampos();
         }
 
         private void buttonAlterar_Click(object sender, EventArgs e)
         {
-            var car = new Car();
-            var carRegister = new CarRegister();
-            car.name = textBoxNome.Text;
-            car.model = textBoxModelo.Text;
-            car.year = textBoxAno.Text;
-            car.price = textBoxPreco.Text;
-            car.mark = textBoxMarca.Text;
-            carRegister.quantity = textBoxQuantidade.Text;
-            carRegister.vehiculeChange(car);
-            limparCampos();
+            
         }
 
-        private void pictureBoxPesquisa_Click(object sender, EventArgs e)
-        {
-            buttonSalvar.Visible = false;
-            if (textBoxPesquisa.Text == "")
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {           
+            if (string.IsNullOrEmpty(textBoxPesquisa.Text))
             {
                 MessageBox.Show("Por favor preencha o campo para pesquisa");
                 textBoxPesquisa.Focus();
             }
             else
             {
-                int nome = Convert.ToInt32(textBoxPesquisa.Text);
+                var name =(textBoxPesquisa.Text);
                 var carRegister = new CarRegister();
                 var car = new Car();
-                car = carRegister.codeVehiculeSearch(nome);
+                car = carRegister.SearchVehicleByName(name);
                 if (carRegister != null)
                 {
+                    textBoxCodigoID.Text = Convert.ToString(car.id);
                     textBoxNome.Text = car.name;
                     textBoxAno.Text = car.year;
                     textBoxModelo.Text = car.model;
                     textBoxPreco.Text = car.price;
                     textBoxMarca.Text = car.mark;
-                    textBoxQuantidade.Text = carRegister.quantity;
+                    textBoxQuantidade.Text = Convert.ToString(carRegister.Quantity);
                 }
                 else
                 {
@@ -84,7 +75,7 @@ namespace CapptaDev1
                 }
             }
         }
-        private void pictureBoxVoltar_Click(object sender, EventArgs e)
+        private void BtnGoBack_Click(object sender, EventArgs e)
         {
             buttonSalvar.Visible = true;
         }
@@ -92,6 +83,43 @@ namespace CapptaDev1
         private void Estoque_Load(object sender, EventArgs e)
         {
 
+            EnableButtons();
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            var exclusionCode = Convert.ToInt32(textBoxCodigoID.Text);
+            var carRegister = new CarRegister();
+            carRegister.Delete(exclusionCode);
+        }
+        private void EnableButtons()
+        {
+            
+            ButtonDelete.Visible = false;
+            buttonSalvar.Visible = false;
+            BtnGoBack.Visible = false;
+            textBoxCodigoID.Visible = false;
+            BtnSearch.Visible = false;
+            textBoxPesquisa.Visible = false;
+
+        }
+
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            ButtonDelete.Visible = false;
+            buttonSalvar.Visible = true;
+            BtnSearch.Visible = false;
+        }
+
+        private void BtnRemove_Click(object sender, EventArgs e)
+        {
+            ButtonDelete.Visible = false;
+            buttonSalvar.Visible = false;
+            BtnSearch.Visible = false;
+            textBoxCodigoID.Visible = true;
+            BtnSearch.Visible = true;
+            textBoxPesquisa.Visible = true;
+            ButtonDelete.Visible = true;
         }
     }
 }

@@ -1,6 +1,7 @@
-﻿namespace CapptaDev1.Modelos
+﻿
+namespace SinalVeiculos.Models
 {
-    public abstract class Vehicules
+    public class Car : IVehicule
     {
         public int id { get; set; }
         public string name { get; set; }
@@ -10,3 +11,4 @@
         public string mark { get; set; }
     }
 }
+

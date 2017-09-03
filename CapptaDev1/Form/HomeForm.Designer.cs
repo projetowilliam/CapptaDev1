@@ -1,6 +1,6 @@
-﻿namespace CapptaDev1
+﻿namespace SinalVeiculos
 {
-    partial class Home
+    partial class HomeForm
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,17 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBoxCodigoCliente = new System.Windows.Forms.ComboBox();
-            this.comboBoxCodigoVendedor = new System.Windows.Forms.ComboBox();
-            this.dataTimeData = new System.Windows.Forms.DateTimePicker();
             this.botaoPesquisaCliente = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.comboBoxCliente = new System.Windows.Forms.ComboBox();
+            this.comboBoxClient = new System.Windows.Forms.ComboBox();
             this.venda = new System.Windows.Forms.Label();
-            this.comboBoxVendedor = new System.Windows.Forms.ComboBox();
+            this.comboBoxSalesman = new System.Windows.Forms.ComboBox();
             this.botaoComfirmarPedido = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.botaoLimpar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -59,41 +56,40 @@
             this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvEstoque = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.botaoRegistrarCliente = new System.Windows.Forms.Button();
+            this.date = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textoQuantidadeEscolhida = new System.Windows.Forms.TextBox();
+            this.units = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.textBoxTipoVeiculo = new System.Windows.Forms.TextBox();
             this.pictureBoxBuscarVeiculo = new System.Windows.Forms.PictureBox();
-            this.comboBoxCodigoCarro = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textoQuantidade = new System.Windows.Forms.TextBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.textoMarca = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBoxProduto = new System.Windows.Forms.ComboBox();
-            this.textoPreco = new System.Windows.Forms.TextBox();
-            this.textoAno = new System.Windows.Forms.TextBox();
-            this.textoModelo = new System.Windows.Forms.TextBox();
-            this.textoCarro = new System.Windows.Forms.TextBox();
+            this.comboBoxProduct = new System.Windows.Forms.ComboBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtYear = new System.Windows.Forms.TextBox();
+            this.txtModel = new System.Windows.Forms.TextBox();
+            this.txtCar = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textoEstado = new System.Windows.Forms.TextBox();
-            this.textoNumero = new System.Windows.Forms.TextBox();
-            this.textoCidade = new System.Windows.Forms.TextBox();
-            this.textoRua = new System.Windows.Forms.TextBox();
-            this.textoCpf = new System.Windows.Forms.TextBox();
-            this.textoTelefone = new System.Windows.Forms.TextBox();
+            this.txtState = new System.Windows.Forms.TextBox();
+            this.txtNumber = new System.Windows.Forms.TextBox();
+            this.txtCity = new System.Windows.Forms.TextBox();
+            this.txtStreet = new System.Windows.Forms.TextBox();
+            this.txtCpf = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textoNome = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -101,6 +97,8 @@
             this.funcionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estoqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.atualizarDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botaoPesquisaCliente)).BeginInit();
             this.panel3.SuspendLayout();
@@ -114,21 +112,18 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBuscarVeiculo)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.comboBoxCodigoCliente);
-            this.panel1.Controls.Add(this.comboBoxCodigoVendedor);
-            this.panel1.Controls.Add(this.dataTimeData);
             this.panel1.Controls.Add(this.botaoPesquisaCliente);
             this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.comboBoxCliente);
+            this.panel1.Controls.Add(this.comboBoxClient);
             this.panel1.Controls.Add(this.venda);
-            this.panel1.Controls.Add(this.comboBoxVendedor);
+            this.panel1.Controls.Add(this.comboBoxSalesman);
             this.panel1.Controls.Add(this.botaoComfirmarPedido);
-            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.botaoLimpar);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -139,57 +134,34 @@
             this.panel1.Size = new System.Drawing.Size(1196, 539);
             this.panel1.TabIndex = 0;
             // 
-            // comboBoxCodigoCliente
-            // 
-            this.comboBoxCodigoCliente.FormattingEnabled = true;
-            this.comboBoxCodigoCliente.Location = new System.Drawing.Point(514, 28);
-            this.comboBoxCodigoCliente.Name = "comboBoxCodigoCliente";
-            this.comboBoxCodigoCliente.Size = new System.Drawing.Size(42, 28);
-            this.comboBoxCodigoCliente.TabIndex = 31;
-            // 
-            // comboBoxCodigoVendedor
-            // 
-            this.comboBoxCodigoVendedor.FormattingEnabled = true;
-            this.comboBoxCodigoVendedor.Location = new System.Drawing.Point(218, 27);
-            this.comboBoxCodigoVendedor.Name = "comboBoxCodigoVendedor";
-            this.comboBoxCodigoVendedor.Size = new System.Drawing.Size(42, 28);
-            this.comboBoxCodigoVendedor.TabIndex = 30;
-            // 
-            // dataTimeData
-            // 
-            this.dataTimeData.Location = new System.Drawing.Point(655, 26);
-            this.dataTimeData.Name = "dataTimeData";
-            this.dataTimeData.Size = new System.Drawing.Size(523, 26);
-            this.dataTimeData.TabIndex = 29;
-            // 
             // botaoPesquisaCliente
             // 
-            this.botaoPesquisaCliente.Image = global::CapptaDev1.Properties.Resources.if_search_173095;
-            this.botaoPesquisaCliente.Location = new System.Drawing.Point(578, 28);
+            this.botaoPesquisaCliente.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
+            this.botaoPesquisaCliente.Location = new System.Drawing.Point(585, 28);
             this.botaoPesquisaCliente.Name = "botaoPesquisaCliente";
             this.botaoPesquisaCliente.Size = new System.Drawing.Size(42, 28);
             this.botaoPesquisaCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.botaoPesquisaCliente.TabIndex = 28;
             this.botaoPesquisaCliente.TabStop = false;
-            this.botaoPesquisaCliente.Click += new System.EventHandler(this.botaoPesquisaCliente_Click);
+            this.botaoPesquisaCliente.Click += new System.EventHandler(this.BtnSearchClient);
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(318, 31);
+            this.label16.Location = new System.Drawing.Point(224, 31);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(50, 20);
             this.label16.TabIndex = 26;
             this.label16.Text = "Cliente";
             // 
-            // comboBoxCliente
+            // comboBoxClient
             // 
-            this.comboBoxCliente.FormattingEnabled = true;
-            this.comboBoxCliente.Location = new System.Drawing.Point(368, 28);
-            this.comboBoxCliente.Name = "comboBoxCliente";
-            this.comboBoxCliente.Size = new System.Drawing.Size(145, 28);
-            this.comboBoxCliente.TabIndex = 27;
-            this.comboBoxCliente.SelectedIndexChanged += new System.EventHandler(this.comboBoxCliente_SelectedIndexChanged);
+            this.comboBoxClient.FormattingEnabled = true;
+            this.errorProvider1.SetIconAlignment(this.comboBoxClient, System.Windows.Forms.ErrorIconAlignment.BottomLeft);
+            this.comboBoxClient.Location = new System.Drawing.Point(280, 28);
+            this.comboBoxClient.Name = "comboBoxClient";
+            this.comboBoxClient.Size = new System.Drawing.Size(299, 28);
+            this.comboBoxClient.TabIndex = 27;
             // 
             // venda
             // 
@@ -200,14 +172,13 @@
             this.venda.TabIndex = 25;
             this.venda.Text = "Vendedor";
             // 
-            // comboBoxVendedor
+            // comboBoxSalesman
             // 
-            this.comboBoxVendedor.FormattingEnabled = true;
-            this.comboBoxVendedor.Location = new System.Drawing.Point(72, 27);
-            this.comboBoxVendedor.Name = "comboBoxVendedor";
-            this.comboBoxVendedor.Size = new System.Drawing.Size(145, 28);
-            this.comboBoxVendedor.TabIndex = 25;
-            this.comboBoxVendedor.SelectedIndexChanged += new System.EventHandler(this.comboBoxVendedor_SelectedIndexChanged);
+            this.comboBoxSalesman.FormattingEnabled = true;
+            this.comboBoxSalesman.Location = new System.Drawing.Point(72, 27);
+            this.comboBoxSalesman.Name = "comboBoxSalesman";
+            this.comboBoxSalesman.Size = new System.Drawing.Size(145, 28);
+            this.comboBoxSalesman.TabIndex = 25;
             // 
             // botaoComfirmarPedido
             // 
@@ -217,26 +188,17 @@
             this.botaoComfirmarPedido.TabIndex = 17;
             this.botaoComfirmarPedido.Text = "Comfirmar pedido";
             this.botaoComfirmarPedido.UseVisualStyleBackColor = true;
-            this.botaoComfirmarPedido.Click += new System.EventHandler(this.botaoComfirmarPedido_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(380, 493);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(165, 32);
-            this.button3.TabIndex = 19;
-            this.button3.Text = "Imprimir";
-            this.button3.UseVisualStyleBackColor = true;
+            this.botaoComfirmarPedido.Click += new System.EventHandler(this.BtnComfirmSalesRegister);
             // 
             // botaoLimpar
             // 
-            this.botaoLimpar.Location = new System.Drawing.Point(207, 493);
+            this.botaoLimpar.Location = new System.Drawing.Point(355, 493);
             this.botaoLimpar.Name = "botaoLimpar";
             this.botaoLimpar.Size = new System.Drawing.Size(162, 32);
             this.botaoLimpar.TabIndex = 18;
             this.botaoLimpar.Text = "Limpar";
             this.botaoLimpar.UseVisualStyleBackColor = true;
-            this.botaoLimpar.Click += new System.EventHandler(this.botaoLimpar_Click);
+            this.botaoLimpar.Click += new System.EventHandler(this.BtnFieldClean_Click);
             // 
             // panel3
             // 
@@ -286,7 +248,6 @@
             this.botaoBuscarArquivoPedidos.TabIndex = 30;
             this.botaoBuscarArquivoPedidos.Text = "Buscar Pedidos";
             this.botaoBuscarArquivoPedidos.UseVisualStyleBackColor = true;
-            this.botaoBuscarArquivoPedidos.Click += new System.EventHandler(this.botaoBuscarArquivoPedidos_Click);
             // 
             // textoSaida
             // 
@@ -397,37 +358,34 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.botaoRegistrarCliente);
+            this.panel2.Controls.Add(this.date);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.textoEstado);
-            this.panel2.Controls.Add(this.textoNumero);
-            this.panel2.Controls.Add(this.textoCidade);
-            this.panel2.Controls.Add(this.textoRua);
-            this.panel2.Controls.Add(this.textoCpf);
-            this.panel2.Controls.Add(this.textoTelefone);
+            this.panel2.Controls.Add(this.txtState);
+            this.panel2.Controls.Add(this.txtNumber);
+            this.panel2.Controls.Add(this.txtCity);
+            this.panel2.Controls.Add(this.txtStreet);
+            this.panel2.Controls.Add(this.txtCpf);
+            this.panel2.Controls.Add(this.txtPhone);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.textoNome);
+            this.panel2.Controls.Add(this.txtName);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(10, 61);
+            this.panel2.Location = new System.Drawing.Point(13, 62);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(617, 410);
             this.panel2.TabIndex = 0;
             // 
-            // botaoRegistrarCliente
+            // date
             // 
-            this.botaoRegistrarCliente.Location = new System.Drawing.Point(195, 139);
-            this.botaoRegistrarCliente.Name = "botaoRegistrarCliente";
-            this.botaoRegistrarCliente.Size = new System.Drawing.Size(162, 32);
-            this.botaoRegistrarCliente.TabIndex = 8;
-            this.botaoRegistrarCliente.Text = "Registrar Cliente";
-            this.botaoRegistrarCliente.UseVisualStyleBackColor = true;
-            this.botaoRegistrarCliente.Click += new System.EventHandler(this.botaoRegistrarCliente_Click);
+            this.date.Location = new System.Drawing.Point(16, 160);
+            this.date.Name = "date";
+            this.date.Size = new System.Drawing.Size(523, 26);
+            this.date.TabIndex = 29;
             // 
             // label8
             // 
@@ -441,21 +399,20 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.textoQuantidadeEscolhida);
+            this.panel4.Controls.Add(this.units);
             this.panel4.Controls.Add(this.label17);
             this.panel4.Controls.Add(this.textBoxTipoVeiculo);
             this.panel4.Controls.Add(this.pictureBoxBuscarVeiculo);
-            this.panel4.Controls.Add(this.comboBoxCodigoCarro);
             this.panel4.Controls.Add(this.label15);
-            this.panel4.Controls.Add(this.textoQuantidade);
+            this.panel4.Controls.Add(this.txtQuantity);
             this.panel4.Controls.Add(this.label14);
             this.panel4.Controls.Add(this.textoMarca);
             this.panel4.Controls.Add(this.label13);
-            this.panel4.Controls.Add(this.comboBoxProduto);
-            this.panel4.Controls.Add(this.textoPreco);
-            this.panel4.Controls.Add(this.textoAno);
-            this.panel4.Controls.Add(this.textoModelo);
-            this.panel4.Controls.Add(this.textoCarro);
+            this.panel4.Controls.Add(this.comboBoxProduct);
+            this.panel4.Controls.Add(this.txtPrice);
+            this.panel4.Controls.Add(this.txtYear);
+            this.panel4.Controls.Add(this.txtModel);
+            this.panel4.Controls.Add(this.txtCar);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.label11);
@@ -465,12 +422,12 @@
             this.panel4.Size = new System.Drawing.Size(567, 191);
             this.panel4.TabIndex = 14;
             // 
-            // textoQuantidadeEscolhida
+            // units
             // 
-            this.textoQuantidadeEscolhida.Location = new System.Drawing.Point(418, 151);
-            this.textoQuantidadeEscolhida.Name = "textoQuantidadeEscolhida";
-            this.textoQuantidadeEscolhida.Size = new System.Drawing.Size(52, 26);
-            this.textoQuantidadeEscolhida.TabIndex = 16;
+            this.units.Location = new System.Drawing.Point(418, 151);
+            this.units.Name = "units";
+            this.units.Size = new System.Drawing.Size(52, 26);
+            this.units.TabIndex = 16;
             // 
             // label17
             // 
@@ -490,22 +447,14 @@
             // 
             // pictureBoxBuscarVeiculo
             // 
-            this.pictureBoxBuscarVeiculo.Image = global::CapptaDev1.Properties.Resources.if_search_173095;
-            this.pictureBoxBuscarVeiculo.Location = new System.Drawing.Point(368, 36);
+            this.pictureBoxBuscarVeiculo.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
+            this.pictureBoxBuscarVeiculo.Location = new System.Drawing.Point(328, 36);
             this.pictureBoxBuscarVeiculo.Name = "pictureBoxBuscarVeiculo";
             this.pictureBoxBuscarVeiculo.Size = new System.Drawing.Size(42, 28);
             this.pictureBoxBuscarVeiculo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxBuscarVeiculo.TabIndex = 32;
             this.pictureBoxBuscarVeiculo.TabStop = false;
-            this.pictureBoxBuscarVeiculo.Click += new System.EventHandler(this.pictureBoxBuscarVeiculo_Click);
-            // 
-            // comboBoxCodigoCarro
-            // 
-            this.comboBoxCodigoCarro.FormattingEnabled = true;
-            this.comboBoxCodigoCarro.Location = new System.Drawing.Point(321, 36);
-            this.comboBoxCodigoCarro.Name = "comboBoxCodigoCarro";
-            this.comboBoxCodigoCarro.Size = new System.Drawing.Size(47, 28);
-            this.comboBoxCodigoCarro.TabIndex = 29;
+            this.pictureBoxBuscarVeiculo.Click += new System.EventHandler(this.BtnSearchVehicule_Click);
             // 
             // label15
             // 
@@ -516,12 +465,12 @@
             this.label15.TabIndex = 28;
             this.label15.Text = "Estoque";
             // 
-            // textoQuantidade
+            // txtQuantity
             // 
-            this.textoQuantidade.Location = new System.Drawing.Point(304, 151);
-            this.textoQuantidade.Name = "textoQuantidade";
-            this.textoQuantidade.Size = new System.Drawing.Size(52, 26);
-            this.textoQuantidade.TabIndex = 27;
+            this.txtQuantity.Location = new System.Drawing.Point(304, 151);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(52, 26);
+            this.txtQuantity.TabIndex = 27;
             // 
             // label14
             // 
@@ -548,42 +497,41 @@
             this.label13.TabIndex = 23;
             this.label13.Text = "Produto";
             // 
-            // comboBoxProduto
+            // comboBoxProduct
             // 
-            this.comboBoxProduto.FormattingEnabled = true;
-            this.comboBoxProduto.Location = new System.Drawing.Point(90, 36);
-            this.comboBoxProduto.Name = "comboBoxProduto";
-            this.comboBoxProduto.Size = new System.Drawing.Size(231, 28);
-            this.comboBoxProduto.TabIndex = 8;
-            this.comboBoxProduto.SelectedIndexChanged += new System.EventHandler(this.comboBoxProduto_SelectedIndexChanged);
+            this.comboBoxProduct.FormattingEnabled = true;
+            this.comboBoxProduct.Location = new System.Drawing.Point(90, 36);
+            this.comboBoxProduct.Name = "comboBoxProduct";
+            this.comboBoxProduct.Size = new System.Drawing.Size(231, 28);
+            this.comboBoxProduct.TabIndex = 8;
             // 
-            // textoPreco
+            // txtPrice
             // 
-            this.textoPreco.Location = new System.Drawing.Point(304, 113);
-            this.textoPreco.Name = "textoPreco";
-            this.textoPreco.Size = new System.Drawing.Size(166, 26);
-            this.textoPreco.TabIndex = 13;
+            this.txtPrice.Location = new System.Drawing.Point(304, 113);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(166, 26);
+            this.txtPrice.TabIndex = 13;
             // 
-            // textoAno
+            // txtYear
             // 
-            this.textoAno.Location = new System.Drawing.Point(304, 79);
-            this.textoAno.Name = "textoAno";
-            this.textoAno.Size = new System.Drawing.Size(64, 26);
-            this.textoAno.TabIndex = 10;
+            this.txtYear.Location = new System.Drawing.Point(304, 79);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(64, 26);
+            this.txtYear.TabIndex = 10;
             // 
-            // textoModelo
+            // txtModel
             // 
-            this.textoModelo.Location = new System.Drawing.Point(63, 110);
-            this.textoModelo.Name = "textoModelo";
-            this.textoModelo.Size = new System.Drawing.Size(174, 26);
-            this.textoModelo.TabIndex = 12;
+            this.txtModel.Location = new System.Drawing.Point(63, 110);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(174, 26);
+            this.txtModel.TabIndex = 12;
             // 
-            // textoCarro
+            // txtCar
             // 
-            this.textoCarro.Location = new System.Drawing.Point(63, 78);
-            this.textoCarro.Name = "textoCarro";
-            this.textoCarro.Size = new System.Drawing.Size(174, 26);
-            this.textoCarro.TabIndex = 9;
+            this.txtCar.Location = new System.Drawing.Point(63, 78);
+            this.txtCar.Name = "txtCar";
+            this.txtCar.Size = new System.Drawing.Size(174, 26);
+            this.txtCar.TabIndex = 9;
             // 
             // label9
             // 
@@ -621,52 +569,52 @@
             this.label12.TabIndex = 14;
             this.label12.Text = "Carro";
             // 
-            // textoEstado
+            // txtState
             // 
-            this.textoEstado.Location = new System.Drawing.Point(315, 107);
-            this.textoEstado.Name = "textoEstado";
-            this.textoEstado.Size = new System.Drawing.Size(187, 26);
-            this.textoEstado.TabIndex = 7;
+            this.txtState.Location = new System.Drawing.Point(347, 113);
+            this.txtState.Name = "txtState";
+            this.txtState.Size = new System.Drawing.Size(187, 26);
+            this.txtState.TabIndex = 7;
             // 
-            // textoNumero
+            // txtNumber
             // 
-            this.textoNumero.Location = new System.Drawing.Point(315, 76);
-            this.textoNumero.Name = "textoNumero";
-            this.textoNumero.Size = new System.Drawing.Size(78, 26);
-            this.textoNumero.TabIndex = 5;
+            this.txtNumber.Location = new System.Drawing.Point(347, 82);
+            this.txtNumber.Name = "txtNumber";
+            this.txtNumber.Size = new System.Drawing.Size(78, 26);
+            this.txtNumber.TabIndex = 5;
             // 
-            // textoCidade
+            // txtCity
             // 
-            this.textoCidade.Location = new System.Drawing.Point(74, 107);
-            this.textoCidade.Name = "textoCidade";
-            this.textoCidade.Size = new System.Drawing.Size(174, 26);
-            this.textoCidade.TabIndex = 6;
+            this.txtCity.Location = new System.Drawing.Point(106, 113);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(174, 26);
+            this.txtCity.TabIndex = 6;
             // 
-            // textoRua
+            // txtStreet
             // 
-            this.textoRua.Location = new System.Drawing.Point(74, 75);
-            this.textoRua.Name = "textoRua";
-            this.textoRua.Size = new System.Drawing.Size(174, 26);
-            this.textoRua.TabIndex = 4;
+            this.txtStreet.Location = new System.Drawing.Point(106, 81);
+            this.txtStreet.Name = "txtStreet";
+            this.txtStreet.Size = new System.Drawing.Size(174, 26);
+            this.txtStreet.TabIndex = 4;
             // 
-            // textoCpf
+            // txtCpf
             // 
-            this.textoCpf.Location = new System.Drawing.Point(315, 42);
-            this.textoCpf.Name = "textoCpf";
-            this.textoCpf.Size = new System.Drawing.Size(187, 26);
-            this.textoCpf.TabIndex = 3;
+            this.txtCpf.Location = new System.Drawing.Point(347, 48);
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(187, 26);
+            this.txtCpf.TabIndex = 3;
             // 
-            // textoTelefone
+            // txtPhone
             // 
-            this.textoTelefone.Location = new System.Drawing.Point(74, 43);
-            this.textoTelefone.Name = "textoTelefone";
-            this.textoTelefone.Size = new System.Drawing.Size(174, 26);
-            this.textoTelefone.TabIndex = 2;
+            this.txtPhone.Location = new System.Drawing.Point(106, 49);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(174, 26);
+            this.txtPhone.TabIndex = 2;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(253, 81);
+            this.label7.Location = new System.Drawing.Point(285, 87);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 20);
             this.label7.TabIndex = 7;
@@ -675,7 +623,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 113);
+            this.label6.Location = new System.Drawing.Point(41, 119);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 20);
             this.label6.TabIndex = 6;
@@ -684,7 +632,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(254, 113);
+            this.label5.Location = new System.Drawing.Point(286, 119);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 20);
             this.label5.TabIndex = 5;
@@ -693,7 +641,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 79);
+            this.label4.Location = new System.Drawing.Point(41, 85);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 20);
             this.label4.TabIndex = 4;
@@ -702,7 +650,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 45);
+            this.label3.Location = new System.Drawing.Point(35, 51);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 20);
             this.label3.TabIndex = 3;
@@ -711,23 +659,23 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(254, 46);
+            this.label2.Location = new System.Drawing.Point(286, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "CPF";
             // 
-            // textoNome
+            // txtName
             // 
-            this.textoNome.Location = new System.Drawing.Point(74, 11);
-            this.textoNome.Name = "textoNome";
-            this.textoNome.Size = new System.Drawing.Size(428, 26);
-            this.textoNome.TabIndex = 1;
+            this.txtName.Location = new System.Drawing.Point(106, 17);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(428, 26);
+            this.txtName.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 12);
+            this.label1.Location = new System.Drawing.Point(35, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 20);
             this.label1.TabIndex = 0;
@@ -740,7 +688,8 @@
             this.relatórioToolStripMenuItem,
             this.funcionarioToolStripMenuItem,
             this.estoqueToolStripMenuItem,
-            this.atualizarDadosToolStripMenuItem});
+            this.atualizarDadosToolStripMenuItem,
+            this.clientesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1192, 24);
@@ -758,28 +707,40 @@
             this.relatórioToolStripMenuItem.Name = "relatórioToolStripMenuItem";
             this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.relatórioToolStripMenuItem.Text = "Relatório";
-            this.relatórioToolStripMenuItem.Click += new System.EventHandler(this.relatórioToolStripMenuItem_Click);
+            this.relatórioToolStripMenuItem.Click += new System.EventHandler(this.ReportShowoTolStripMenuItem_Click);
             // 
             // funcionarioToolStripMenuItem
             // 
             this.funcionarioToolStripMenuItem.Name = "funcionarioToolStripMenuItem";
             this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
             this.funcionarioToolStripMenuItem.Text = "Funcionario";
-            this.funcionarioToolStripMenuItem.Click += new System.EventHandler(this.funcionarioToolStripMenuItem_Click);
+            this.funcionarioToolStripMenuItem.Click += new System.EventHandler(this.EmployeeShowToolStripMenuItem_Click);
             // 
             // estoqueToolStripMenuItem
             // 
             this.estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
             this.estoqueToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.estoqueToolStripMenuItem.Text = "Estoque";
-            this.estoqueToolStripMenuItem.Click += new System.EventHandler(this.produtosToolStripMenuItem_Click);
+            this.estoqueToolStripMenuItem.Click += new System.EventHandler(this.StockShowToolStripMenuItem_Click);
             // 
             // atualizarDadosToolStripMenuItem
             // 
             this.atualizarDadosToolStripMenuItem.Name = "atualizarDadosToolStripMenuItem";
             this.atualizarDadosToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
             this.atualizarDadosToolStripMenuItem.Text = "Atualizar Dados";
-            this.atualizarDadosToolStripMenuItem.Click += new System.EventHandler(this.botaoAtualizarTabela_Click);
+            this.atualizarDadosToolStripMenuItem.Click += new System.EventHandler(this.BtnRefreshHome_Click);
+            // 
+            // clientesToolStripMenuItem
+            // 
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.clientesToolStripMenuItem.Text = "Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.ClientesShowToolStripMenuItem_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.AlwaysBlink;
+            this.errorProvider1.ContainerControl = this;
             // 
             // Home
             // 
@@ -812,6 +773,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBuscarVeiculo)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -824,38 +786,22 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBoxProduto;
-        private System.Windows.Forms.TextBox textoPreco;
-        private System.Windows.Forms.TextBox textoAno;
-        private System.Windows.Forms.TextBox textoModelo;
-        private System.Windows.Forms.TextBox textoCarro;
+        private System.Windows.Forms.ComboBox comboBoxProduct;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtYear;
+        private System.Windows.Forms.TextBox txtModel;
+        private System.Windows.Forms.TextBox txtCar;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textoEstado;
-        private System.Windows.Forms.TextBox textoNumero;
-        private System.Windows.Forms.TextBox textoCidade;
-        private System.Windows.Forms.TextBox textoRua;
-        private System.Windows.Forms.TextBox textoCpf;
-        private System.Windows.Forms.TextBox textoTelefone;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textoNome;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem arquivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatórioToolStripMenuItem;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button botaoLimpar;
         private System.Windows.Forms.DataGridView dgvEstoque;
-        private System.Windows.Forms.Button botaoRegistrarCliente;
         private System.Windows.Forms.Button botaoComfirmarPedido;
-        private System.Windows.Forms.ComboBox comboBoxVendedor;
+        private System.Windows.Forms.ComboBox comboBoxSalesman;
         private System.Windows.Forms.Label venda;
         private System.Windows.Forms.ToolStripMenuItem funcionarioToolStripMenuItem;
         private System.Windows.Forms.TabControl tabControl1;
@@ -865,24 +811,21 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textoMarca;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textoQuantidade;
+        private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.PictureBox botaoPesquisaCliente;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox comboBoxCliente;
+        private System.Windows.Forms.ComboBox comboBoxClient;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridView dgvEstoqueVeiculos;
         private System.Windows.Forms.ToolStripMenuItem estoqueToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem atualizarDadosToolStripMenuItem;
-        private System.Windows.Forms.DateTimePicker dataTimeData;
-        private System.Windows.Forms.ComboBox comboBoxCodigoVendedor;
-        private System.Windows.Forms.ComboBox comboBoxCodigoCliente;
-        private System.Windows.Forms.ComboBox comboBoxCodigoCarro;
+        private System.Windows.Forms.DateTimePicker date;
         private System.Windows.Forms.TextBox textoBuscarArquivo;
         private System.Windows.Forms.Button botaoBuscarArquivoPedidos;
         private System.Windows.Forms.PictureBox pictureBoxBuscarVeiculo;
         private System.Windows.Forms.TextBox textBoxTipoVeiculo;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textoQuantidadeEscolhida;
+        private System.Windows.Forms.TextBox units;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn carro;
         private System.Windows.Forms.DataGridViewTextBoxColumn model;
@@ -891,6 +834,22 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mark;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn type;
+        private System.Windows.Forms.TextBox txtState;
+        private System.Windows.Forms.TextBox txtNumber;
+        private System.Windows.Forms.TextBox txtCity;
+        private System.Windows.Forms.TextBox txtStreet;
+        private System.Windows.Forms.TextBox txtCpf;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 

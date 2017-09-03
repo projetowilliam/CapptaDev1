@@ -1,6 +1,6 @@
-﻿namespace CapptaDev1
+﻿namespace SinalVeiculos
 {
-    partial class Estoque
+    partial class StockForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBoxVoltar = new System.Windows.Forms.PictureBox();
-            this.buttonDelete = new System.Windows.Forms.Button();
-            this.tiposLabel = new System.Windows.Forms.Label();
-            this.tipoVeiculo = new System.Windows.Forms.ComboBox();
-            this.buttonAlterar = new System.Windows.Forms.Button();
+            this.BtnRemove = new System.Windows.Forms.Button();
+            this.BtnAdd = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxCodigoID = new System.Windows.Forms.TextBox();
+            this.BtnGoBack = new System.Windows.Forms.PictureBox();
+            this.ButtonDelete = new System.Windows.Forms.Button();
             this.buttonLimpar = new System.Windows.Forms.Button();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -49,23 +50,24 @@
             this.textBoxModelo = new System.Windows.Forms.TextBox();
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBoxPesquisa = new System.Windows.Forms.PictureBox();
+            this.BtnSearch = new System.Windows.Forms.PictureBox();
             this.textBoxPesquisa = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVoltar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnGoBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxQuantidade)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPesquisa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.pictureBoxVoltar);
-            this.panel1.Controls.Add(this.buttonDelete);
-            this.panel1.Controls.Add(this.tiposLabel);
-            this.panel1.Controls.Add(this.tipoVeiculo);
-            this.panel1.Controls.Add(this.buttonAlterar);
+            this.panel1.Controls.Add(this.BtnRemove);
+            this.panel1.Controls.Add(this.BtnAdd);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.textBoxCodigoID);
+            this.panel1.Controls.Add(this.BtnGoBack);
+            this.panel1.Controls.Add(this.ButtonDelete);
             this.panel1.Controls.Add(this.buttonLimpar);
             this.panel1.Controls.Add(this.buttonSalvar);
             this.panel1.Controls.Add(this.label6);
@@ -87,57 +89,62 @@
             this.panel1.Size = new System.Drawing.Size(523, 330);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBoxVoltar
+            // BtnRemove
             // 
-            this.pictureBoxVoltar.Image = global::CapptaDev1.Properties.Resources.if__30ui_2303135;
-            this.pictureBoxVoltar.Location = new System.Drawing.Point(407, 254);
-            this.pictureBoxVoltar.Name = "pictureBoxVoltar";
-            this.pictureBoxVoltar.Size = new System.Drawing.Size(44, 33);
-            this.pictureBoxVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxVoltar.TabIndex = 21;
-            this.pictureBoxVoltar.TabStop = false;
-            this.pictureBoxVoltar.Click += new System.EventHandler(this.pictureBoxVoltar_Click);
+            this.BtnRemove.Location = new System.Drawing.Point(85, 61);
+            this.BtnRemove.Name = "BtnRemove";
+            this.BtnRemove.Size = new System.Drawing.Size(76, 33);
+            this.BtnRemove.TabIndex = 25;
+            this.BtnRemove.Text = "Remover";
+            this.BtnRemove.UseVisualStyleBackColor = true;
+            this.BtnRemove.Click += new System.EventHandler(this.BtnRemove_Click);
             // 
-            // buttonDelete
+            // BtnAdd
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(325, 254);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(76, 33);
-            this.buttonDelete.TabIndex = 20;
-            this.buttonDelete.Text = "Apagar";
-            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.BtnAdd.Location = new System.Drawing.Point(3, 61);
+            this.BtnAdd.Name = "BtnAdd";
+            this.BtnAdd.Size = new System.Drawing.Size(76, 33);
+            this.BtnAdd.TabIndex = 24;
+            this.BtnAdd.Text = "Adicionar";
+            this.BtnAdd.UseVisualStyleBackColor = true;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
-            // tiposLabel
+            // label7
             // 
-            this.tiposLabel.AutoSize = true;
-            this.tiposLabel.Location = new System.Drawing.Point(17, 84);
-            this.tiposLabel.Name = "tiposLabel";
-            this.tiposLabel.Size = new System.Drawing.Size(42, 13);
-            this.tiposLabel.TabIndex = 19;
-            this.tiposLabel.Text = "Veiculo";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(10, 115);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Código";
             // 
-            // tipoVeiculo
+            // textBoxCodigoID
             // 
-            this.tipoVeiculo.FormattingEnabled = true;
-            this.tipoVeiculo.Items.AddRange(new object[] {
-            "Carro popular",
-            "Carro de Luxo",
-            "Veiculo para Carga Pesada",
-            "Moto"});
-            this.tipoVeiculo.Location = new System.Drawing.Point(90, 79);
-            this.tipoVeiculo.Name = "tipoVeiculo";
-            this.tipoVeiculo.Size = new System.Drawing.Size(334, 21);
-            this.tipoVeiculo.TabIndex = 2;
+            this.textBoxCodigoID.Location = new System.Drawing.Point(60, 112);
+            this.textBoxCodigoID.Name = "textBoxCodigoID";
+            this.textBoxCodigoID.Size = new System.Drawing.Size(54, 20);
+            this.textBoxCodigoID.TabIndex = 22;
             // 
-            // buttonAlterar
+            // BtnGoBack
             // 
-            this.buttonAlterar.Location = new System.Drawing.Point(243, 254);
-            this.buttonAlterar.Name = "buttonAlterar";
-            this.buttonAlterar.Size = new System.Drawing.Size(76, 33);
-            this.buttonAlterar.TabIndex = 11;
-            this.buttonAlterar.Text = "Alterar";
-            this.buttonAlterar.UseVisualStyleBackColor = true;
-            this.buttonAlterar.Click += new System.EventHandler(this.buttonAlterar_Click);
+            this.BtnGoBack.Image = global::SinalVeiculos.Properties.Resources.if__30ui_2303135;
+            this.BtnGoBack.Location = new System.Drawing.Point(251, 254);
+            this.BtnGoBack.Name = "BtnGoBack";
+            this.BtnGoBack.Size = new System.Drawing.Size(44, 33);
+            this.BtnGoBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BtnGoBack.TabIndex = 21;
+            this.BtnGoBack.TabStop = false;
+            this.BtnGoBack.Click += new System.EventHandler(this.BtnGoBack_Click);
+            // 
+            // ButtonDelete
+            // 
+            this.ButtonDelete.Location = new System.Drawing.Point(375, 254);
+            this.ButtonDelete.Name = "ButtonDelete";
+            this.ButtonDelete.Size = new System.Drawing.Size(76, 33);
+            this.ButtonDelete.TabIndex = 20;
+            this.ButtonDelete.Text = "Excluir";
+            this.ButtonDelete.UseVisualStyleBackColor = true;
+            this.ButtonDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // buttonLimpar
             // 
@@ -151,7 +158,7 @@
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(79, 254);
+            this.buttonSalvar.Location = new System.Drawing.Point(81, 254);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(76, 33);
             this.buttonSalvar.TabIndex = 9;
@@ -258,24 +265,24 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.pictureBoxPesquisa);
+            this.panel2.Controls.Add(this.BtnSearch);
             this.panel2.Controls.Add(this.textBoxPesquisa);
             this.panel2.Location = new System.Drawing.Point(3, 7);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(513, 48);
             this.panel2.TabIndex = 1;
             // 
-            // pictureBoxPesquisa
+            // BtnSearch
             // 
-            this.pictureBoxPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBoxPesquisa.Image = global::CapptaDev1.Properties.Resources.if_search_173095;
-            this.pictureBoxPesquisa.Location = new System.Drawing.Point(435, 13);
-            this.pictureBoxPesquisa.Name = "pictureBoxPesquisa";
-            this.pictureBoxPesquisa.Size = new System.Drawing.Size(44, 19);
-            this.pictureBoxPesquisa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxPesquisa.TabIndex = 1;
-            this.pictureBoxPesquisa.TabStop = false;
-            this.pictureBoxPesquisa.Click += new System.EventHandler(this.pictureBoxPesquisa_Click);
+            this.BtnSearch.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BtnSearch.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
+            this.BtnSearch.Location = new System.Drawing.Point(435, 13);
+            this.BtnSearch.Name = "BtnSearch";
+            this.BtnSearch.Size = new System.Drawing.Size(44, 19);
+            this.BtnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BtnSearch.TabIndex = 1;
+            this.BtnSearch.TabStop = false;
+            this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // textBoxPesquisa
             // 
@@ -285,22 +292,22 @@
             this.textBoxPesquisa.Size = new System.Drawing.Size(374, 20);
             this.textBoxPesquisa.TabIndex = 0;
             // 
-            // Estoque
+            // StockForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(523, 330);
             this.Controls.Add(this.panel1);
-            this.Name = "Estoque";
+            this.Name = "StockForm";
             this.Text = "Estoque";
             this.Load += new System.EventHandler(this.Estoque_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVoltar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnGoBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxQuantidade)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPesquisa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnSearch)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -309,9 +316,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBoxPesquisa;
+        private System.Windows.Forms.PictureBox BtnSearch;
         private System.Windows.Forms.TextBox textBoxPesquisa;
-        private System.Windows.Forms.Button buttonAlterar;
         private System.Windows.Forms.Button buttonLimpar;
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Label label6;
@@ -326,9 +332,11 @@
         private System.Windows.Forms.TextBox textBoxAno;
         private System.Windows.Forms.TextBox textBoxModelo;
         private System.Windows.Forms.TextBox textBoxNome;
-        private System.Windows.Forms.Label tiposLabel;
-        private System.Windows.Forms.ComboBox tipoVeiculo;
-        private System.Windows.Forms.Button buttonDelete;
-        private System.Windows.Forms.PictureBox pictureBoxVoltar;
+        private System.Windows.Forms.Button ButtonDelete;
+        private System.Windows.Forms.PictureBox BtnGoBack;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBoxCodigoID;
+        private System.Windows.Forms.Button BtnAdd;
+        private System.Windows.Forms.Button BtnRemove;
     }
 }

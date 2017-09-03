@@ -1,49 +1,38 @@
-﻿using CapptaDev1.Data;
-using CapptaDev1.Models;
+﻿using SinalVeiculos.Data;
+using SinalVeiculos.Models;
 using System;
 using System.Windows.Forms;
-namespace CapptaDev1
+
+namespace SinalVeiculos
 {
-    public partial class Funcionario : Form
+    public partial class EmployeeForm : Form
     {
-        public Funcionario()
+        public EmployeeForm()
         {
             InitializeComponent();
         }
 
-        public void limparCampos()
+        private void BtnClean_Click(object sender, EventArgs e)
         {
-            textoCidade.Text = "";
-            textoCpf.Text = "";
-            textoEstado.Text = "";
-            textoNome.Text = "";
-            textoNumero.Text = "";
-            textoRua.Text = "";
-            textoTelefone.Text = "";
+            FieldClean();
         }
 
-        private void botaoLimpar_Click(object sender, EventArgs e)
-        {
-            limparCampos();
-        }
-
-        private void botaoSalvar_Click(object sender, EventArgs e)
+        private void BotaoSave_Click(object sender, EventArgs e)
         {         
-            var salesRegister = new SalesRegister();
-            var employePerson = new Employee();
-            employePerson.name = Convert.ToString(textoNome.Text);
-            employePerson.phone = Convert.ToString(textoTelefone.Text);
-            employePerson.cpf = Convert.ToString(textoCpf.Text);
-            employePerson.street = Convert.ToString(textoRua.Text);
-            employePerson.number = Convert.ToString(textoNumero.Text);
-            employePerson.city = Convert.ToString(textoCidade.Text);
-            employePerson.state = Convert.ToString(textoEstado.Text);
-            salesRegister.personAdd(employePerson);
-            limparCampos();
+            var employeerRegister = new EmployeerRegister();
+            var employee = new Employee();
+            employee.Name = Convert.ToString(textoNome.Text);
+            employee.Phone = Convert.ToString(textoTelefone.Text);
+            employee.Cpf = Convert.ToString(textoCpf.Text);
+            employee.Street = Convert.ToString(textoRua.Text);
+            employee.Number = Convert.ToString(textoNumero.Text);
+            employee.City = Convert.ToString(textoCidade.Text);
+            employee.State = Convert.ToString(textoEstado.Text);
+            employeerRegister.Add(employee);
+            FieldClean();
         }
 
-        // botão para cancelar inclusão de funcionário e fechar Form Funcionário
-        private void botaoCancelar_Click(object sender, EventArgs e)
+        private void BtnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -51,6 +40,32 @@ namespace CapptaDev1
         private void Funcionario_Load(object sender, EventArgs e)
         {
 
+        }
+        public void FieldClean()
+        {
+            textoCidade.Text = string.Empty;
+            textoCpf.Text = string.Empty;
+            textoEstado.Text = string.Empty;
+            textoNome.Text = string.Empty;
+            textoNumero.Text = string.Empty;
+            textoRua.Text = string.Empty;
+            textoTelefone.Text = string.Empty;
+        }
+
+        private void BtnSearcheEmployeer_Click(object sender, EventArgs e)
+        {
+            var employeerRegister = new EmployeerRegister();
+            var employee = new Employee();
+            var name = textoPesquisa.Text;
+
+            employee = employeerRegister.SearchPersonByName(name);
+            textoNome.Text = employee.Name;
+            textoCidade.Text = employee.City;
+            textoCpf.Text = employee.Cpf;
+            textoEstado.Text = employee.State;
+            textoNumero.Text = employee.Number;
+            textoRua.Text = employee.Street;
+            textoTelefone.Text = employee.Phone;
         }
     }
 }

@@ -68,16 +68,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Car.cs" />
-    <Compile Include="Models\IVehicule.cs" />
-    <Compile Include="Models\Person.cs" />
-    <Compile Include="Register\CarRegister.cs" />
-    <Compile Include="Register\ClientRegister.cs" />
-    <Compile Include="Register\RequestRegister.cs" />
-    <Compile Include="Register\PersonRegister.cs" />
-    <Compile Include="Register\SalesRegister.cs" />
-    <Compile Include="Register\VehiculeRegister.cs" />
-    <Compile Include="Interfaces\IPersonRegister.cs" />
+    <Compile Include="Form\ClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ClientForm.Designer.cs">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Request.cs" />
+    <Compile Include="Form\RequestRegister.cs" />
+    <Compile Include="VehiculeModel\Car.cs" />
+    <Compile Include="VehiculeModel\IVehicule.cs" />
+    <Compile Include="VehiculeRegister\CarRegister.cs" />
+    <Compile Include="PersonRegister\CustomerRegistration.cs" />
+    <Compile Include="PersonRegister\PersonRegister.cs" />
+    <Compile Include="PersonRegister\EmployeerRegister.cs" />
+    <Compile Include="VehiculeRegister\VehiculeRegister.cs" />
     <Compile Include="Connection\DataBaseConnection.cs" />
     <Compile Include="Form\HomeForm.cs">
       <SubType>Form</SubType>
@@ -91,10 +96,9 @@
     <Compile Include="Form\EmployeeForm.Designer.cs">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Client.cs" />
-    <Compile Include="Models\IPerson.cs" />
-    <Compile Include="Models\Request.cs" />
-    <Compile Include="Models\Employee.cs" />
+    <Compile Include="PersonModel\Client.cs" />
+    <Compile Include="PersonModel\IPerson.cs" />
+    <Compile Include="PersonModel\Employee.cs" />
     <Compile Include="Resources\Mensagem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -104,14 +108,15 @@
     <Compile Include="Form\ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces\IVehicleRegister.cs" />
     <Compile Include="Form\StockForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\StockForm.Designer.cs">
       <DependentUpon>StockForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Vehicules.cs" />
+    <EmbeddedResource Include="Form\ClientForm.resx">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,5 +174,6 @@
   <ItemGroup>
     <None Include="Resources\if__30ui_2303135.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

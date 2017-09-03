@@ -1,4 +1,4 @@
-﻿namespace CapptaDev1.Models
+﻿namespace SinalVeiculos.Models
 {
     public interface IVehicule
     {
