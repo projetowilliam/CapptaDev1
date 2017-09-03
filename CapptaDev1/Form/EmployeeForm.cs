@@ -17,55 +17,77 @@ namespace SinalVeiculos
             FieldClean();
         }
 
-        private void BotaoSave_Click(object sender, EventArgs e)
-        {         
-            var employeerRegister = new EmployeerRegister();
-            var employee = new Employee();
-            employee.Name = Convert.ToString(textoNome.Text);
-            employee.Phone = Convert.ToString(textoTelefone.Text);
-            employee.Cpf = Convert.ToString(textoCpf.Text);
-            employee.Street = Convert.ToString(textoRua.Text);
-            employee.Number = Convert.ToString(textoNumero.Text);
-            employee.City = Convert.ToString(textoCidade.Text);
-            employee.State = Convert.ToString(textoEstado.Text);
-            employeerRegister.Add(employee);
-            FieldClean();
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            if (ValidadeInputFieldEmployee() == true)
+            {
+                var employeerRegister = new EmployeerRegister();
+                var employee = new Employee();
+                employee.Name = Convert.ToString(this.txtName.Text);
+                employee.Phone = Convert.ToString(txtPhone.Text);
+                employee.Cpf = Convert.ToString(txtCpf.Text);
+                employee.Street = Convert.ToString(txtStreet.Text);
+                employee.Number = Convert.ToString(txtNumber.Text);
+                employee.City = Convert.ToString(txtCity.Text);
+                employee.State = Convert.ToString(txtState.Text);
+                employeerRegister.Add(employee);
+                FieldClean();
+            }
+            else
+            {
+                MessageBox.Show("Por favor verifique se tem algum campo vazio");
+            }
         }
 
-        private void BtnCancel_Click(object sender, EventArgs e)
+        private void BtnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void Funcionario_Load(object sender, EventArgs e)
-        {
-
-        }
         public void FieldClean()
         {
-            textoCidade.Text = string.Empty;
-            textoCpf.Text = string.Empty;
-            textoEstado.Text = string.Empty;
-            textoNome.Text = string.Empty;
-            textoNumero.Text = string.Empty;
-            textoRua.Text = string.Empty;
-            textoTelefone.Text = string.Empty;
+            txtCity.Text = string.Empty;
+            txtCpf.Text = string.Empty;
+            txtState.Text = string.Empty;
+            txtName.Text = string.Empty;
+            txtNumber.Text = string.Empty;
+            txtStreet.Text = string.Empty;
+            txtPhone.Text = string.Empty;
         }
 
         private void BtnSearcheEmployeer_Click(object sender, EventArgs e)
         {
-            var employeerRegister = new EmployeerRegister();
-            var employee = new Employee();
-            var name = textoPesquisa.Text;
+            if (ValidateIfTxtSearchEmployeerIsEmpty() == true)
+            {
+                var employeerRegister = new EmployeerRegister();
+                var employee = new Employee();
+                employee = employeerRegister.SearchPersonByName(txtSearch.Text);
+                txtName.Text = employee.Name;
+                txtCity.Text = employee.City;
+                txtCpf.Text = employee.Cpf;
+                txtState.Text = employee.State;
+                txtNumber.Text = employee.Number;
+                txtStreet.Text = employee.Street;
+                txtPhone.Text = employee.Phone;
+            }
+            else
+            {
+                MessageBox.Show("Por favor escolha um nome para pesquisa");
+            }
+        }
 
-            employee = employeerRegister.SearchPersonByName(name);
-            textoNome.Text = employee.Name;
-            textoCidade.Text = employee.City;
-            textoCpf.Text = employee.Cpf;
-            textoEstado.Text = employee.State;
-            textoNumero.Text = employee.Number;
-            textoRua.Text = employee.Street;
-            textoTelefone.Text = employee.Phone;
+        private bool ValidateIfTxtSearchEmployeerIsEmpty()
+        {
+            if (txtSearch.Text == "") { return false; } else { return true; }
+        }
+
+        private bool ValidadeInputFieldEmployee()
+        {
+            if (txtCity.Text == "" || txtCpf.Text == "" || txtName.Text == "" || txtNumber.Text == ""
+                || txtPhone.Text == "" || txtState.Text == "" || txtStreet.Text == "")
+            { return false; }
+            else
+            { return true; }
         }
     }
 }

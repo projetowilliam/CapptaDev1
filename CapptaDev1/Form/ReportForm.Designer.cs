@@ -174,7 +174,7 @@
             // 
             // pictureBoxPesquisaCliente
             // 
-            this.pictureBoxPesquisaCliente.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
+          //  this.pictureBoxPesquisaCliente.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
             this.pictureBoxPesquisaCliente.Location = new System.Drawing.Point(538, 8);
             this.pictureBoxPesquisaCliente.Name = "pictureBoxPesquisaCliente";
             this.pictureBoxPesquisaCliente.Size = new System.Drawing.Size(51, 26);
@@ -255,7 +255,7 @@
             // 
             // pictureBoxPesquisaFuncionario
             // 
-            this.pictureBoxPesquisaFuncionario.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
+          //  this.pictureBoxPesquisaFuncionario.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
             this.pictureBoxPesquisaFuncionario.Location = new System.Drawing.Point(522, 4);
             this.pictureBoxPesquisaFuncionario.Name = "pictureBoxPesquisaFuncionario";
             this.pictureBoxPesquisaFuncionario.Size = new System.Drawing.Size(51, 37);
@@ -274,7 +274,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
+   //         this.pictureBox1.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
             this.pictureBox1.Location = new System.Drawing.Point(519, 144);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(51, 37);
@@ -341,7 +341,7 @@
             // 
             // pictureBoxPesquisaProduto
             // 
-            this.pictureBoxPesquisaProduto.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
+          //  this.pictureBoxPesquisaProduto.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
             this.pictureBoxPesquisaProduto.Location = new System.Drawing.Point(569, 17);
             this.pictureBoxPesquisaProduto.Name = "pictureBoxPesquisaProduto";
             this.pictureBoxPesquisaProduto.Size = new System.Drawing.Size(51, 37);
@@ -409,7 +409,7 @@
             // 
             // pictureBoxPesquisaVenda
             // 
-            this.pictureBoxPesquisaVenda.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
+          //  this.pictureBoxPesquisaVenda.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
             this.pictureBoxPesquisaVenda.Location = new System.Drawing.Point(569, 34);
             this.pictureBoxPesquisaVenda.Name = "pictureBoxPesquisaVenda";
             this.pictureBoxPesquisaVenda.Size = new System.Drawing.Size(51, 20);

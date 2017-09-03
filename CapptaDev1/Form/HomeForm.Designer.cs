@@ -136,7 +136,7 @@
             // 
             // botaoPesquisaCliente
             // 
-            this.botaoPesquisaCliente.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
+//            this.botaoPesquisaCliente.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
             this.botaoPesquisaCliente.Location = new System.Drawing.Point(585, 28);
             this.botaoPesquisaCliente.Name = "botaoPesquisaCliente";
             this.botaoPesquisaCliente.Size = new System.Drawing.Size(42, 28);
@@ -447,7 +447,7 @@
             // 
             // pictureBoxBuscarVeiculo
             // 
-            this.pictureBoxBuscarVeiculo.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
+ //           this.pictureBoxBuscarVeiculo.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
             this.pictureBoxBuscarVeiculo.Location = new System.Drawing.Point(328, 36);
             this.pictureBoxBuscarVeiculo.Name = "pictureBoxBuscarVeiculo";
             this.pictureBoxBuscarVeiculo.Size = new System.Drawing.Size(42, 28);

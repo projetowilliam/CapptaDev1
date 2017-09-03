@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SinalVeiculos.Properties {
+namespace CapptaDev1.Properties {
     using System;
     
     
@@ -57,36 +57,6 @@ namespace SinalVeiculos.Properties {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap if__30ui_2303135 {
-            get {
-                object obj = ResourceManager.GetObject("if__30ui_2303135", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap if_search_173095 {
-            get {
-                object obj = ResourceManager.GetObject("if_search_173095", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap if_search_chat_965671 {
-            get {
-                object obj = ResourceManager.GetObject("if_search-chat_965671", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

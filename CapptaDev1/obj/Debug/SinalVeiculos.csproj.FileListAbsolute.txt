@@ -16,3 +16,4 @@ D:\CapptaDev1\CapptaDev1\obj\Debug\SinalVeiculos.HomeForm.resources
 D:\CapptaDev1\CapptaDev1\obj\Debug\SinalVeiculos.EmployeeForm.resources
 D:\CapptaDev1\CapptaDev1\obj\Debug\SinalVeiculos.ReportForm.resources
 D:\CapptaDev1\CapptaDev1\obj\Debug\SinalVeiculos.StockForm.resources
+D:\CapptaDev1\CapptaDev1\obj\Debug\SinalVeiculos.csprojResolveAssemblyReference.cache

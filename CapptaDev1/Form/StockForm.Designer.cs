@@ -127,7 +127,7 @@
             // 
             // BtnGoBack
             // 
-            this.BtnGoBack.Image = global::SinalVeiculos.Properties.Resources.if__30ui_2303135;
+           // this.BtnGoBack.Image = global::SinalVeiculos.Properties.Resources.if__30ui_2303135;
             this.BtnGoBack.Location = new System.Drawing.Point(251, 254);
             this.BtnGoBack.Name = "BtnGoBack";
             this.BtnGoBack.Size = new System.Drawing.Size(44, 33);
@@ -275,7 +275,7 @@
             // BtnSearch
             // 
             this.BtnSearch.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.BtnSearch.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
+           // this.BtnSearch.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
             this.BtnSearch.Location = new System.Drawing.Point(435, 13);
             this.BtnSearch.Name = "BtnSearch";
             this.BtnSearch.Size = new System.Drawing.Size(44, 19);

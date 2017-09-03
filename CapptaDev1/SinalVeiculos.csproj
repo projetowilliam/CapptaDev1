@@ -74,8 +74,13 @@
     <Compile Include="Form\ClientForm.Designer.cs">
       <DependentUpon>ClientForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Request.cs" />
-    <Compile Include="Form\RequestRegister.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Request\Request.cs" />
+    <Compile Include="Request\RequestRegister.cs" />
     <Compile Include="VehiculeModel\Car.cs" />
     <Compile Include="VehiculeModel\IVehicule.cs" />
     <Compile Include="VehiculeRegister\CarRegister.cs" />
@@ -99,7 +104,6 @@
     <Compile Include="PersonModel\Client.cs" />
     <Compile Include="PersonModel\IPerson.cs" />
     <Compile Include="PersonModel\Employee.cs" />
-    <Compile Include="Resources\Mensagem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Form\ReportForm.cs">
@@ -125,14 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Form\ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,15 +163,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\if_search-chat_965671.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\if_search_173095.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\if__30ui_2303135.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

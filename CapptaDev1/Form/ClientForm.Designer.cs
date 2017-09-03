@@ -230,7 +230,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
+          //  this.pictureBox1.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
             this.pictureBox1.Location = new System.Drawing.Point(450, 18);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(43, 31);
