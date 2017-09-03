@@ -28,7 +28,7 @@ namespace SinalVeiculos
                     Phone = Convert.ToString(txtPhone.Text),
                     Cpf = Convert.ToString(txtCpf.Text),
                     Street = Convert.ToString(txtStreet.Text),
-                    Number = Convert.ToString(txtNumber.Text),
+                    Number = Convert.ToInt32(txtNumber.Text),
                     City = Convert.ToString(txtCity.Text),
                     State = Convert.ToString(txtState.Text)
                 };
@@ -68,7 +68,7 @@ namespace SinalVeiculos
                 txtCity.Text = employee.City;
                 txtCpf.Text = employee.Cpf;
                 txtState.Text = employee.State;
-                txtNumber.Text = employee.Number;
+                txtNumber.Text =Convert.ToString( employee.Number);
                 txtStreet.Text = employee.Street;
                 txtPhone.Text = employee.Phone;
             }

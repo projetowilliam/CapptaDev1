@@ -79,7 +79,7 @@ namespace SinalVeiculos
                 this.txtPhone.Text = client.Phone;
                 this.txtCpf.Text = client.Cpf;
                 this.txtStreet.Text = client.Street;
-                this.txtNumber.Text = client.Number;
+                this.txtNumber.Text =Convert.ToString( client.Number);
                 this.txtCity.Text = client.City;
                 this.txtState.Text = client.State;
             }

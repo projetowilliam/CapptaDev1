@@ -22,7 +22,7 @@ namespace SinalVeiculos
                 Phone = txtPhone.Text,
                 Cpf = txtCpf.Text,
                 Street = txtStreet.Text,
-                Number = txtNumber.Text,
+                Number = Convert.ToInt32(txtNumber.Text),
                 City = txtCity.Text,
                 State = txtState.Text
             };
@@ -43,7 +43,7 @@ namespace SinalVeiculos
             txtCity.Text = custumer.City;
             txtCpf.Text = custumer.Cpf;
             txtState.Text = custumer.State;
-            txtNumber.Text = custumer.Number;
+            txtNumber.Text =Convert.ToString( custumer.Number);
             txtStreet.Text = custumer.Street;
             txtPhone.Text = custumer.Phone;
         }

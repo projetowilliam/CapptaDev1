@@ -100,7 +100,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(673, 490);
+            this.panel1.Size = new System.Drawing.Size(673, 447);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -149,9 +149,9 @@
             // dgvCliente
             // 
             this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCliente.Location = new System.Drawing.Point(6, 78);
+            this.dgvCliente.Location = new System.Drawing.Point(6, 63);
             this.dgvCliente.Name = "dgvCliente";
-            this.dgvCliente.Size = new System.Drawing.Size(651, 348);
+            this.dgvCliente.Size = new System.Drawing.Size(651, 327);
             this.dgvCliente.TabIndex = 0;
             // 
             // panel2
@@ -174,7 +174,6 @@
             // 
             // pictureBoxPesquisaCliente
             // 
-          //  this.pictureBoxPesquisaCliente.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
             this.pictureBoxPesquisaCliente.Location = new System.Drawing.Point(538, 8);
             this.pictureBoxPesquisaCliente.Name = "pictureBoxPesquisaCliente";
             this.pictureBoxPesquisaCliente.Size = new System.Drawing.Size(51, 26);
@@ -255,7 +254,6 @@
             // 
             // pictureBoxPesquisaFuncionario
             // 
-          //  this.pictureBoxPesquisaFuncionario.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
             this.pictureBoxPesquisaFuncionario.Location = new System.Drawing.Point(522, 4);
             this.pictureBoxPesquisaFuncionario.Name = "pictureBoxPesquisaFuncionario";
             this.pictureBoxPesquisaFuncionario.Size = new System.Drawing.Size(51, 37);
@@ -274,7 +272,6 @@
             // 
             // pictureBox1
             // 
-   //         this.pictureBox1.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
             this.pictureBox1.Location = new System.Drawing.Point(519, 144);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(51, 37);
@@ -307,18 +304,17 @@
             // 
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel10.Controls.Add(this.dgvProdutos);
-            this.panel10.Location = new System.Drawing.Point(3, 83);
+            this.panel10.Location = new System.Drawing.Point(3, 49);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(729, 344);
+            this.panel10.Size = new System.Drawing.Size(647, 344);
             this.panel10.TabIndex = 2;
             // 
             // dgvProdutos
             // 
             this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvProdutos.Location = new System.Drawing.Point(0, 0);
+            this.dgvProdutos.Location = new System.Drawing.Point(0, 3);
             this.dgvProdutos.Name = "dgvProdutos";
-            this.dgvProdutos.Size = new System.Drawing.Size(725, 340);
+            this.dgvProdutos.Size = new System.Drawing.Size(640, 337);
             this.dgvProdutos.TabIndex = 0;
             // 
             // panel9
@@ -328,21 +324,20 @@
             this.panel9.Controls.Add(this.pictureBoxPesquisaProduto);
             this.panel9.Location = new System.Drawing.Point(3, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(729, 74);
+            this.panel9.Size = new System.Drawing.Size(652, 52);
             this.panel9.TabIndex = 1;
             // 
             // textBoxPesquisaPorNomeProduto
             // 
             this.textBoxPesquisaPorNomeProduto.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPesquisaPorNomeProduto.Location = new System.Drawing.Point(105, 22);
+            this.textBoxPesquisaPorNomeProduto.Location = new System.Drawing.Point(60, 12);
             this.textBoxPesquisaPorNomeProduto.Name = "textBoxPesquisaPorNomeProduto";
             this.textBoxPesquisaPorNomeProduto.Size = new System.Drawing.Size(461, 26);
             this.textBoxPesquisaPorNomeProduto.TabIndex = 5;
             // 
             // pictureBoxPesquisaProduto
             // 
-          //  this.pictureBoxPesquisaProduto.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
-            this.pictureBoxPesquisaProduto.Location = new System.Drawing.Point(569, 17);
+            this.pictureBoxPesquisaProduto.Location = new System.Drawing.Point(524, 7);
             this.pictureBoxPesquisaProduto.Name = "pictureBoxPesquisaProduto";
             this.pictureBoxPesquisaProduto.Size = new System.Drawing.Size(51, 37);
             this.pictureBoxPesquisaProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -409,7 +404,6 @@
             // 
             // pictureBoxPesquisaVenda
             // 
-          //  this.pictureBoxPesquisaVenda.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
             this.pictureBoxPesquisaVenda.Location = new System.Drawing.Point(569, 34);
             this.pictureBoxPesquisaVenda.Name = "pictureBoxPesquisaVenda";
             this.pictureBoxPesquisaVenda.Size = new System.Drawing.Size(51, 20);
@@ -426,13 +420,14 @@
             this.panel3.Size = new System.Drawing.Size(661, 384);
             this.panel3.TabIndex = 1;
             // 
-            // Relatorios
+            // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 490);
+            this.ClientSize = new System.Drawing.Size(673, 447);
             this.Controls.Add(this.panel1);
-            this.Name = "Relatorios";
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name = "ReportForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Relatorios";
             this.Load += new System.EventHandler(this.Relatorios_Load);

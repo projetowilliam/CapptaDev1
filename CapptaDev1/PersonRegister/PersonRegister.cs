@@ -48,12 +48,12 @@ namespace SinalVeiculos.Dados.Pessoas
                 {
                     var person = new PersonType()
                     {
-                        Code = executeReader.GetInt32("codigo"),
+                        id = executeReader.GetInt32("codigo"),
                         Name = executeReader.GetString("nome"),
                         Phone = executeReader.GetString("telefone"),
                         Cpf = executeReader.GetString("cpf"),
                         Street = executeReader.GetString("rua"),
-                        Number = executeReader.GetString("numero"),
+                        Number = executeReader.GetInt32("numero"),
                         City = executeReader.GetString("cidade"),
                         State = executeReader.GetString("estado")
                     };
@@ -77,7 +77,7 @@ namespace SinalVeiculos.Dados.Pessoas
                     person.Phone = executeReader.GetString("telefone");
                     person.Cpf = executeReader.GetString("cpf");
                     person.Street = executeReader.GetString("rua");
-                    person.Number = executeReader.GetString("numero");
+                    person.Number = executeReader.GetInt32("numero");
                     person.City = executeReader.GetString("cidade");
                     person.State = executeReader.GetString("estado");
                 }

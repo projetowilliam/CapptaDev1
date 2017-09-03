@@ -4,12 +4,12 @@
     {
         public interface IPerson
         {
-            int Code { get; set; }
+            int id { get; set; }
             string Name { get; set; }
             string Phone { get; set; }
             string Cpf { get; set; }
             string Street { get; set; }
-            string Number { get; set; }
+            int Number { get; set; }
             string City { get; set; }
             string State { get; set; }
         }
