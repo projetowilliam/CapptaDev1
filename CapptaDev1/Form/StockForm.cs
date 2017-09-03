@@ -12,114 +12,79 @@ namespace SinalVeiculos
         {
             InitializeComponent();
         }
-        private void limparCampos()
-        {
-            textBoxNome.Text = "";
-            textBoxAno.Text = "";
-            textBoxModelo.Text = "";
-            textBoxPreco.Text = "";
-            textBoxQuantidade.Text = "";
-            textBoxMarca.Text = "";
-            textBoxQuantidade.Text = "";
-        }
 
-        private void buttonLimpar_Click(object sender, EventArgs e)
+        private void BtnClean_Click(object sender, EventArgs e)
         {
-            limparCampos();
+            FieldClean();
         }
-        private void buttonSalvar_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
-            var car = new Car();
-            var carRegister = new CarRegister();
-            car.name = textBoxNome.Text;
-            car.model = textBoxModelo.Text;
-            car.year = textBoxAno.Text;
-            car.price = textBoxPreco.Text;
-            car.mark = textBoxMarca.Text;
-            carRegister.Quantity = Convert.ToInt32(textBoxQuantidade.Text);
-            carRegister.Add(car);
-            limparCampos();
-        }
-
-        private void buttonAlterar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void BtnSearch_Click(object sender, EventArgs e)
-        {           
-            if (string.IsNullOrEmpty(textBoxPesquisa.Text))
+            if (ValidateInputFieldStock() == true)
             {
-                MessageBox.Show("Por favor preencha o campo para pesquisa");
-                textBoxPesquisa.Focus();
+                var carRegister = new CarRegister();
+                var car = new Car
+                {
+                    name = txtName.Text,
+                    model = txtModel.Text,
+                    year = txtYear.Text,
+                    price = txtPrice.Text,
+                    mark = txtBrand.Text
+                };
+                carRegister.Quantity = Convert.ToInt32(txtQuantity.Text);
+                carRegister.Add(car);
+                FieldClean();
             }
             else
             {
-                var name =(textBoxPesquisa.Text);
+                MessageBox.Show("Certifique-se que todos os campos estão preenchidos");
+            }
+        }
+
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            if (ValidateIfTxtSearchIsEmpty() == true)
+            {
                 var carRegister = new CarRegister();
                 var car = new Car();
-                car = carRegister.SearchVehicleByName(name);
+                car = carRegister.SearchVehicleByName(txtSearch.Text);
                 if (carRegister != null)
                 {
-                    textBoxCodigoID.Text = Convert.ToString(car.id);
-                    textBoxNome.Text = car.name;
-                    textBoxAno.Text = car.year;
-                    textBoxModelo.Text = car.model;
-                    textBoxPreco.Text = car.price;
-                    textBoxMarca.Text = car.mark;
-                    textBoxQuantidade.Text = Convert.ToString(carRegister.Quantity);
+                    txtId.Text = Convert.ToString(car.id);
+                    txtName.Text = car.name;
+                    txtYear.Text = car.year;
+                    txtModel.Text = car.model;
+                    txtPrice.Text = car.price;
+                    txtBrand.Text = car.mark;
+                    txtQuantity.Text = Convert.ToString(carRegister.Quantity);
                 }
                 else
                 {
-                    MessageBox.Show("Verifique o campo digitado. Não há item correspondente na Base");
+                    MessageBox.Show("Selecione um nome para pesquisa");
                 }
             }
         }
-        private void BtnGoBack_Click(object sender, EventArgs e)
+
+        private void FieldClean()
         {
-            buttonSalvar.Visible = true;
+            txtName.Text = string.Empty;
+            txtYear.Text = string.Empty;
+            txtModel.Text = string.Empty;
+            txtPrice.Text = string.Empty;
+            txtQuantity.Text = string.Empty;
+            txtBrand.Text = string.Empty;
         }
 
-        private void Estoque_Load(object sender, EventArgs e)
+        private bool ValidateInputFieldStock()
         {
-
-            EnableButtons();
+            if (txtBrand.Text == string.Empty || txtModel.Text == string.Empty || txtName.Text == string.Empty
+                || txtPrice.Text == string.Empty || txtQuantity.Text == string.Empty || txtYear.Text == string.Empty)
+            { return false; }
+            else { return true; }
         }
 
-        private void BtnDelete_Click(object sender, EventArgs e)
+        private bool ValidateIfTxtSearchIsEmpty()
         {
-            var exclusionCode = Convert.ToInt32(textBoxCodigoID.Text);
-            var carRegister = new CarRegister();
-            carRegister.Delete(exclusionCode);
-        }
-        private void EnableButtons()
-        {
-            
-            ButtonDelete.Visible = false;
-            buttonSalvar.Visible = false;
-            BtnGoBack.Visible = false;
-            textBoxCodigoID.Visible = false;
-            BtnSearch.Visible = false;
-            textBoxPesquisa.Visible = false;
-
-        }
-
-        private void BtnAdd_Click(object sender, EventArgs e)
-        {
-            ButtonDelete.Visible = false;
-            buttonSalvar.Visible = true;
-            BtnSearch.Visible = false;
-        }
-
-        private void BtnRemove_Click(object sender, EventArgs e)
-        {
-            ButtonDelete.Visible = false;
-            buttonSalvar.Visible = false;
-            BtnSearch.Visible = false;
-            textBoxCodigoID.Visible = true;
-            BtnSearch.Visible = true;
-            textBoxPesquisa.Visible = true;
-            ButtonDelete.Visible = true;
+            if (txtSearch.Text == string.Empty) { return false; } else { return true; }
         }
     }
 }

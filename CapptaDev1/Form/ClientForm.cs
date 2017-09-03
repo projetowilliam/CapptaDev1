@@ -14,6 +14,7 @@ namespace SinalVeiculos
 
         private void BtnRegisterClient_Click(object sender, EventArgs e)
         {
+            // falta validar os campos
             var customerRegister = new CustomerRegiser();
             var customer = new Customer
             {

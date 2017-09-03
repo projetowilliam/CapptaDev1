@@ -29,32 +29,27 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BtnRemove = new System.Windows.Forms.Button();
-            this.BtnAdd = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBoxCodigoID = new System.Windows.Forms.TextBox();
-            this.BtnGoBack = new System.Windows.Forms.PictureBox();
-            this.ButtonDelete = new System.Windows.Forms.Button();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.buttonLimpar = new System.Windows.Forms.Button();
-            this.buttonSalvar = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBoxQuantidade = new System.Windows.Forms.NumericUpDown();
+            this.txtQuantity = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxMarca = new System.Windows.Forms.TextBox();
-            this.textBoxPreco = new System.Windows.Forms.TextBox();
-            this.textBoxAno = new System.Windows.Forms.TextBox();
-            this.textBoxModelo = new System.Windows.Forms.TextBox();
-            this.textBoxNome = new System.Windows.Forms.TextBox();
+            this.txtBrand = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtYear = new System.Windows.Forms.TextBox();
+            this.txtModel = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnSearch = new System.Windows.Forms.PictureBox();
-            this.textBoxPesquisa = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnGoBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxQuantidade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQuantity)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnSearch)).BeginInit();
             this.SuspendLayout();
@@ -62,249 +57,223 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.BtnRemove);
-            this.panel1.Controls.Add(this.BtnAdd);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.textBoxCodigoID);
-            this.panel1.Controls.Add(this.BtnGoBack);
-            this.panel1.Controls.Add(this.ButtonDelete);
+            this.panel1.Controls.Add(this.txtId);
             this.panel1.Controls.Add(this.buttonLimpar);
-            this.panel1.Controls.Add(this.buttonSalvar);
+            this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.textBoxQuantidade);
+            this.panel1.Controls.Add(this.txtQuantity);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBoxMarca);
-            this.panel1.Controls.Add(this.textBoxPreco);
-            this.panel1.Controls.Add(this.textBoxAno);
-            this.panel1.Controls.Add(this.textBoxModelo);
-            this.panel1.Controls.Add(this.textBoxNome);
+            this.panel1.Controls.Add(this.txtBrand);
+            this.panel1.Controls.Add(this.txtPrice);
+            this.panel1.Controls.Add(this.txtYear);
+            this.panel1.Controls.Add(this.txtModel);
+            this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(523, 330);
+            this.panel1.Size = new System.Drawing.Size(436, 273);
             this.panel1.TabIndex = 0;
-            // 
-            // BtnRemove
-            // 
-            this.BtnRemove.Location = new System.Drawing.Point(85, 61);
-            this.BtnRemove.Name = "BtnRemove";
-            this.BtnRemove.Size = new System.Drawing.Size(76, 33);
-            this.BtnRemove.TabIndex = 25;
-            this.BtnRemove.Text = "Remover";
-            this.BtnRemove.UseVisualStyleBackColor = true;
-            this.BtnRemove.Click += new System.EventHandler(this.BtnRemove_Click);
-            // 
-            // BtnAdd
-            // 
-            this.BtnAdd.Location = new System.Drawing.Point(3, 61);
-            this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(76, 33);
-            this.BtnAdd.TabIndex = 24;
-            this.BtnAdd.Text = "Adicionar";
-            this.BtnAdd.UseVisualStyleBackColor = true;
-            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(10, 115);
+            this.label7.Location = new System.Drawing.Point(8, 133);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.Size = new System.Drawing.Size(36, 15);
             this.label7.TabIndex = 23;
             this.label7.Text = "Código";
             // 
-            // textBoxCodigoID
+            // txtId
             // 
-            this.textBoxCodigoID.Location = new System.Drawing.Point(60, 112);
-            this.textBoxCodigoID.Name = "textBoxCodigoID";
-            this.textBoxCodigoID.Size = new System.Drawing.Size(54, 20);
-            this.textBoxCodigoID.TabIndex = 22;
-            // 
-            // BtnGoBack
-            // 
-           // this.BtnGoBack.Image = global::SinalVeiculos.Properties.Resources.if__30ui_2303135;
-            this.BtnGoBack.Location = new System.Drawing.Point(251, 254);
-            this.BtnGoBack.Name = "BtnGoBack";
-            this.BtnGoBack.Size = new System.Drawing.Size(44, 33);
-            this.BtnGoBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BtnGoBack.TabIndex = 21;
-            this.BtnGoBack.TabStop = false;
-            this.BtnGoBack.Click += new System.EventHandler(this.BtnGoBack_Click);
-            // 
-            // ButtonDelete
-            // 
-            this.ButtonDelete.Location = new System.Drawing.Point(375, 254);
-            this.ButtonDelete.Name = "ButtonDelete";
-            this.ButtonDelete.Size = new System.Drawing.Size(76, 33);
-            this.ButtonDelete.TabIndex = 20;
-            this.ButtonDelete.Text = "Excluir";
-            this.ButtonDelete.UseVisualStyleBackColor = true;
-            this.ButtonDelete.Click += new System.EventHandler(this.BtnDelete_Click);
+            this.txtId.Location = new System.Drawing.Point(50, 129);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(46, 20);
+            this.txtId.TabIndex = 22;
             // 
             // buttonLimpar
             // 
-            this.buttonLimpar.Location = new System.Drawing.Point(161, 254);
+            this.buttonLimpar.Location = new System.Drawing.Point(352, 72);
+            this.buttonLimpar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonLimpar.Name = "buttonLimpar";
-            this.buttonLimpar.Size = new System.Drawing.Size(76, 33);
+            this.buttonLimpar.Size = new System.Drawing.Size(63, 38);
             this.buttonLimpar.TabIndex = 10;
             this.buttonLimpar.Text = "Limpar";
             this.buttonLimpar.UseVisualStyleBackColor = true;
-            this.buttonLimpar.Click += new System.EventHandler(this.buttonLimpar_Click);
+            this.buttonLimpar.Click += new System.EventHandler(this.BtnClean_Click);
             // 
-            // buttonSalvar
+            // btnSave
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(81, 254);
-            this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(76, 33);
-            this.buttonSalvar.TabIndex = 9;
-            this.buttonSalvar.Text = "Salvar";
-            this.buttonSalvar.UseVisualStyleBackColor = true;
-            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
+            this.btnSave.Location = new System.Drawing.Point(3, 70);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(63, 38);
+            this.btnSave.TabIndex = 9;
+            this.btnSave.Text = "Salvar";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(344, 167);
+            this.label6.Location = new System.Drawing.Point(287, 193);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 13);
+            this.label6.Size = new System.Drawing.Size(53, 15);
             this.label6.TabIndex = 13;
             this.label6.Text = "Quantidade";
             // 
-            // textBoxQuantidade
+            // txtQuantity
             // 
-            this.textBoxQuantidade.Location = new System.Drawing.Point(423, 165);
-            this.textBoxQuantidade.Name = "textBoxQuantidade";
-            this.textBoxQuantidade.Size = new System.Drawing.Size(58, 20);
-            this.textBoxQuantidade.TabIndex = 6;
+            this.txtQuantity.Location = new System.Drawing.Point(352, 190);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(48, 20);
+            this.txtQuantity.TabIndex = 6;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(226, 202);
+            this.label5.Location = new System.Drawing.Point(188, 233);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.Size = new System.Drawing.Size(33, 15);
             this.label5.TabIndex = 11;
             this.label5.Text = "Marca";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 205);
+            this.label4.Location = new System.Drawing.Point(8, 237);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(31, 15);
             this.label4.TabIndex = 10;
             this.label4.Text = "Preço";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 171);
+            this.label3.Location = new System.Drawing.Point(8, 197);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.Size = new System.Drawing.Size(37, 15);
             this.label3.TabIndex = 9;
             this.label3.Text = "Modelo";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(306, 145);
+            this.label2.Location = new System.Drawing.Point(255, 167);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 13);
+            this.label2.Size = new System.Drawing.Size(23, 15);
             this.label2.TabIndex = 8;
             this.label2.Text = "Ano";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 145);
+            this.label1.Location = new System.Drawing.Point(8, 167);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(32, 15);
             this.label1.TabIndex = 7;
             this.label1.Text = "Nome";
             // 
-            // textBoxMarca
+            // txtBrand
             // 
-            this.textBoxMarca.Location = new System.Drawing.Point(269, 199);
-            this.textBoxMarca.Name = "textBoxMarca";
-            this.textBoxMarca.Size = new System.Drawing.Size(182, 20);
-            this.textBoxMarca.TabIndex = 8;
+            this.txtBrand.Location = new System.Drawing.Point(224, 230);
+            this.txtBrand.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtBrand.Name = "txtBrand";
+            this.txtBrand.Size = new System.Drawing.Size(180, 20);
+            this.txtBrand.TabIndex = 8;
             // 
-            // textBoxPreco
+            // txtPrice
             // 
-            this.textBoxPreco.Location = new System.Drawing.Point(60, 199);
-            this.textBoxPreco.Name = "textBoxPreco";
-            this.textBoxPreco.Size = new System.Drawing.Size(150, 20);
-            this.textBoxPreco.TabIndex = 7;
+            this.txtPrice.Location = new System.Drawing.Point(50, 230);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(126, 20);
+            this.txtPrice.TabIndex = 7;
             // 
-            // textBoxAno
+            // txtYear
             // 
-            this.textBoxAno.Location = new System.Drawing.Point(347, 138);
-            this.textBoxAno.Name = "textBoxAno";
-            this.textBoxAno.Size = new System.Drawing.Size(137, 20);
-            this.textBoxAno.TabIndex = 4;
+            this.txtYear.Location = new System.Drawing.Point(289, 159);
+            this.txtYear.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(115, 20);
+            this.txtYear.TabIndex = 4;
             // 
-            // textBoxModelo
+            // txtModel
             // 
-            this.textBoxModelo.Location = new System.Drawing.Point(60, 164);
-            this.textBoxModelo.Name = "textBoxModelo";
-            this.textBoxModelo.Size = new System.Drawing.Size(272, 20);
-            this.textBoxModelo.TabIndex = 5;
+            this.txtModel.Location = new System.Drawing.Point(50, 189);
+            this.txtModel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(227, 20);
+            this.txtModel.TabIndex = 5;
             // 
-            // textBoxNome
+            // txtName
             // 
-            this.textBoxNome.Location = new System.Drawing.Point(60, 138);
-            this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(235, 20);
-            this.textBoxNome.TabIndex = 3;
+            this.txtName.Location = new System.Drawing.Point(50, 159);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(196, 20);
+            this.txtName.TabIndex = 3;
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.BtnSearch);
-            this.panel2.Controls.Add(this.textBoxPesquisa);
-            this.panel2.Location = new System.Drawing.Point(3, 7);
+            this.panel2.Controls.Add(this.txtSearch);
+            this.panel2.Location = new System.Drawing.Point(2, 8);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(513, 48);
+            this.panel2.Size = new System.Drawing.Size(428, 55);
             this.panel2.TabIndex = 1;
             // 
             // BtnSearch
             // 
             this.BtnSearch.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-           // this.BtnSearch.Image = global::SinalVeiculos.Properties.Resources.if_search_173095;
-            this.BtnSearch.Location = new System.Drawing.Point(435, 13);
+            this.BtnSearch.Location = new System.Drawing.Point(362, 15);
+            this.BtnSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(44, 19);
+            this.BtnSearch.Size = new System.Drawing.Size(37, 21);
             this.BtnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BtnSearch.TabIndex = 1;
             this.BtnSearch.TabStop = false;
             this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
-            // textBoxPesquisa
+            // txtSearch
             // 
-            this.textBoxPesquisa.AllowDrop = true;
-            this.textBoxPesquisa.Location = new System.Drawing.Point(58, 13);
-            this.textBoxPesquisa.Name = "textBoxPesquisa";
-            this.textBoxPesquisa.Size = new System.Drawing.Size(374, 20);
-            this.textBoxPesquisa.TabIndex = 0;
+            this.txtSearch.AllowDrop = true;
+            this.txtSearch.Location = new System.Drawing.Point(48, 15);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(312, 20);
+            this.txtSearch.TabIndex = 0;
             // 
             // StockForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(523, 330);
+            this.ClientSize = new System.Drawing.Size(436, 273);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "StockForm";
             this.Text = "Estoque";
-            this.Load += new System.EventHandler(this.Estoque_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnGoBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxQuantidade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQuantity)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnSearch)).EndInit();
@@ -317,26 +286,22 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox BtnSearch;
-        private System.Windows.Forms.TextBox textBoxPesquisa;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button buttonLimpar;
-        private System.Windows.Forms.Button buttonSalvar;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown textBoxQuantidade;
+        private System.Windows.Forms.NumericUpDown txtQuantity;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxMarca;
-        private System.Windows.Forms.TextBox textBoxPreco;
-        private System.Windows.Forms.TextBox textBoxAno;
-        private System.Windows.Forms.TextBox textBoxModelo;
-        private System.Windows.Forms.TextBox textBoxNome;
-        private System.Windows.Forms.Button ButtonDelete;
-        private System.Windows.Forms.PictureBox BtnGoBack;
+        private System.Windows.Forms.TextBox txtBrand;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtYear;
+        private System.Windows.Forms.TextBox txtModel;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBoxCodigoID;
-        private System.Windows.Forms.Button BtnAdd;
-        private System.Windows.Forms.Button BtnRemove;
+        private System.Windows.Forms.TextBox txtId;
     }
 }
