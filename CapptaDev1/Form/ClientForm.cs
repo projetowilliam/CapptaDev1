@@ -12,86 +12,63 @@ namespace SinalVeiculos
             InitializeComponent();
         }
 
-        private void btnRegisterClient_Click(object sender, EventArgs e)
+        private void BtnRegisterClient_Click(object sender, EventArgs e)
         {
-            CheckCompletedField();
             var customerRegister = new CustomerRegiser();
-            var customer = new Customer()
+            var customer = new Customer
             {
-                Name = textNome.Text,
-                Phone = textoTelefone.Text,
-                Cpf = textoCpf.Text,
-                Street = textoRua.Text,
-                Number = textoNumero.Text,
-                City = textoCidade.Text,
-                State = textoEstado.Text
+                Name = txtName.Text,
+                Phone = txtPhone.Text,
+                Cpf = txtCpf.Text,
+                Street = txtStreet.Text,
+                Number = txtNumber.Text,
+                City = txtCity.Text,
+                State = txtState.Text
             };
             customerRegister.Add(customer);
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void BtnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
         private void FieldClean()
         {
-            textoCidade.Text = string.Empty;
-            textoCpf.Text = string.Empty;
-            textoEstado.Text = string.Empty;
-            textNome.Text = string.Empty;
-            textoNumero.Text = string.Empty;
-            textoRua.Text = string.Empty;
-            textoTelefone.Text = string.Empty;
+            txtCity.Text = string.Empty;
+            txtCpf.Text = string.Empty;
+            txtState.Text = string.Empty;
+            txtName.Text = string.Empty;
+            txtNumber.Text = string.Empty;
+            txtStreet.Text = string.Empty;
+            txtPhone.Text = string.Empty;
         }
 
         private void BtnSearchClient_Click(object sender, EventArgs e)
         {
             var registerCostumer = new CustomerRegiser();
             var custumer = new Customer();
-            var name = textoPesquisa.Text;
-
-            custumer = registerCostumer.SearchPersonByName(name);
-            textNome.Text = custumer.Name;
-            textoCidade.Text = custumer.City;
-            textoCpf.Text = custumer.Cpf;
-            textoEstado.Text = custumer.State;
-            textoNumero.Text = custumer.Number;
-            textoRua.Text = custumer.Street;
-            textoTelefone.Text = custumer.Phone;
+            custumer = registerCostumer.SearchPersonByName(txtSearch.Text);
+            txtName.Text = custumer.Name;
+            txtCity.Text = custumer.City;
+            txtCpf.Text = custumer.Cpf;
+            txtState.Text = custumer.State;
+            txtNumber.Text = custumer.Number;
+            txtStreet.Text = custumer.Street;
+            txtPhone.Text = custumer.Phone;
+        }
+        private bool ValidateIfTxtSearchClientIsEmpty()
+        {
+            if (txtSearch.Text == "") { return false; } else { return true; }
         }
 
-        private void ClientForm_Load(object sender, EventArgs e)
+        private bool ValidadeInputFieldClient()
         {
-            
-        }
-        private void CheckCompletedField()
-        {
-            if (string.IsNullOrEmpty(textoCidade.Text))
-            {
-                MessageBox.Show("por favor preencher o campo cidade");
-            }
-            if (string.IsNullOrEmpty(textoCpf.Text))
-            {
-                MessageBox.Show("por favor preencher o campo cpf");
-            }
-            if (string.IsNullOrEmpty(textoEstado.Text))
-            {
-                MessageBox.Show("por favor preencher o campo estado");
-            }
-            if (string.IsNullOrEmpty(textoNumero.Text))
-            {
-                MessageBox.Show("por favor preencher o campo Número");
-            }
-            if (string.IsNullOrEmpty(textoRua.Text))
-            {
-                MessageBox.Show("por favor preencher o campo Rua");
-            }
-            if (string.IsNullOrEmpty(textoTelefone.Text))
-            {
-                MessageBox.Show("por favor preencher o campo Telefone");
-            }
-
+            if (txtCity.Text == "" || txtCpf.Text == "" || txtName.Text == "" || txtNumber.Text == ""
+                || txtPhone.Text == "" || txtState.Text == "" || txtStreet.Text == "")
+            { return false; }
+            else
+            { return true; }
         }
     }
 }

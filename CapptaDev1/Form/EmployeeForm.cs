@@ -22,14 +22,16 @@ namespace SinalVeiculos
             if (ValidadeInputFieldEmployee() == true)
             {
                 var employeerRegister = new EmployeerRegister();
-                var employee = new Employee();
-                employee.Name = Convert.ToString(this.txtName.Text);
-                employee.Phone = Convert.ToString(txtPhone.Text);
-                employee.Cpf = Convert.ToString(txtCpf.Text);
-                employee.Street = Convert.ToString(txtStreet.Text);
-                employee.Number = Convert.ToString(txtNumber.Text);
-                employee.City = Convert.ToString(txtCity.Text);
-                employee.State = Convert.ToString(txtState.Text);
+                var employee = new Employee
+                {
+                    Name = Convert.ToString(this.txtName.Text),
+                    Phone = Convert.ToString(txtPhone.Text),
+                    Cpf = Convert.ToString(txtCpf.Text),
+                    Street = Convert.ToString(txtStreet.Text),
+                    Number = Convert.ToString(txtNumber.Text),
+                    City = Convert.ToString(txtCity.Text),
+                    State = Convert.ToString(txtState.Text)
+                };
                 employeerRegister.Add(employee);
                 FieldClean();
             }
