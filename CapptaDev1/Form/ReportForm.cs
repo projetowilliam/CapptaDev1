@@ -66,11 +66,11 @@ namespace SinalVeiculos
         private void BtnSearcheProduct_Click(object sender, EventArgs e)
         {
             var carRegister = new CarRegister();
-            this.dgvSales.DataSource = (from item in carRegister.GetAll()
+            this.dgvProducts.DataSource = (from item in carRegister.GetAll()
                  where item.name == this.txtSearchProductsForName.Text select item).ToList();
         }
 
-        private void BtnPesquisaVenda_Click(object sender, EventArgs e)
+        private void BtnSearchSales_Click(object sender, EventArgs e)
         {
             var requestRegister = new RequestRegister();
             this.dgvSales.DataSource = (from item in requestRegister.GetAll()

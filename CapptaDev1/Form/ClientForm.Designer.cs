@@ -29,11 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnRegisterClient = new System.Windows.Forms.Button();
             this.txtState = new System.Windows.Forms.TextBox();
             this.txtNumber = new System.Windows.Forms.TextBox();
             this.txtCity = new System.Windows.Forms.TextBox();
@@ -48,19 +45,25 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnClear = new System.Windows.Forms.Button();
+            this.btnClean = new System.Windows.Forms.PictureBox();
+            this.btnExit_ = new System.Windows.Forms.PictureBox();
+            this.btnAddCustomer = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClean)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit_)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnClear);
+            this.panel1.Controls.Add(this.btnClean);
+            this.panel1.Controls.Add(this.btnExit_);
+            this.panel1.Controls.Add(this.btnAddCustomer);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txtSearch);
-            this.panel1.Controls.Add(this.btnExit);
-            this.panel1.Controls.Add(this.btnRegisterClient);
             this.panel1.Controls.Add(this.txtState);
             this.panel1.Controls.Add(this.txtNumber);
             this.panel1.Controls.Add(this.txtCity);
@@ -81,17 +84,6 @@
             this.panel1.Size = new System.Drawing.Size(577, 314);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(450, 18);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 27;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.BtnSearchClient_Click);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -108,26 +100,6 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(347, 20);
             this.txtSearch.TabIndex = 25;
-            // 
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(201, 224);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(162, 32);
-            this.btnExit.TabIndex = 24;
-            this.btnExit.Text = "Sair";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
-            // 
-            // btnRegisterClient
-            // 
-            this.btnRegisterClient.Location = new System.Drawing.Point(21, 224);
-            this.btnRegisterClient.Name = "btnRegisterClient";
-            this.btnRegisterClient.Size = new System.Drawing.Size(162, 32);
-            this.btnRegisterClient.TabIndex = 23;
-            this.btnRegisterClient.Text = "Registrar Cliente";
-            this.btnRegisterClient.UseVisualStyleBackColor = true;
-            this.btnRegisterClient.Click += new System.EventHandler(this.BtnRegisterClient_Click);
             // 
             // txtState
             // 
@@ -241,15 +213,53 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Nome";
             // 
-            // btnClear
+            // btnClean
             // 
-            this.btnClear.Location = new System.Drawing.Point(379, 224);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(162, 32);
-            this.btnClear.TabIndex = 28;
-            this.btnClear.Text = "Limpar";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.BbtnClean_Click);
+            this.btnClean.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnClean.Image = global::CapptaDev1.Properties.Resources.if_broom_stick_3_896656;
+            this.btnClean.Location = new System.Drawing.Point(262, 222);
+            this.btnClean.Name = "btnClean";
+            this.btnClean.Size = new System.Drawing.Size(55, 48);
+            this.btnClean.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnClean.TabIndex = 31;
+            this.btnClean.TabStop = false;
+            this.btnClean.Click += new System.EventHandler(this.BbtnClean_Click);
+            // 
+            // btnExit_
+            // 
+            this.btnExit_.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnExit_.Image = global::CapptaDev1.Properties.Resources.if_Exit_131885;
+            this.btnExit_.Location = new System.Drawing.Point(484, 222);
+            this.btnExit_.Name = "btnExit_";
+            this.btnExit_.Size = new System.Drawing.Size(59, 48);
+            this.btnExit_.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnExit_.TabIndex = 30;
+            this.btnExit_.TabStop = false;
+            this.btnExit_.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
+            // btnAddCustomer
+            // 
+            this.btnAddCustomer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnAddCustomer.Image = global::CapptaDev1.Properties.Resources.if_InterfaceExpendet_10_592607;
+            this.btnAddCustomer.Location = new System.Drawing.Point(52, 219);
+            this.btnAddCustomer.Name = "btnAddCustomer";
+            this.btnAddCustomer.Size = new System.Drawing.Size(69, 51);
+            this.btnAddCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnAddCustomer.TabIndex = 29;
+            this.btnAddCustomer.TabStop = false;
+            this.btnAddCustomer.Click += new System.EventHandler(this.BtnRegisterClient_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = global::CapptaDev1.Properties.Resources.if_search_173095;
+            this.pictureBox1.Location = new System.Drawing.Point(445, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(43, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.BtnSearchClient_Click);
             // 
             // ClientForm
             // 
@@ -261,6 +271,9 @@
             this.Text = "Client";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClean)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit_)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -269,7 +282,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnRegisterClient;
         private System.Windows.Forms.TextBox txtState;
         private System.Windows.Forms.TextBox txtNumber;
         private System.Windows.Forms.TextBox txtCity;
@@ -284,10 +296,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.PictureBox btnAddCustomer;
+        private System.Windows.Forms.PictureBox btnExit_;
+        private System.Windows.Forms.PictureBox btnClean;
     }
 }

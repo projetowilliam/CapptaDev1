@@ -167,5 +167,14 @@
   <ItemGroup>
     <None Include="Resources\if_search_173095.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_InterfaceExpendet-10_592607.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Exit_131885.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_broom_stick_3_896656.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

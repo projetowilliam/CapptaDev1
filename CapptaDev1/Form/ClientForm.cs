@@ -14,19 +14,26 @@ namespace SinalVeiculos
 
         private void BtnRegisterClient_Click(object sender, EventArgs e)
         {
-            // falta validar os campos
-            var customerRegister = new CustomerRegiser();
-            var customer = new Customer
+            if (this.ValidadeInputFieldClient() == true)
             {
-                Name = txtName.Text,
-                Phone = txtPhone.Text,
-                Cpf = txtCpf.Text,
-                Street = txtStreet.Text,
-                Number = Convert.ToInt32(txtNumber.Text),
-                City = txtCity.Text,
-                State = txtState.Text
-            };
-            customerRegister.Add(customer);
+                var customerRegister = new CustomerRegiser();
+                var customer = new Customer
+                {
+                    Name = this.txtName.Text,
+                    Phone = this.txtPhone.Text,
+                    Cpf = this.txtCpf.Text,
+                    Street = this.txtStreet.Text,
+                    Number = Convert.ToInt32(this.txtNumber.Text),
+                    City = this.txtCity.Text,
+                    State = this.txtState.Text
+                };
+                customerRegister.Add(customer);
+                FieldClean();
+            }
+            else
+            {
+                MessageBox.Show("Por favor verifique se há algum campo vazio");
+            }          
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
@@ -36,16 +43,23 @@ namespace SinalVeiculos
 
         private void BtnSearchClient_Click(object sender, EventArgs e)
         {
-            var registerCostumer = new CustomerRegiser();
-            var custumer = new Customer();
-            custumer = registerCostumer.SearchPersonByName(txtSearch.Text);
-            txtName.Text = custumer.Name;
-            txtCity.Text = custumer.City;
-            txtCpf.Text = custumer.Cpf;
-            txtState.Text = custumer.State;
-            txtNumber.Text =Convert.ToString( custumer.Number);
-            txtStreet.Text = custumer.Street;
-            txtPhone.Text = custumer.Phone;
+            if(this.ValidateIfTxtSearchClientIsEmpty() == true)
+            {
+                var registerCostumer = new CustomerRegiser();
+                var custumer = new Customer();
+                custumer = registerCostumer.SearchPersonByName(this.txtSearch.Text);
+                this.txtName.Text = custumer.Name;
+                this.txtCity.Text = custumer.City;
+                this.txtCpf.Text = custumer.Cpf;
+                this.txtState.Text = custumer.State;
+                this.txtNumber.Text = Convert.ToString(custumer.Number);
+                this.txtStreet.Text = custumer.Street;
+                this.txtPhone.Text = custumer.Phone;
+            }
+            else
+            {
+                MessageBox.Show("Por favor forneça um nome para pesquisa");
+            }       
         }
 
         private void BbtnClean_Click(object sender, EventArgs e)
@@ -55,13 +69,13 @@ namespace SinalVeiculos
 
         private bool ValidateIfTxtSearchClientIsEmpty()
         {
-            if (txtSearch.Text == "") { return false; } else { return true; }
+            if (this.txtSearch.Text == "") { return false; } else { return true; }
         }
 
         private bool ValidadeInputFieldClient()
         {
-            if (txtCity.Text == "" || txtCpf.Text == "" || txtName.Text == "" || txtNumber.Text == ""
-                || txtPhone.Text == "" || txtState.Text == "" || txtStreet.Text == "")
+            if (this.txtCity.Text == string.Empty || this.txtCpf.Text == string.Empty || this.txtName.Text == string.Empty || this.txtNumber.Text == string.Empty
+                || this.txtPhone.Text == string.Empty || this.txtState.Text == string.Empty || this.txtStreet.Text == string.Empty)
             { return false; }
             else
             { return true; }
@@ -69,13 +83,13 @@ namespace SinalVeiculos
 
         private void FieldClean()
         {
-            txtCity.Text = string.Empty;
-            txtCpf.Text = string.Empty;
-            txtState.Text = string.Empty;
-            txtName.Text = string.Empty;
-            txtNumber.Text = string.Empty;
-            txtStreet.Text = string.Empty;
-            txtPhone.Text = string.Empty;
+           this.txtCity.Text = string.Empty;
+            this.txtCpf.Text = string.Empty;
+            this.txtState.Text = string.Empty;
+            this.txtName.Text = string.Empty;
+            this.txtNumber.Text = string.Empty;
+            this.txtStreet.Text = string.Empty;
+            this.txtPhone.Text = string.Empty;
         }
     }
 }
