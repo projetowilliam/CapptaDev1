@@ -33,7 +33,7 @@ namespace SinalVeiculos
             else
             {
                 MessageBox.Show("Por favor verifique se há algum campo vazio");
-            }          
+            }
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
@@ -43,7 +43,7 @@ namespace SinalVeiculos
 
         private void BtnSearchClient_Click(object sender, EventArgs e)
         {
-            if(this.ValidateIfTxtSearchClientIsEmpty() == true)
+            if (this.ValidateIfTxtSearchClientIsEmpty() == true)
             {
                 var registerCostumer = new CustomerRegiser();
                 var custumer = new Customer();
@@ -59,7 +59,7 @@ namespace SinalVeiculos
             else
             {
                 MessageBox.Show("Por favor forneça um nome para pesquisa");
-            }       
+            }
         }
 
         private void BbtnClean_Click(object sender, EventArgs e)
@@ -74,8 +74,9 @@ namespace SinalVeiculos
 
         private bool ValidadeInputFieldClient()
         {
-            if (this.txtCity.Text == string.Empty || this.txtCpf.Text == string.Empty || this.txtName.Text == string.Empty || this.txtNumber.Text == string.Empty
-                || this.txtPhone.Text == string.Empty || this.txtState.Text == string.Empty || this.txtStreet.Text == string.Empty)
+            if (this.txtCity.Text == string.Empty || this.txtCpf.Text == string.Empty || this.txtName.Text == string.Empty
+                || this.txtNumber.Text == string.Empty || this.txtPhone.Text == string.Empty || this.txtState.Text == string.Empty
+                || this.txtStreet.Text == string.Empty)
             { return false; }
             else
             { return true; }
@@ -83,7 +84,7 @@ namespace SinalVeiculos
 
         private void FieldClean()
         {
-           this.txtCity.Text = string.Empty;
+            this.txtCity.Text = string.Empty;
             this.txtCpf.Text = string.Empty;
             this.txtState.Text = string.Empty;
             this.txtName.Text = string.Empty;

@@ -14,7 +14,7 @@ namespace SinalVeiculos
 
         private void BtnClean_Click(object sender, EventArgs e)
         {
-            FieldClean();
+            this.FieldClean();
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -25,15 +25,15 @@ namespace SinalVeiculos
                 var employee = new Employee
                 {
                     Name = Convert.ToString(this.txtName.Text),
-                    Phone = Convert.ToString(txtPhone.Text),
-                    Cpf = Convert.ToString(txtCpf.Text),
-                    Street = Convert.ToString(txtStreet.Text),
-                    Number = Convert.ToInt32(txtNumber.Text),
-                    City = Convert.ToString(txtCity.Text),
-                    State = Convert.ToString(txtState.Text)
+                    Phone = Convert.ToString(this.txtPhone.Text),
+                    Cpf = Convert.ToString(this.txtCpf.Text),
+                    Street = Convert.ToString(this.txtStreet.Text),
+                    Number = Convert.ToInt32(this.txtNumber.Text),
+                    City = Convert.ToString(this.txtCity.Text),
+                    State = Convert.ToString(this.txtState.Text)
                 };
                 employeerRegister.Add(employee);
-                FieldClean();
+                this.FieldClean();
             }
             else
             {
@@ -48,29 +48,29 @@ namespace SinalVeiculos
 
         public void FieldClean()
         {
-            txtCity.Text = string.Empty;
-            txtCpf.Text = string.Empty;
-            txtState.Text = string.Empty;
-            txtName.Text = string.Empty;
-            txtNumber.Text = string.Empty;
-            txtStreet.Text = string.Empty;
-            txtPhone.Text = string.Empty;
+            this.txtCity.Text = string.Empty;
+            this.txtCpf.Text = string.Empty;
+            this.txtState.Text = string.Empty;
+            this.txtName.Text = string.Empty;
+            this.txtNumber.Text = string.Empty;
+            this.txtStreet.Text = string.Empty;
+            this.txtPhone.Text = string.Empty;
         }
 
         private void BtnSearcheEmployeer_Click(object sender, EventArgs e)
         {
-            if (ValidateIfTxtSearchEmployeerIsEmpty() == true)
+            if (this.ValidateIfTxtSearchEmployeerIsEmpty() == true)
             {
                 var employeerRegister = new EmployeerRegister();
                 var employee = new Employee();
-                employee = employeerRegister.SearchPersonByName(txtSearch.Text);
-                txtName.Text = employee.Name;
-                txtCity.Text = employee.City;
-                txtCpf.Text = employee.Cpf;
-                txtState.Text = employee.State;
-                txtNumber.Text =Convert.ToString( employee.Number);
-                txtStreet.Text = employee.Street;
-                txtPhone.Text = employee.Phone;
+                employee = employeerRegister.SearchPersonByName(this.txtSearch.Text);
+                this.txtName.Text = employee.Name;
+                this.txtCity.Text = employee.City;
+                this.txtCpf.Text = employee.Cpf;
+                this.txtState.Text = employee.State;
+                this.txtNumber.Text =Convert.ToString( employee.Number);
+                this.txtStreet.Text = employee.Street;
+                this.txtPhone.Text = employee.Phone;
             }
             else
             {
@@ -80,13 +80,14 @@ namespace SinalVeiculos
 
         private bool ValidateIfTxtSearchEmployeerIsEmpty()
         {
-            if (txtSearch.Text == "") { return false; } else { return true; }
+            if (this.txtSearch.Text == "") { return false; } else { return true; }
         }
 
         private bool ValidadeInputFieldEmployee()
         {
-            if (txtCity.Text == "" || txtCpf.Text == "" || txtName.Text == "" || txtNumber.Text == ""
-                || txtPhone.Text == "" || txtState.Text == "" || txtStreet.Text == "")
+            if (this.txtCity.Text == string.Empty || this.txtCpf.Text == string.Empty || this.txtName.Text == string.Empty
+                || this.txtNumber.Text == string.Empty || this.txtPhone.Text == string.Empty || this.txtState.Text == string.Empty
+                || this.txtStreet.Text == string.Empty)
             { return false; }
             else
             { return true; }
