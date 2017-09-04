@@ -176,5 +176,8 @@
   <ItemGroup>
     <None Include="Resources\if_broom_stick_3_896656.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_icon-33-clipboard-add_314289.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

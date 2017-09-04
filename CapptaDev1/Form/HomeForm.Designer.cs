@@ -36,13 +36,10 @@
             this.btnClient = new System.Windows.Forms.Button();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.botaoPesquisaCliente = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.comboBoxClient = new System.Windows.Forms.ComboBox();
             this.venda = new System.Windows.Forms.Label();
             this.comboBoxSalesman = new System.Windows.Forms.ComboBox();
-            this.botaoComfirmarPedido = new System.Windows.Forms.Button();
-            this.botaoLimpar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabSaida = new System.Windows.Forms.TabPage();
@@ -68,7 +65,6 @@
             this.units = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.textBoxTipoVeiculo = new System.Windows.Forms.TextBox();
-            this.pictureBoxBuscarVeiculo = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -104,10 +100,13 @@
             this.atualizarDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnAddRequest = new System.Windows.Forms.PictureBox();
+            this.botaoPesquisaCliente = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBuscarVeiculo = new System.Windows.Forms.PictureBox();
+            this.btnClean = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.botaoPesquisaCliente)).BeginInit();
             this.panel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabSaida.SuspendLayout();
@@ -117,13 +116,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstoque)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBuscarVeiculo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddRequest)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.botaoPesquisaCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBuscarVeiculo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClean)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.btnClean);
+            this.panel1.Controls.Add(this.btnAddRequest);
             this.panel1.Controls.Add(this.btnReport);
             this.panel1.Controls.Add(this.btnStock);
             this.panel1.Controls.Add(this.btnEmployee);
@@ -134,23 +138,21 @@
             this.panel1.Controls.Add(this.comboBoxClient);
             this.panel1.Controls.Add(this.venda);
             this.panel1.Controls.Add(this.comboBoxSalesman);
-            this.panel1.Controls.Add(this.botaoComfirmarPedido);
-            this.panel1.Controls.Add(this.botaoLimpar);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(898, 466);
             this.panel1.TabIndex = 0;
             // 
             // btnReport
             // 
-            this.btnReport.Location = new System.Drawing.Point(207, 2);
-            this.btnReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReport.Location = new System.Drawing.Point(303, 2);
+            this.btnReport.Margin = new System.Windows.Forms.Padding(2);
             this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(69, 31);
+            this.btnReport.Size = new System.Drawing.Size(98, 31);
             this.btnReport.TabIndex = 32;
             this.btnReport.Text = "Relatório";
             this.btnReport.UseVisualStyleBackColor = true;
@@ -158,10 +160,10 @@
             // 
             // btnStock
             // 
-            this.btnStock.Location = new System.Drawing.Point(140, 2);
-            this.btnStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStock.Location = new System.Drawing.Point(208, 2);
+            this.btnStock.Margin = new System.Windows.Forms.Padding(2);
             this.btnStock.Name = "btnStock";
-            this.btnStock.Size = new System.Drawing.Size(69, 31);
+            this.btnStock.Size = new System.Drawing.Size(97, 31);
             this.btnStock.TabIndex = 31;
             this.btnStock.Text = "Estoque";
             this.btnStock.UseVisualStyleBackColor = true;
@@ -169,10 +171,10 @@
             // 
             // btnEmployee
             // 
-            this.btnEmployee.Location = new System.Drawing.Point(72, 2);
-            this.btnEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEmployee.Location = new System.Drawing.Point(103, 2);
+            this.btnEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.btnEmployee.Name = "btnEmployee";
-            this.btnEmployee.Size = new System.Drawing.Size(69, 31);
+            this.btnEmployee.Size = new System.Drawing.Size(107, 31);
             this.btnEmployee.TabIndex = 30;
             this.btnEmployee.Text = "Funcionário";
             this.btnEmployee.UseVisualStyleBackColor = true;
@@ -181,9 +183,9 @@
             // btnClient
             // 
             this.btnClient.Location = new System.Drawing.Point(4, 2);
-            this.btnClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClient.Margin = new System.Windows.Forms.Padding(2);
             this.btnClient.Name = "btnClient";
-            this.btnClient.Size = new System.Drawing.Size(69, 31);
+            this.btnClient.Size = new System.Drawing.Size(101, 31);
             this.btnClient.TabIndex = 29;
             this.btnClient.Text = "Cliente";
             this.btnClient.UseVisualStyleBackColor = true;
@@ -217,17 +219,6 @@
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // botaoPesquisaCliente
-            // 
-            this.botaoPesquisaCliente.Location = new System.Drawing.Point(440, 49);
-            this.botaoPesquisaCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.botaoPesquisaCliente.Name = "botaoPesquisaCliente";
-            this.botaoPesquisaCliente.Size = new System.Drawing.Size(32, 22);
-            this.botaoPesquisaCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.botaoPesquisaCliente.TabIndex = 28;
-            this.botaoPesquisaCliente.TabStop = false;
-            this.botaoPesquisaCliente.Click += new System.EventHandler(this.BtnSearchClient);
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -243,7 +234,7 @@
             this.comboBoxClient.FormattingEnabled = true;
             this.errorProvider1.SetIconAlignment(this.comboBoxClient, System.Windows.Forms.ErrorIconAlignment.BottomLeft);
             this.comboBoxClient.Location = new System.Drawing.Point(210, 49);
-            this.comboBoxClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxClient.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxClient.Name = "comboBoxClient";
             this.comboBoxClient.Size = new System.Drawing.Size(224, 24);
             this.comboBoxClient.TabIndex = 27;
@@ -262,32 +253,10 @@
             // 
             this.comboBoxSalesman.FormattingEnabled = true;
             this.comboBoxSalesman.Location = new System.Drawing.Point(54, 48);
-            this.comboBoxSalesman.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSalesman.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSalesman.Name = "comboBoxSalesman";
             this.comboBoxSalesman.Size = new System.Drawing.Size(110, 24);
             this.comboBoxSalesman.TabIndex = 25;
-            // 
-            // botaoComfirmarPedido
-            // 
-            this.botaoComfirmarPedido.Location = new System.Drawing.Point(28, 422);
-            this.botaoComfirmarPedido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.botaoComfirmarPedido.Name = "botaoComfirmarPedido";
-            this.botaoComfirmarPedido.Size = new System.Drawing.Size(122, 26);
-            this.botaoComfirmarPedido.TabIndex = 17;
-            this.botaoComfirmarPedido.Text = "Comfirmar pedido";
-            this.botaoComfirmarPedido.UseVisualStyleBackColor = true;
-            this.botaoComfirmarPedido.Click += new System.EventHandler(this.BtnComfirmSalesRegister);
-            // 
-            // botaoLimpar
-            // 
-            this.botaoLimpar.Location = new System.Drawing.Point(266, 422);
-            this.botaoLimpar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.botaoLimpar.Name = "botaoLimpar";
-            this.botaoLimpar.Size = new System.Drawing.Size(122, 26);
-            this.botaoLimpar.TabIndex = 18;
-            this.botaoLimpar.Text = "Limpar";
-            this.botaoLimpar.UseVisualStyleBackColor = true;
-            this.botaoLimpar.Click += new System.EventHandler(this.BtnFieldClean_Click);
             // 
             // panel3
             // 
@@ -295,7 +264,7 @@
             this.panel3.Controls.Add(this.tabControl1);
             this.panel3.Controls.Add(this.dgvEstoque);
             this.panel3.Location = new System.Drawing.Point(490, 74);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(396, 328);
             this.panel3.TabIndex = 1;
@@ -305,7 +274,7 @@
             this.tabControl1.Controls.Add(this.tabSaida);
             this.tabControl1.Controls.Add(this.tabEstoque);
             this.tabControl1.Location = new System.Drawing.Point(-2, -2);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(390, 329);
@@ -317,9 +286,9 @@
             this.tabSaida.Controls.Add(this.botaoBuscarArquivoPedidos);
             this.tabSaida.Controls.Add(this.textoSaida);
             this.tabSaida.Location = new System.Drawing.Point(4, 25);
-            this.tabSaida.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabSaida.Margin = new System.Windows.Forms.Padding(2);
             this.tabSaida.Name = "tabSaida";
-            this.tabSaida.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabSaida.Padding = new System.Windows.Forms.Padding(2);
             this.tabSaida.Size = new System.Drawing.Size(382, 300);
             this.tabSaida.TabIndex = 0;
             this.tabSaida.Text = "Saída";
@@ -328,7 +297,7 @@
             // textoBuscarArquivo
             // 
             this.textoBuscarArquivo.Location = new System.Drawing.Point(148, 278);
-            this.textoBuscarArquivo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textoBuscarArquivo.Margin = new System.Windows.Forms.Padding(2);
             this.textoBuscarArquivo.Name = "textoBuscarArquivo";
             this.textoBuscarArquivo.Size = new System.Drawing.Size(218, 22);
             this.textoBuscarArquivo.TabIndex = 16;
@@ -336,7 +305,7 @@
             // botaoBuscarArquivoPedidos
             // 
             this.botaoBuscarArquivoPedidos.Location = new System.Drawing.Point(2, 278);
-            this.botaoBuscarArquivoPedidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.botaoBuscarArquivoPedidos.Margin = new System.Windows.Forms.Padding(2);
             this.botaoBuscarArquivoPedidos.Name = "botaoBuscarArquivoPedidos";
             this.botaoBuscarArquivoPedidos.Size = new System.Drawing.Size(142, 23);
             this.botaoBuscarArquivoPedidos.TabIndex = 30;
@@ -346,7 +315,7 @@
             // textoSaida
             // 
             this.textoSaida.Location = new System.Drawing.Point(2, 4);
-            this.textoSaida.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textoSaida.Margin = new System.Windows.Forms.Padding(2);
             this.textoSaida.Multiline = true;
             this.textoSaida.Name = "textoSaida";
             this.textoSaida.Size = new System.Drawing.Size(384, 269);
@@ -355,11 +324,11 @@
             // tabEstoque
             // 
             this.tabEstoque.Controls.Add(this.panel5);
-            this.tabEstoque.Location = new System.Drawing.Point(4, 29);
-            this.tabEstoque.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabEstoque.Location = new System.Drawing.Point(4, 25);
+            this.tabEstoque.Margin = new System.Windows.Forms.Padding(2);
             this.tabEstoque.Name = "tabEstoque";
-            this.tabEstoque.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabEstoque.Size = new System.Drawing.Size(382, 296);
+            this.tabEstoque.Padding = new System.Windows.Forms.Padding(2);
+            this.tabEstoque.Size = new System.Drawing.Size(382, 300);
             this.tabEstoque.TabIndex = 1;
             this.tabEstoque.Text = "Estoque";
             this.tabEstoque.UseVisualStyleBackColor = true;
@@ -370,9 +339,9 @@
             this.panel5.Controls.Add(this.dgvEstoqueVeiculos);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(2, 2);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(378, 292);
+            this.panel5.Size = new System.Drawing.Size(378, 296);
             this.panel5.TabIndex = 0;
             // 
             // dgvEstoqueVeiculos
@@ -389,9 +358,9 @@
             this.type});
             this.dgvEstoqueVeiculos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEstoqueVeiculos.Location = new System.Drawing.Point(0, 0);
-            this.dgvEstoqueVeiculos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvEstoqueVeiculos.Margin = new System.Windows.Forms.Padding(2);
             this.dgvEstoqueVeiculos.Name = "dgvEstoqueVeiculos";
-            this.dgvEstoqueVeiculos.Size = new System.Drawing.Size(374, 288);
+            this.dgvEstoqueVeiculos.Size = new System.Drawing.Size(374, 292);
             this.dgvEstoqueVeiculos.TabIndex = 0;
             // 
             // id
@@ -449,7 +418,7 @@
             this.dgvEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEstoque.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEstoque.Location = new System.Drawing.Point(0, 0);
-            this.dgvEstoque.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvEstoque.Margin = new System.Windows.Forms.Padding(2);
             this.dgvEstoque.Name = "dgvEstoque";
             this.dgvEstoque.Size = new System.Drawing.Size(392, 324);
             this.dgvEstoque.TabIndex = 0;
@@ -475,7 +444,7 @@
             this.panel2.Controls.Add(this.txtName);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(10, 76);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(464, 328);
             this.panel2.TabIndex = 0;
@@ -483,7 +452,7 @@
             // date
             // 
             this.date.Location = new System.Drawing.Point(12, 128);
-            this.date.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.date.Margin = new System.Windows.Forms.Padding(2);
             this.date.Name = "date";
             this.date.Size = new System.Drawing.Size(392, 22);
             this.date.TabIndex = 29;
@@ -519,8 +488,8 @@
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.label12);
-            this.panel4.Location = new System.Drawing.Point(16, 182);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Location = new System.Drawing.Point(16, 177);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(426, 154);
             this.panel4.TabIndex = 14;
@@ -528,7 +497,7 @@
             // units
             // 
             this.units.Location = new System.Drawing.Point(314, 121);
-            this.units.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.units.Margin = new System.Windows.Forms.Padding(2);
             this.units.Name = "units";
             this.units.Size = new System.Drawing.Size(40, 22);
             this.units.TabIndex = 16;
@@ -546,21 +515,10 @@
             // textBoxTipoVeiculo
             // 
             this.textBoxTipoVeiculo.Location = new System.Drawing.Point(280, 62);
-            this.textBoxTipoVeiculo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxTipoVeiculo.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTipoVeiculo.Name = "textBoxTipoVeiculo";
             this.textBoxTipoVeiculo.Size = new System.Drawing.Size(70, 22);
             this.textBoxTipoVeiculo.TabIndex = 11;
-            // 
-            // pictureBoxBuscarVeiculo
-            // 
-            this.pictureBoxBuscarVeiculo.Location = new System.Drawing.Point(246, 29);
-            this.pictureBoxBuscarVeiculo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBoxBuscarVeiculo.Name = "pictureBoxBuscarVeiculo";
-            this.pictureBoxBuscarVeiculo.Size = new System.Drawing.Size(32, 22);
-            this.pictureBoxBuscarVeiculo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxBuscarVeiculo.TabIndex = 32;
-            this.pictureBoxBuscarVeiculo.TabStop = false;
-            this.pictureBoxBuscarVeiculo.Click += new System.EventHandler(this.BtnSearchVehicule_Click);
             // 
             // label15
             // 
@@ -575,7 +533,7 @@
             // txtQuantity
             // 
             this.txtQuantity.Location = new System.Drawing.Point(228, 121);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(40, 22);
             this.txtQuantity.TabIndex = 27;
@@ -593,7 +551,7 @@
             // textoMarca
             // 
             this.textoMarca.Location = new System.Drawing.Point(46, 118);
-            this.textoMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textoMarca.Margin = new System.Windows.Forms.Padding(2);
             this.textoMarca.Name = "textoMarca";
             this.textoMarca.Size = new System.Drawing.Size(132, 22);
             this.textoMarca.TabIndex = 14;
@@ -612,7 +570,7 @@
             // 
             this.comboBoxProduct.FormattingEnabled = true;
             this.comboBoxProduct.Location = new System.Drawing.Point(68, 29);
-            this.comboBoxProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxProduct.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxProduct.Name = "comboBoxProduct";
             this.comboBoxProduct.Size = new System.Drawing.Size(174, 24);
             this.comboBoxProduct.TabIndex = 8;
@@ -620,7 +578,7 @@
             // txtPrice
             // 
             this.txtPrice.Location = new System.Drawing.Point(228, 90);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(126, 22);
             this.txtPrice.TabIndex = 13;
@@ -628,7 +586,7 @@
             // txtYear
             // 
             this.txtYear.Location = new System.Drawing.Point(228, 63);
-            this.txtYear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtYear.Margin = new System.Windows.Forms.Padding(2);
             this.txtYear.Name = "txtYear";
             this.txtYear.Size = new System.Drawing.Size(50, 22);
             this.txtYear.TabIndex = 10;
@@ -636,7 +594,7 @@
             // txtModel
             // 
             this.txtModel.Location = new System.Drawing.Point(46, 87);
-            this.txtModel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtModel.Margin = new System.Windows.Forms.Padding(2);
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(132, 22);
             this.txtModel.TabIndex = 12;
@@ -644,7 +602,7 @@
             // txtCar
             // 
             this.txtCar.Location = new System.Drawing.Point(46, 62);
-            this.txtCar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCar.Margin = new System.Windows.Forms.Padding(2);
             this.txtCar.Name = "txtCar";
             this.txtCar.Size = new System.Drawing.Size(132, 22);
             this.txtCar.TabIndex = 9;
@@ -692,7 +650,7 @@
             // txtState
             // 
             this.txtState.Location = new System.Drawing.Point(260, 90);
-            this.txtState.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtState.Margin = new System.Windows.Forms.Padding(2);
             this.txtState.Name = "txtState";
             this.txtState.Size = new System.Drawing.Size(140, 22);
             this.txtState.TabIndex = 7;
@@ -700,7 +658,7 @@
             // txtNumber
             // 
             this.txtNumber.Location = new System.Drawing.Point(260, 66);
-            this.txtNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Size = new System.Drawing.Size(60, 22);
             this.txtNumber.TabIndex = 5;
@@ -708,7 +666,7 @@
             // txtCity
             // 
             this.txtCity.Location = new System.Drawing.Point(80, 90);
-            this.txtCity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCity.Margin = new System.Windows.Forms.Padding(2);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(132, 22);
             this.txtCity.TabIndex = 6;
@@ -716,7 +674,7 @@
             // txtStreet
             // 
             this.txtStreet.Location = new System.Drawing.Point(80, 65);
-            this.txtStreet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtStreet.Margin = new System.Windows.Forms.Padding(2);
             this.txtStreet.Name = "txtStreet";
             this.txtStreet.Size = new System.Drawing.Size(132, 22);
             this.txtStreet.TabIndex = 4;
@@ -724,7 +682,7 @@
             // txtCpf
             // 
             this.txtCpf.Location = new System.Drawing.Point(260, 38);
-            this.txtCpf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCpf.Margin = new System.Windows.Forms.Padding(2);
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(140, 22);
             this.txtCpf.TabIndex = 3;
@@ -732,7 +690,7 @@
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(80, 39);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(132, 22);
             this.txtPhone.TabIndex = 2;
@@ -800,7 +758,7 @@
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(80, 14);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(322, 22);
             this.txtName.TabIndex = 1;
@@ -857,6 +815,58 @@
             this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.AlwaysBlink;
             this.errorProvider1.ContainerControl = this;
             // 
+            // btnAddRequest
+            // 
+            this.btnAddRequest.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnAddRequest.Image = global::CapptaDev1.Properties.Resources.if_icon_33_clipboard_add_314289;
+            this.btnAddRequest.Location = new System.Drawing.Point(171, 408);
+            this.btnAddRequest.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddRequest.Name = "btnAddRequest";
+            this.btnAddRequest.Size = new System.Drawing.Size(53, 52);
+            this.btnAddRequest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnAddRequest.TabIndex = 36;
+            this.btnAddRequest.TabStop = false;
+            this.btnAddRequest.Click += new System.EventHandler(this.BtnComfirmSalesRegister);
+            // 
+            // botaoPesquisaCliente
+            // 
+            this.botaoPesquisaCliente.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.botaoPesquisaCliente.Image = global::CapptaDev1.Properties.Resources.if_search_173095;
+            this.botaoPesquisaCliente.Location = new System.Drawing.Point(440, 49);
+            this.botaoPesquisaCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.botaoPesquisaCliente.Name = "botaoPesquisaCliente";
+            this.botaoPesquisaCliente.Size = new System.Drawing.Size(32, 22);
+            this.botaoPesquisaCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.botaoPesquisaCliente.TabIndex = 28;
+            this.botaoPesquisaCliente.TabStop = false;
+            this.botaoPesquisaCliente.Click += new System.EventHandler(this.BtnSearchClient);
+            // 
+            // pictureBoxBuscarVeiculo
+            // 
+            this.pictureBoxBuscarVeiculo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBoxBuscarVeiculo.Image = global::CapptaDev1.Properties.Resources.if_search_173095;
+            this.pictureBoxBuscarVeiculo.Location = new System.Drawing.Point(246, 29);
+            this.pictureBoxBuscarVeiculo.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxBuscarVeiculo.Name = "pictureBoxBuscarVeiculo";
+            this.pictureBoxBuscarVeiculo.Size = new System.Drawing.Size(32, 22);
+            this.pictureBoxBuscarVeiculo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBuscarVeiculo.TabIndex = 32;
+            this.pictureBoxBuscarVeiculo.TabStop = false;
+            this.pictureBoxBuscarVeiculo.Click += new System.EventHandler(this.BtnSearchVehicule_Click);
+            // 
+            // btnClean
+            // 
+            this.btnClean.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnClean.Image = global::CapptaDev1.Properties.Resources.if_broom_stick_3_896656;
+            this.btnClean.Location = new System.Drawing.Point(229, 407);
+            this.btnClean.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClean.Name = "btnClean";
+            this.btnClean.Size = new System.Drawing.Size(53, 52);
+            this.btnClean.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnClean.TabIndex = 37;
+            this.btnClean.TabStop = false;
+            this.btnClean.Click += new System.EventHandler(this.BtnFieldClean_Click);
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
@@ -876,7 +886,6 @@
             this.toolStripContainer1.TopToolStripPanel.PerformLayout();
             this.toolStripContainer1.ResumeLayout(false);
             this.toolStripContainer1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.botaoPesquisaCliente)).EndInit();
             this.panel3.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabSaida.ResumeLayout(false);
@@ -889,8 +898,11 @@
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBuscarVeiculo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddRequest)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.botaoPesquisaCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBuscarVeiculo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClean)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -915,9 +927,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem arquivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatórioToolStripMenuItem;
-        private System.Windows.Forms.Button botaoLimpar;
         private System.Windows.Forms.DataGridView dgvEstoque;
-        private System.Windows.Forms.Button botaoComfirmarPedido;
         private System.Windows.Forms.ComboBox comboBoxSalesman;
         private System.Windows.Forms.Label venda;
         private System.Windows.Forms.ToolStripMenuItem funcionarioToolStripMenuItem;
@@ -972,6 +982,8 @@
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnStock;
         private System.Windows.Forms.Button btnEmployee;
+        private System.Windows.Forms.PictureBox btnAddRequest;
+        private System.Windows.Forms.PictureBox btnClean;
     }
 }
 

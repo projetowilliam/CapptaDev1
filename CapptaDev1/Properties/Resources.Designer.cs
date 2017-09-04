@@ -93,6 +93,16 @@ namespace CapptaDev1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_icon_33_clipboard_add_314289 {
+            get {
+                object obj = ResourceManager.GetObject("if_icon-33-clipboard-add_314289", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_InterfaceExpendet_10_592607 {
             get {
                 object obj = ResourceManager.GetObject("if_InterfaceExpendet-10_592607", resourceCulture);
