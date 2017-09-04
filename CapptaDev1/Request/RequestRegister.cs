@@ -27,29 +27,30 @@ namespace SinalVeiculos.Dados
 
         public IEnumerable<Request> GetAll()
         {
-            using (var sqlConnection = DataBaseConnection.Open())
+            using (var dataBaseConnectionOpen = DataBaseConnection.Open())
             {
-                var sql = "select*from pedidos  ";
-                var mysqlComand = new MySqlCommand(sql, sqlConnection);
+                var selectQuery = "select*from pedidos  ";
+                var mysqlComand = new MySqlCommand(selectQuery, dataBaseConnectionOpen);
                 var executeReader = mysqlComand.ExecuteReader();
                 while (executeReader.Read())
                 {
                     var request = new Request()
                     {
-                        requestCode = executeReader.GetInt32("codigoPedido"),
-                        value = executeReader.GetInt32("valorVenda"),
+                        id = executeReader.GetInt32("codigoPedido"),
+                        value = executeReader.GetInt32("valor"),
                         responsibleForSale = executeReader.GetString("responsavelPelaVenda"),
                         product = executeReader.GetString("produto"),
                         quantity = executeReader.GetInt32("quantidade"),
                         client = executeReader.GetString("cliente"),
-                        cpfClient = executeReader.GetString("cpfCliente")              
+                        cpfClient = executeReader.GetString("cpfCliente"),
+                        date = executeReader.GetString("dataVenda")
                     };
                     yield return request;
                 }
             }
         }
 
-        public void UpdateQauntity(int quantity, int id)
+        public void UpdateVehiculeQauntity(int quantity, int id)
         {
             using (var sqlConnection = DataBaseConnection.Open())
             {

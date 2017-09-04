@@ -2,7 +2,7 @@
 {
     public class Request
     {
-        public int requestCode { get; set; }
+        public int id { get; set; }
         public int value { get; set; }
         public string responsibleForSale { get; set; }
         public string product { get; set; }

@@ -58,7 +58,7 @@ namespace SinalVeiculos
                     date = this.date.Text
                 };
                 requestRegister.Add(request);
-                requestRegister.UpdateQauntity(this.BalanceInStock(), this.idCar);
+                requestRegister.UpdateVehiculeQauntity(this.BalanceInStock(), this.idCar);
             }
             else
             {
