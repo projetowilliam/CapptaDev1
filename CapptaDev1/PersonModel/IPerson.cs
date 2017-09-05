@@ -4,7 +4,7 @@
     {
         public interface IPerson
         {
-            int id { get; set; }
+            int Id { get; set; }
             string Name { get; set; }
             string Phone { get; set; }
             string Cpf { get; set; }

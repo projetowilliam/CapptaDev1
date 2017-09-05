@@ -16,11 +16,11 @@ namespace SinalVeiculos.Register
                 var insertQuery = @"insert into " + NameTable + " (carro, modelo, ano,preco, marca, quantidade)" +
                     "values(@carro,@modelo,@ano,@preco,@marca, @quantidade)";
                 var mysqlComand = new MySqlCommand(insertQuery, dataBaseConectionOpen);
-                mysqlComand.Parameters.AddWithValue("@carro", vehicles.name);
-                mysqlComand.Parameters.AddWithValue("@modelo", vehicles.model);
-                mysqlComand.Parameters.AddWithValue("@ano", vehicles.year);
-                mysqlComand.Parameters.AddWithValue("@preco", vehicles.price);
-                mysqlComand.Parameters.AddWithValue("@marca", vehicles.mark);
+                mysqlComand.Parameters.AddWithValue("@carro", vehicles.Name);
+                mysqlComand.Parameters.AddWithValue("@modelo", vehicles.Model);
+                mysqlComand.Parameters.AddWithValue("@ano", vehicles.Year);
+                mysqlComand.Parameters.AddWithValue("@preco", vehicles.Price);
+                mysqlComand.Parameters.AddWithValue("@marca", vehicles.Mark);
                 mysqlComand.Parameters.AddWithValue("@quantidade", Quantity);
                 mysqlComand.ExecuteNonQuery();
             }
@@ -49,12 +49,12 @@ namespace SinalVeiculos.Register
                 {
                     var vehicules = new VehiculeType()
                     {
-                        id = executeReader.GetInt32("id"),
-                        name = executeReader.GetString("carro"),
-                        model = executeReader.GetString("modelo"),
-                        year = executeReader.GetString("ano"),
-                        price = executeReader.GetString("preco"),
-                        mark = executeReader.GetString("marca")
+                        Id = executeReader.GetInt32("id"),
+                        Name = executeReader.GetString("carro"),
+                        Model = executeReader.GetString("modelo"),
+                        Year = executeReader.GetString("ano"),
+                        Price = executeReader.GetString("preco"),
+                        Mark = executeReader.GetString("marca")
                     };
                     Quantity = executeReader.GetInt32("quantidade");
                     yield return vehicules;
@@ -73,12 +73,12 @@ namespace SinalVeiculos.Register
                 VehiculeType vehicules = new VehiculeType();
                 if (executeReader.Read())
                 {
-                    vehicules.id = executeReader.GetInt32("id");
-                    vehicules.name = executeReader.GetString("carro");
-                    vehicules.model = executeReader.GetString("modelo");
-                    vehicules.year = executeReader.GetString("ano");
-                    vehicules.price = executeReader.GetString("preco");
-                    vehicules.mark = executeReader.GetString("marca");
+                    vehicules.Id = executeReader.GetInt32("id");
+                    vehicules.Name = executeReader.GetString("carro");
+                    vehicules.Model = executeReader.GetString("modelo");
+                    vehicules.Year = executeReader.GetString("ano");
+                    vehicules.Price = executeReader.GetString("preco");
+                    vehicules.Mark = executeReader.GetString("marca");
                     Quantity = executeReader.GetInt32("quantidade");
                 }
                 return vehicules;

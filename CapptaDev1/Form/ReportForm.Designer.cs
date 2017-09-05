@@ -191,7 +191,7 @@
             this.pictureBoxPesquisaCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxPesquisaCliente.TabIndex = 0;
             this.pictureBoxPesquisaCliente.TabStop = false;
-            this.pictureBoxPesquisaCliente.Click += new System.EventHandler(this.BtnSearchCustomer_Click);
+            this.pictureBoxPesquisaCliente.Click += new System.EventHandler(this.BtnSearchCustomerForName_Click);
             // 
             // tabPage2
             // 
@@ -389,7 +389,7 @@
             this.BtnSearcheProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BtnSearcheProduct.TabIndex = 4;
             this.BtnSearcheProduct.TabStop = false;
-            this.BtnSearcheProduct.Click += new System.EventHandler(this.BtnSearcheProduct_Click);
+            this.BtnSearcheProduct.Click += new System.EventHandler(this.BtnSearcheProductForName_Click);
             // 
             // tabPage4
             // 
@@ -473,7 +473,7 @@
             this.btnSalesSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnSalesSearch.TabIndex = 6;
             this.btnSalesSearch.TabStop = false;
-            this.btnSalesSearch.Click += new System.EventHandler(this.BtnSearchSales_Click);
+            this.btnSalesSearch.Click += new System.EventHandler(this.BtnSearchSalesForDate_Click);
             // 
             // ReportForm
             // 

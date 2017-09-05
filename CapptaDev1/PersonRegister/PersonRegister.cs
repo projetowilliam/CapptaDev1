@@ -48,7 +48,7 @@ namespace SinalVeiculos.Dados.Pessoas
                 {
                     var person = new PersonType()
                     {
-                        id = executeReader.GetInt32("codigo"),
+                        Id = executeReader.GetInt32("codigo"),
                         Name = executeReader.GetString("nome"),
                         Phone = executeReader.GetString("telefone"),
                         Cpf = executeReader.GetString("cpf"),

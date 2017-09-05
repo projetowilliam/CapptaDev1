@@ -13,13 +13,13 @@ namespace SinalVeiculos.Dados
                 string insertQuery = @"insert into pedidos (valor,responsavelPelaVenda,produto,quantidade,cliente, cpfCliente,dataVenda)
                         values (@valor,@responsavelPelaVenda,@produto,@quantidade,@cliente, @cpfCliente,@dataVenda)";
                 var mysqlcomand = new MySqlCommand(insertQuery, sqlConnection);
-                mysqlcomand.Parameters.AddWithValue("@valor", request.value);
-                mysqlcomand.Parameters.AddWithValue("@responsavelPelaVenda", request.responsibleForSale);
-                mysqlcomand.Parameters.AddWithValue("@produto", request.product);
-                mysqlcomand.Parameters.AddWithValue("@quantidade", request.quantity);
-                mysqlcomand.Parameters.AddWithValue("@cliente", request.client);
-                mysqlcomand.Parameters.AddWithValue("@cpfCliente", request.cpfClient);
-                mysqlcomand.Parameters.AddWithValue("@dataVenda", request.date);
+                mysqlcomand.Parameters.AddWithValue("@valor", request.Value);
+                mysqlcomand.Parameters.AddWithValue("@responsavelPelaVenda", request.ResponsibleForSale);
+                mysqlcomand.Parameters.AddWithValue("@produto", request.Product);
+                mysqlcomand.Parameters.AddWithValue("@quantidade", request.Quantity);
+                mysqlcomand.Parameters.AddWithValue("@cliente", request.Client);
+                mysqlcomand.Parameters.AddWithValue("@cpfCliente", request.CpfClient);
+                mysqlcomand.Parameters.AddWithValue("@dataVenda", request.Date);
 
                 mysqlcomand.ExecuteNonQuery();
             }
@@ -36,14 +36,14 @@ namespace SinalVeiculos.Dados
                 {
                     var request = new Request()
                     {
-                        id = executeReader.GetInt32("codigoPedido"),
-                        value = executeReader.GetInt32("valor"),
-                        responsibleForSale = executeReader.GetString("responsavelPelaVenda"),
-                        product = executeReader.GetString("produto"),
-                        quantity = executeReader.GetInt32("quantidade"),
-                        client = executeReader.GetString("cliente"),
-                        cpfClient = executeReader.GetString("cpfCliente"),
-                        date = executeReader.GetString("dataVenda")
+                        Id = executeReader.GetInt32("codigoPedido"),
+                        Value = executeReader.GetInt32("valor"),
+                        ResponsibleForSale = executeReader.GetString("responsavelPelaVenda"),
+                        Product = executeReader.GetString("produto"),
+                        Quantity = executeReader.GetInt32("quantidade"),
+                        Client = executeReader.GetString("cliente"),
+                        CpfClient = executeReader.GetString("cpfCliente"),
+                        Date = executeReader.GetString("dataVenda")
                     };
                     yield return request;
                 }

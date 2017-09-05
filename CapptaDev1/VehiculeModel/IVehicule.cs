@@ -2,11 +2,11 @@
 {
     public interface IVehicule
     {
-        int id { get; set; }
-        string name { get; set; }
-        string model { get; set; }
-        string year { get; set; }
-        string price { get; set; }
-        string mark { get; set; }
+        int Id { get; set; }
+        string Name { get; set; }
+        string Model { get; set; }
+        string Year { get; set; }
+        string Price { get; set; }
+        string Mark { get; set; }
     }
 }

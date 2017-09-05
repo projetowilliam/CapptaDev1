@@ -48,15 +48,18 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnSearch = new System.Windows.Forms.PictureBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantity)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.txtId);
             this.panel1.Controls.Add(this.buttonLimpar);
@@ -243,6 +246,7 @@
             // BtnSearch
             // 
             this.BtnSearch.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BtnSearch.Image = global::CapptaDev1.Properties.Resources.if_search_173095;
             this.BtnSearch.Location = new System.Drawing.Point(362, 15);
             this.BtnSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.BtnSearch.Name = "BtnSearch";
@@ -261,6 +265,18 @@
             this.txtSearch.Size = new System.Drawing.Size(312, 20);
             this.txtSearch.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = global::CapptaDev1.Properties.Resources.if_icon_33_clipboard_add_314289;
+            this.pictureBox1.Location = new System.Drawing.Point(70, 72);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // StockForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 15F);
@@ -277,6 +293,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -303,5 +320,6 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

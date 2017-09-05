@@ -25,11 +25,11 @@ namespace SinalVeiculos
                 var carRegister = new CarRegister();
                 var car = new Car
                 {
-                    name = txtName.Text,
-                    model = txtModel.Text,
-                    year = txtYear.Text,
-                    price = txtPrice.Text,
-                    mark = txtBrand.Text
+                    Name = txtName.Text,
+                    Model = txtModel.Text,
+                    Year = txtYear.Text,
+                    Price = txtPrice.Text,
+                    Mark = txtBrand.Text
                 };
                 carRegister.Quantity = Convert.ToInt32(txtQuantity.Text);
                 carRegister.Add(car);
@@ -50,12 +50,12 @@ namespace SinalVeiculos
                 car = carRegister.SearchVehicleByName(txtSearch.Text);
                 if (carRegister != null)
                 {
-                    txtId.Text = Convert.ToString(car.id);
-                    txtName.Text = car.name;
-                    txtYear.Text = car.year;
-                    txtModel.Text = car.model;
-                    txtPrice.Text = car.price;
-                    txtBrand.Text = car.mark;
+                    txtId.Text = Convert.ToString(car.Id);
+                    txtName.Text = car.Name;
+                    txtYear.Text = car.Year;
+                    txtModel.Text = car.Model;
+                    txtPrice.Text = car.Price;
+                    txtBrand.Text = car.Mark;
                     txtQuantity.Text = Convert.ToString(carRegister.Quantity);
                 }
                 else

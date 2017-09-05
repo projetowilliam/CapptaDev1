@@ -2,14 +2,14 @@
 {
     public class Request
     {
-        public int id { get; set; }
-        public int value { get; set; }
-        public string responsibleForSale { get; set; }
-        public string product { get; set; }
-        public int quantity { get; set; }
-        public string client { get; set; }
-        public string cpfClient { get; set; }
-        public string date { get; set; }
+        public int Id { get; set; }
+        public int Value { get; set; }
+        public string ResponsibleForSale { get; set; }
+        public string Product { get; set; }
+        public int Quantity { get; set; }
+        public string Client { get; set; }
+        public string CpfClient { get; set; }
+        public string Date { get; set; }
     }
 }
 
