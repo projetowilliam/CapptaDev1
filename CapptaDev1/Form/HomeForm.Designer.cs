@@ -852,7 +852,7 @@
             this.pictureBoxBuscarVeiculo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxBuscarVeiculo.TabIndex = 32;
             this.pictureBoxBuscarVeiculo.TabStop = false;
-            this.pictureBoxBuscarVeiculo.Click += new System.EventHandler(this.BtnSearchVehicule_Click);
+            this.pictureBoxBuscarVeiculo.Click += new System.EventHandler(this.BtnSearchVehiculeByName_Click);
             // 
             // btnClean
             // 

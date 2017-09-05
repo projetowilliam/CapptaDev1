@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.buttonLimpar = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtQuantity = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,22 +47,25 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnSearch = new System.Windows.Forms.PictureBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnClean = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantity)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnSearch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnClean)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Controls.Add(this.BtnClean);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.txtId);
-            this.panel1.Controls.Add(this.buttonLimpar);
-            this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtQuantity);
             this.panel1.Controls.Add(this.label5);
@@ -84,6 +86,19 @@
             this.panel1.Size = new System.Drawing.Size(436, 273);
             this.panel1.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = global::CapptaDev1.Properties.Resources.if_icon_33_clipboard_add_314289;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 72);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -101,28 +116,6 @@
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(46, 20);
             this.txtId.TabIndex = 22;
-            // 
-            // buttonLimpar
-            // 
-            this.buttonLimpar.Location = new System.Drawing.Point(352, 72);
-            this.buttonLimpar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.buttonLimpar.Name = "buttonLimpar";
-            this.buttonLimpar.Size = new System.Drawing.Size(63, 38);
-            this.buttonLimpar.TabIndex = 10;
-            this.buttonLimpar.Text = "Limpar";
-            this.buttonLimpar.UseVisualStyleBackColor = true;
-            this.buttonLimpar.Click += new System.EventHandler(this.BtnClean_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(3, 70);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(63, 38);
-            this.btnSave.TabIndex = 9;
-            this.btnSave.Text = "Salvar";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // label6
             // 
@@ -265,17 +258,31 @@
             this.txtSearch.Size = new System.Drawing.Size(312, 20);
             this.txtSearch.TabIndex = 0;
             // 
-            // pictureBox1
+            // BtnClean
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::CapptaDev1.Properties.Resources.if_icon_33_clipboard_add_314289;
-            this.pictureBox1.Location = new System.Drawing.Point(70, 72);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(37, 36);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.BtnClean.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BtnClean.Image = global::CapptaDev1.Properties.Resources.if_broom_stick_3_896656;
+            this.BtnClean.Location = new System.Drawing.Point(383, 72);
+            this.BtnClean.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.BtnClean.Name = "BtnClean";
+            this.BtnClean.Size = new System.Drawing.Size(37, 36);
+            this.BtnClean.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BtnClean.TabIndex = 24;
+            this.BtnClean.TabStop = false;
+            this.BtnClean.Click += new System.EventHandler(this.BtnClean_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnExit.Image = global::CapptaDev1.Properties.Resources.if_Exit_131885;
+            this.btnExit.Location = new System.Drawing.Point(184, 72);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(37, 36);
+            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnExit.TabIndex = 25;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // StockForm
             // 
@@ -289,11 +296,13 @@
             this.Text = "Estoque";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantity)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnSearch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnClean)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -304,8 +313,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox BtnSearch;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Button buttonLimpar;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown txtQuantity;
         private System.Windows.Forms.Label label5;
@@ -321,5 +328,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox BtnClean;
+        private System.Windows.Forms.PictureBox btnExit;
     }
 }

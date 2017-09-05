@@ -43,7 +43,7 @@ namespace SinalVeiculos
 
         private void BtnSearch_Click(object sender, EventArgs e)
         {
-            if (ValidateIfTxtSearchIsEmpty() == true)
+            if (!string.IsNullOrEmpty(txtSearch.Text))
             {
                 var carRegister = new CarRegister();
                 var car = new Car();
@@ -65,6 +65,11 @@ namespace SinalVeiculos
             }
         }
 
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void FieldClean()
         {
             txtName.Text = string.Empty;
@@ -81,12 +86,7 @@ namespace SinalVeiculos
                 || txtPrice.Text == string.Empty || txtQuantity.Text == string.Empty || txtYear.Text == string.Empty)
             { return false; }
             else { return true; }
-        }
-
-        private bool ValidateIfTxtSearchIsEmpty()
-        {
-            if (txtSearch.Text == string.Empty) { return false; } else { return true; }
-        }
+        }     
     }
 }
 

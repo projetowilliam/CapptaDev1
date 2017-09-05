@@ -19,24 +19,24 @@ namespace SinalVeiculos
 
         private void Home_Load(object sender, EventArgs e)
         {
-            this.ListSalesmanName();
-            this.ListCarName();
-            this.ListCustomerName();
+            this.UpdateSalesmanNameComboBox();
+            this.UpdateCarNameComboBox();
+            this.UpdateCustomerNameComboBox();
         }
 
-        public void ListCustomerName()
+        public void UpdateCustomerNameComboBox()
         {
             var customerRegister = new CustomerRegiser();
             comboBoxClient.Items.AddRange(customerRegister.GetAll().Select(customer=> customer.Name).ToArray());
         }
 
-        public void ListCarName()
+        public void UpdateCarNameComboBox()
         {
             var carRegister = new CarRegister();
             comboBoxProduct.Items.AddRange( carRegister.GetAll().Select(car=> car.Name).ToArray());
         }
 
-        private void ListSalesmanName()
+        private void UpdateSalesmanNameComboBox()
         {
             var salesmanRegister = new EmployeerRegister();
             comboBoxSalesman.Items.AddRange( salesmanRegister.GetAll().Select(salesman => salesman.Name).ToArray());
@@ -58,7 +58,6 @@ namespace SinalVeiculos
                     Date = this.date.Text
                 };
                 requestRegister.Add(request);
-                //recalculate
                 requestRegister.UpdateVehiculeQauntity(this.BalanceInStock(), this.idCar);
                 this.FieldClean();
             }
@@ -98,12 +97,12 @@ namespace SinalVeiculos
 
         private void BtnRefreshHome_Click(object sender, EventArgs e)
         {
-            this.ListSalesmanName();
-            this.ListCustomerName();
-            this.ListSalesmanName();
+            this.UpdateSalesmanNameComboBox();
+            this.UpdateCustomerNameComboBox();
+            this.UpdateSalesmanNameComboBox();
         }
 
-        private void BtnSearchVehicule_Click(object sender, EventArgs e)
+        private void BtnSearchVehiculeByName_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(comboBoxProduct.Text))
             {

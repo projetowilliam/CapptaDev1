@@ -47,20 +47,41 @@ namespace SinalVeiculos
 
         private void BtnSearchCustomerForName_Click(object sender, EventArgs e)
         {
-            var customerRegister = new CustomerRegiser();
-            this.dgvClient.DataSource = customerRegister.GetAll().Where(customer => customer.Name == txtSearchProductsForName.Text).ToList();
+            if (!string.IsNullOrEmpty(txtSearchClient.Text))
+            {
+                var customerRegister = new CustomerRegiser();
+                this.dgvClient.DataSource = customerRegister.GetAll().Where(customer => customer.Name == txtSearchProductsForName.Text).ToList();
+            }
+            else
+            {
+                MessageBox.Show("Digite um nome para pesquisa");
+            }        
         }
 
         private void BtnSarcheEmloyeerForName(object sender, EventArgs e)
         {
-            var employeerRegister = new EmployeerRegister();
-            this.dgvClient.DataSource =  employeerRegister.GetAll().Where(employee => employee.Name == this.txtSearchEmployeerForName.Text).ToList();
+            if (!string.IsNullOrEmpty(txtSearchEmployeerForName.Text))
+            {
+                var employeerRegister = new EmployeerRegister();
+                this.dgvClient.DataSource = employeerRegister.GetAll().Where(employee => employee.Name == this.txtSearchEmployeerForName.Text).ToList();
+            }
+            else
+            {
+                MessageBox.Show("Digite um nome para pesquisa");
+            }
         }
 
         private void BtnSearcheProductForName_Click(object sender, EventArgs e)
         {
-            var carRegister = new CarRegister();
-            this.dgvProducts.DataSource = carRegister.GetAll().Where(car => car.Name == this.txtSearchProductsForName.Text).ToList();
+            if (!string.IsNullOrEmpty(txtSearchProductsForName.Text))
+            {
+                var carRegister = new CarRegister();
+                this.dgvProducts.DataSource = carRegister.GetAll().Where(car => car.Name == this.txtSearchProductsForName.Text).ToList();
+            }
+            else
+            {
+                MessageBox.Show("Por favor digite um nome para pesquisa");
+            }
         }
 
         private void BtnSearchSalesForDate_Click(object sender, EventArgs e)
