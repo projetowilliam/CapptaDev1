@@ -7,6 +7,6 @@
         string Model { get; set; }
         string Year { get; set; }
         string Price { get; set; }
-        string Mark { get; set; }
+        string Brand { get; set; }
     }
 }

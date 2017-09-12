@@ -3,7 +3,7 @@
     public class Request
     {
         public int Id { get; set; }
-        public int Value { get; set; }
+        public int Price { get; set; }
         public string ResponsibleForSale { get; set; }
         public string Product { get; set; }
         public int Quantity { get; set; }

@@ -39,7 +39,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dgvClient = new System.Windows.Forms.DataGridView();
+            this.dgvCustomer = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtSearchClient = new System.Windows.Forms.TextBox();
@@ -57,21 +57,21 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.dgvProducts = new System.Windows.Forms.DataGridView();
+            this.dgvCar = new System.Windows.Forms.DataGridView();
             this.panel9 = new System.Windows.Forms.Panel();
             this.txtSearchProductsForName = new System.Windows.Forms.TextBox();
             this.BtnSearcheProduct = new System.Windows.Forms.PictureBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.dgvSales = new System.Windows.Forms.DataGridView();
+            this.dgvRequest = new System.Windows.Forms.DataGridView();
             this.panel12 = new System.Windows.Forms.Panel();
             this.dateSales = new System.Windows.Forms.DateTimePicker();
             this.btnSalesSearch = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClient)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPesquisaCliente)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -85,13 +85,13 @@
             this.tabPage3.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCar)).BeginInit();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnSearcheProduct)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSales)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRequest)).BeginInit();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalesSearch)).BeginInit();
             this.SuspendLayout();
@@ -120,7 +120,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dgvClient);
+            this.tabPage1.Controls.Add(this.dgvCustomer);
             this.tabPage1.Controls.Add(this.panel3);
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -140,8 +140,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -149,11 +149,11 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvClient.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvClient.Location = new System.Drawing.Point(6, 63);
-            this.dgvClient.Name = "dgvClient";
-            this.dgvClient.Size = new System.Drawing.Size(651, 327);
-            this.dgvClient.TabIndex = 0;
+            this.dgvCustomer.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvCustomer.Location = new System.Drawing.Point(6, 63);
+            this.dgvCustomer.Name = "dgvClient";
+            this.dgvCustomer.Size = new System.Drawing.Size(651, 327);
+            this.dgvCustomer.TabIndex = 0;
             // 
             // panel3
             // 
@@ -331,7 +331,7 @@
             // panel10
             // 
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel10.Controls.Add(this.dgvProducts);
+            this.panel10.Controls.Add(this.dgvCar);
             this.panel10.Location = new System.Drawing.Point(3, 49);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(647, 344);
@@ -346,8 +346,8 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvCar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -355,11 +355,11 @@
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProducts.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvProducts.Location = new System.Drawing.Point(0, 3);
-            this.dgvProducts.Name = "dgvProducts";
-            this.dgvProducts.Size = new System.Drawing.Size(648, 337);
-            this.dgvProducts.TabIndex = 0;
+            this.dgvCar.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvCar.Location = new System.Drawing.Point(0, 3);
+            this.dgvCar.Name = "dgvProducts";
+            this.dgvCar.Size = new System.Drawing.Size(648, 337);
+            this.dgvCar.TabIndex = 0;
             // 
             // panel9
             // 
@@ -415,7 +415,7 @@
             // panel13
             // 
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel13.Controls.Add(this.dgvSales);
+            this.panel13.Controls.Add(this.dgvRequest);
             this.panel13.Location = new System.Drawing.Point(3, 84);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(729, 358);
@@ -430,8 +430,8 @@
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRequest.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvRequest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -439,11 +439,11 @@
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSales.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvSales.Location = new System.Drawing.Point(0, 0);
-            this.dgvSales.Name = "dgvSales";
-            this.dgvSales.Size = new System.Drawing.Size(650, 315);
-            this.dgvSales.TabIndex = 0;
+            this.dgvRequest.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvRequest.Location = new System.Drawing.Point(0, 0);
+            this.dgvRequest.Name = "dgvSales";
+            this.dgvRequest.Size = new System.Drawing.Size(650, 315);
+            this.dgvRequest.TabIndex = 0;
             // 
             // panel12
             // 
@@ -489,7 +489,7 @@
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClient)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPesquisaCliente)).EndInit();
@@ -506,14 +506,14 @@
             this.tabPage3.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCar)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnSearcheProduct)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSales)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRequest)).EndInit();
             this.panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnSalesSearch)).EndInit();
             this.ResumeLayout(false);
@@ -529,7 +529,7 @@
         private System.Windows.Forms.PictureBox pictureBoxPesquisaCliente;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DataGridView dgvClient;
+        private System.Windows.Forms.DataGridView dgvCustomer;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
@@ -544,7 +544,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.DataGridView dgvProducts;
+        private System.Windows.Forms.DataGridView dgvCar;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.TextBox txtSearchProductsForName;
         private System.Windows.Forms.PictureBox BtnSearcheProduct;
@@ -553,6 +553,6 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.PictureBox btnSalesSearch;
         private System.Windows.Forms.DateTimePicker dateSales;
-        private System.Windows.Forms.DataGridView dgvSales;
+        private System.Windows.Forms.DataGridView dgvRequest;
     }
 }

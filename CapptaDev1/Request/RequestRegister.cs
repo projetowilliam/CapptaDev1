@@ -13,7 +13,7 @@ namespace SinalVeiculos.Dados
                 string insertQuery = @"insert into pedidos (valor,responsavelPelaVenda,produto,quantidade,cliente, cpfCliente,dataVenda)
                         values (@valor,@responsavelPelaVenda,@produto,@quantidade,@cliente, @cpfCliente,@dataVenda)";
                 var mysqlcomand = new MySqlCommand(insertQuery, sqlConnection);
-                mysqlcomand.Parameters.AddWithValue("@valor", request.Value);
+                mysqlcomand.Parameters.AddWithValue("@valor", request.Price);
                 mysqlcomand.Parameters.AddWithValue("@responsavelPelaVenda", request.ResponsibleForSale);
                 mysqlcomand.Parameters.AddWithValue("@produto", request.Product);
                 mysqlcomand.Parameters.AddWithValue("@quantidade", request.Quantity);
@@ -37,7 +37,7 @@ namespace SinalVeiculos.Dados
                     var request = new Request()
                     {
                         Id = executeReader.GetInt32("codigoPedido"),
-                        Value = executeReader.GetInt32("valor"),
+                        Price = executeReader.GetInt32("valor"),
                         ResponsibleForSale = executeReader.GetString("responsavelPelaVenda"),
                         Product = executeReader.GetString("produto"),
                         Quantity = executeReader.GetInt32("quantidade"),

@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExit_ = new System.Windows.Forms.PictureBox();
+            this.btnClean_ = new System.Windows.Forms.PictureBox();
+            this.btnAddEmployeer = new System.Windows.Forms.PictureBox();
             this.BtnSearcheEmployeer = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -47,15 +50,12 @@
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.btnAddEmployeer = new System.Windows.Forms.PictureBox();
-            this.btnClean_ = new System.Windows.Forms.PictureBox();
-            this.btnExit_ = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit_)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClean_)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddEmployeer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnSearcheEmployeer)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAddEmployeer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClean_)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExit_)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,6 +73,45 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(387, 270);
             this.panel1.TabIndex = 0;
+            // 
+            // btnExit_
+            // 
+            this.btnExit_.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnExit_.Image = global::CapptaDev1.Properties.Resources.if_Exit_131885;
+            this.btnExit_.Location = new System.Drawing.Point(313, 218);
+            this.btnExit_.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit_.Name = "btnExit_";
+            this.btnExit_.Size = new System.Drawing.Size(57, 38);
+            this.btnExit_.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnExit_.TabIndex = 32;
+            this.btnExit_.TabStop = false;
+            this.btnExit_.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
+            // btnClean_
+            // 
+            this.btnClean_.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnClean_.Image = global::CapptaDev1.Properties.Resources.if_broom_stick_3_896656;
+            this.btnClean_.Location = new System.Drawing.Point(161, 219);
+            this.btnClean_.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClean_.Name = "btnClean_";
+            this.btnClean_.Size = new System.Drawing.Size(57, 38);
+            this.btnClean_.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnClean_.TabIndex = 31;
+            this.btnClean_.TabStop = false;
+            this.btnClean_.Click += new System.EventHandler(this.BtnClean_Click);
+            // 
+            // btnAddEmployeer
+            // 
+            this.btnAddEmployeer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnAddEmployeer.Image = global::CapptaDev1.Properties.Resources.if_InterfaceExpendet_10_592607;
+            this.btnAddEmployeer.Location = new System.Drawing.Point(15, 219);
+            this.btnAddEmployeer.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddEmployeer.Name = "btnAddEmployeer";
+            this.btnAddEmployeer.Size = new System.Drawing.Size(57, 38);
+            this.btnAddEmployeer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnAddEmployeer.TabIndex = 30;
+            this.btnAddEmployeer.TabStop = false;
+            this.btnAddEmployeer.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // BtnSearcheEmployeer
             // 
@@ -245,45 +284,6 @@
             this.txtName.Size = new System.Drawing.Size(291, 20);
             this.txtName.TabIndex = 0;
             // 
-            // btnAddEmployeer
-            // 
-            this.btnAddEmployeer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.btnAddEmployeer.Image = global::CapptaDev1.Properties.Resources.if_InterfaceExpendet_10_592607;
-            this.btnAddEmployeer.Location = new System.Drawing.Point(15, 219);
-            this.btnAddEmployeer.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddEmployeer.Name = "btnAddEmployeer";
-            this.btnAddEmployeer.Size = new System.Drawing.Size(57, 38);
-            this.btnAddEmployeer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnAddEmployeer.TabIndex = 30;
-            this.btnAddEmployeer.TabStop = false;
-            this.btnAddEmployeer.Click += new System.EventHandler(this.BtnSave_Click);
-            // 
-            // btnClean_
-            // 
-            this.btnClean_.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.btnClean_.Image = global::CapptaDev1.Properties.Resources.if_broom_stick_3_896656;
-            this.btnClean_.Location = new System.Drawing.Point(161, 219);
-            this.btnClean_.Margin = new System.Windows.Forms.Padding(2);
-            this.btnClean_.Name = "btnClean_";
-            this.btnClean_.Size = new System.Drawing.Size(57, 38);
-            this.btnClean_.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnClean_.TabIndex = 31;
-            this.btnClean_.TabStop = false;
-            this.btnClean_.Click += new System.EventHandler(this.BtnClean_Click);
-            // 
-            // btnExit_
-            // 
-            this.btnExit_.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.btnExit_.Image = global::CapptaDev1.Properties.Resources.if_Exit_131885;
-            this.btnExit_.Location = new System.Drawing.Point(313, 218);
-            this.btnExit_.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExit_.Name = "btnExit_";
-            this.btnExit_.Size = new System.Drawing.Size(57, 38);
-            this.btnExit_.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnExit_.TabIndex = 32;
-            this.btnExit_.TabStop = false;
-            this.btnExit_.Click += new System.EventHandler(this.BtnExit_Click);
-            // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -294,14 +294,15 @@
             this.Name = "EmployeeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Funcionario";
+            this.Load += new System.EventHandler(this.EmployeeForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit_)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClean_)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddEmployeer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnSearcheEmployeer)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAddEmployeer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClean_)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExit_)).EndInit();
             this.ResumeLayout(false);
 
         }

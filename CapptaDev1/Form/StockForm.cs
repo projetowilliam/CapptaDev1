@@ -13,7 +13,7 @@ namespace SinalVeiculos
             InitializeComponent();
         }
 
-        private void BtnClean_Click(object sender, EventArgs e)
+        private void BtnFieldClean_Click(object sender, EventArgs e)
         {
             FieldClean();
         }
@@ -29,7 +29,7 @@ namespace SinalVeiculos
                     Model = txtModel.Text,
                     Year = txtYear.Text,
                     Price = txtPrice.Text,
-                    Mark = txtBrand.Text
+                    Brand = txtBrand.Text
                 };
                 carRegister.Quantity = Convert.ToInt32(txtQuantity.Text);
                 carRegister.Add(car);
@@ -55,7 +55,7 @@ namespace SinalVeiculos
                     txtYear.Text = car.Year;
                     txtModel.Text = car.Model;
                     txtPrice.Text = car.Price;
-                    txtBrand.Text = car.Mark;
+                    txtBrand.Text = car.Brand;
                     txtQuantity.Text = Convert.ToString(carRegister.Quantity);
                 }
                 else
@@ -86,7 +86,7 @@ namespace SinalVeiculos
                 || txtPrice.Text == string.Empty || txtQuantity.Text == string.Empty || txtYear.Text == string.Empty)
             { return false; }
             else { return true; }
-        }     
+        }
     }
 }
 

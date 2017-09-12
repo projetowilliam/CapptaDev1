@@ -27,19 +27,19 @@ namespace SinalVeiculos
         public void UpdateCustomerNameComboBox()
         {
             var customerRegister = new CustomerRegiser();
-            comboBoxClient.Items.AddRange(customerRegister.GetAll().Select(customer=> customer.Name).ToArray());
+            comboBoxClient.Items.AddRange(customerRegister.GetAll().Select(customer => customer.Name).ToArray());
         }
 
         public void UpdateCarNameComboBox()
         {
             var carRegister = new CarRegister();
-            comboBoxProduct.Items.AddRange( carRegister.GetAll().Select(car=> car.Name).ToArray());
+            comboBoxProduct.Items.AddRange(carRegister.GetAll().Select(car => car.Name).ToArray());
         }
 
         private void UpdateSalesmanNameComboBox()
         {
-            var salesmanRegister = new EmployeerRegister();
-            comboBoxSalesman.Items.AddRange( salesmanRegister.GetAll().Select(salesman => salesman.Name).ToArray());
+            var employeerRegister = new EmployeerRegister();
+            comboBoxSalesman.Items.AddRange(employeerRegister.GetAll().Select(salesman => salesman.Name).ToArray());
         }
 
         private void BtnComfirmSalesRegister(object sender, EventArgs e)
@@ -49,7 +49,7 @@ namespace SinalVeiculos
                 var requestRegister = new RequestRegister();
                 var request = new Request
                 {
-                    Value = Convert.ToInt32(txtPrice.Text),
+                    Price = Convert.ToInt32(txtPrice.Text),
                     ResponsibleForSale = this.comboBoxSalesman.Text,
                     Product = this.comboBoxProduct.Text,
                     Quantity = Convert.ToInt32(this.units.Text),
@@ -57,6 +57,7 @@ namespace SinalVeiculos
                     CpfClient = this.txtCpf.Text,
                     Date = this.date.Text
                 };
+
                 requestRegister.Add(request);
                 requestRegister.UpdateVehiculeQauntity(this.BalanceInStock(), this.idCar);
                 this.FieldClean();
@@ -69,20 +70,18 @@ namespace SinalVeiculos
 
         private void BtnSearchClient(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(comboBoxClient.Text))
+            if (!string.IsNullOrEmpty(this.comboBoxClient.Text))
             {
-                var name = this.comboBoxClient.Text;
-                var client = new Customer();
+                var customer = new Customer();
                 var clientRegister = new CustomerRegiser();
-
-                client = clientRegister.SearchPersonByName(name);
-                this.txtName.Text = client.Name;
-                this.txtPhone.Text = client.Phone;
-                this.txtCpf.Text = client.Cpf;
-                this.txtStreet.Text = client.Street;
-                this.txtNumber.Text = Convert.ToString(client.Number);
-                this.txtCity.Text = client.City;
-                this.txtState.Text = client.State;
+                customer = clientRegister.SearchPersonByName(this.comboBoxClient.Text);
+                this.txtName.Text = customer.Name;
+                this.txtPhone.Text = customer.Phone;
+                this.txtCpf.Text = customer.Cpf;
+                this.txtStreet.Text = customer.Street;
+                this.txtNumber.Text = Convert.ToString(customer.Number);
+                this.txtCity.Text = customer.City;
+                this.txtState.Text = customer.State;
             }
             else
             {
@@ -104,19 +103,17 @@ namespace SinalVeiculos
 
         private void BtnSearchVehiculeByName_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(comboBoxProduct.Text))
+            if (!string.IsNullOrEmpty(this.comboBoxProduct.Text))
             {
-                var name = (this.comboBoxProduct.Text);
                 var car = new Car();
                 var carRegister = new CarRegister();
-
-                car = carRegister.SearchVehicleByName(name);
+                car = carRegister.SearchVehicleByName(comboBoxProduct.Text);
                 this.idCar = car.Id;
                 this.txtCar.Text = car.Name;
                 this.txtYear.Text = car.Year;
                 this.txtModel.Text = car.Model;
                 this.txtPrice.Text = car.Price;
-                this.textoMarca.Text = car.Mark;
+                this.txtBrand.Text = car.Brand;
                 this.txtQuantity.Text = Convert.ToString(carRegister.Quantity);
             }
             else
@@ -175,12 +172,9 @@ namespace SinalVeiculos
             this.txtQuantity.Text = string.Empty;
             this.txtCity.Text = string.Empty;
             this.txtCpf.Text = string.Empty;
-            this.txtModel.Text = string.Empty;
             this.txtName.Text = string.Empty;
             this.txtNumber.Text = string.Empty;
             this.txtPhone.Text = string.Empty;
-            this.txtPrice.Text = string.Empty;
-            this.txtQuantity.Text = string.Empty;
             this.txtState.Text = string.Empty;
             this.txtStreet.Text = string.Empty;
             this.txtYear.Text = string.Empty;

@@ -20,7 +20,7 @@ namespace SinalVeiculos.Register
                 mysqlComand.Parameters.AddWithValue("@modelo", vehicles.Model);
                 mysqlComand.Parameters.AddWithValue("@ano", vehicles.Year);
                 mysqlComand.Parameters.AddWithValue("@preco", vehicles.Price);
-                mysqlComand.Parameters.AddWithValue("@marca", vehicles.Mark);
+                mysqlComand.Parameters.AddWithValue("@marca", vehicles.Brand);
                 mysqlComand.Parameters.AddWithValue("@quantidade", Quantity);
                 mysqlComand.ExecuteNonQuery();
             }
@@ -54,7 +54,7 @@ namespace SinalVeiculos.Register
                         Model = executeReader.GetString("modelo"),
                         Year = executeReader.GetString("ano"),
                         Price = executeReader.GetString("preco"),
-                        Mark = executeReader.GetString("marca")
+                        Brand = executeReader.GetString("marca")
                     };
                     Quantity = executeReader.GetInt32("quantidade");
                     yield return vehicules;
@@ -78,7 +78,7 @@ namespace SinalVeiculos.Register
                     vehicules.Model = executeReader.GetString("modelo");
                     vehicules.Year = executeReader.GetString("ano");
                     vehicules.Price = executeReader.GetString("preco");
-                    vehicules.Mark = executeReader.GetString("marca");
+                    vehicules.Brand = executeReader.GetString("marca");
                     Quantity = executeReader.GetInt32("quantidade");
                 }
                 return vehicules;

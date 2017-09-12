@@ -43,11 +43,11 @@ namespace SinalVeiculos
 
         private void BtnSearchClient_Click(object sender, EventArgs e)
         {
-            if (this.ValidateIfTxtSearchClientIsEmpty() == true)
+            if (!string.IsNullOrEmpty(this.txtSearch.Text))
             {
-                var registerCostumer = new CustomerRegiser();
+                var custumerRegister = new CustomerRegiser();
                 var custumer = new Customer();
-                custumer = registerCostumer.SearchPersonByName(this.txtSearch.Text);
+                custumer = custumerRegister.SearchPersonByName(this.txtSearch.Text);
                 this.txtName.Text = custumer.Name;
                 this.txtCity.Text = custumer.City;
                 this.txtCpf.Text = custumer.Cpf;
@@ -65,11 +65,6 @@ namespace SinalVeiculos
         private void BbtnClean_Click(object sender, EventArgs e)
         {
             FieldClean();
-        }
-
-        private bool ValidateIfTxtSearchClientIsEmpty()
-        {
-            if (this.txtSearch.Text == "") { return false; } else { return true; }
         }
 
         private bool ValidadeInputFieldClient()

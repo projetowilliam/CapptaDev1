@@ -18,31 +18,37 @@ namespace SinalVeiculos
         {
             UpdateCustomerGridView();
             UpdateEmployeeGridView();
-            UpdateSalesGridView();
+            UpdateRequestGridView();
+            UpdateCarGridView();
         }
-  
+
+        private void UpdateCarGridView()
+        {
+            var carRegister = new CarRegister();
+            this.dgvCar.DataSource = carRegister.GetAll().ToList();
+        }
         private void UpdateCustomerGridView()
         {
-            var customerRegister = new CustomerRegiser();  
-            this.dgvClient.DataSource = customerRegister.GetAll().ToList();
+            var customerRegister = new CustomerRegiser();
+            this.dgvCustomer.DataSource = customerRegister.GetAll().ToList();
         }
 
         private void UpdateEmployeeGridView()
         {
             var employeeRegister = new EmployeerRegister();
-            this.dgvEmployee.DataSource =  employeeRegister.GetAll().ToList();
+            this.dgvEmployee.DataSource = employeeRegister.GetAll().ToList();
         }
 
-        private void UpdateSalesGridView()
+        private void UpdateRequestGridView()
         {
             var requestRegister = new RequestRegister();
-            this.dgvSales.DataSource =  requestRegister.GetAll().ToList();
+            this.dgvRequest.DataSource = requestRegister.GetAll().ToList();
         }
 
         private void UpdateVehiculesGridView()
         {
             var carRegister = new CarRegister();
-            this.dgvProducts.DataSource = carRegister.GetAll().ToList();
+            this.dgvCar.DataSource = carRegister.GetAll().ToList();
         }
 
         private void BtnSearchCustomerForName_Click(object sender, EventArgs e)
@@ -50,12 +56,12 @@ namespace SinalVeiculos
             if (!string.IsNullOrEmpty(txtSearchClient.Text))
             {
                 var customerRegister = new CustomerRegiser();
-                this.dgvClient.DataSource = customerRegister.GetAll().Where(customer => customer.Name == txtSearchProductsForName.Text).ToList();
+                this.dgvCustomer.DataSource = customerRegister.GetAll().Where(customer => customer.Name == txtSearchProductsForName.Text).ToList();
             }
             else
             {
                 MessageBox.Show("Digite um nome para pesquisa");
-            }        
+            }
         }
 
         private void BtnSarcheEmloyeerForName(object sender, EventArgs e)
@@ -63,7 +69,7 @@ namespace SinalVeiculos
             if (!string.IsNullOrEmpty(txtSearchEmployeerForName.Text))
             {
                 var employeerRegister = new EmployeerRegister();
-                this.dgvClient.DataSource = employeerRegister.GetAll().Where(employee => employee.Name == this.txtSearchEmployeerForName.Text).ToList();
+                this.dgvEmployee.DataSource = employeerRegister.GetAll().Where(employee => employee.Name == this.txtSearchEmployeerForName.Text).ToList();
             }
             else
             {
@@ -76,7 +82,7 @@ namespace SinalVeiculos
             if (!string.IsNullOrEmpty(txtSearchProductsForName.Text))
             {
                 var carRegister = new CarRegister();
-                this.dgvProducts.DataSource = carRegister.GetAll().Where(car => car.Name == this.txtSearchProductsForName.Text).ToList();
+                this.dgvCar.DataSource = carRegister.GetAll().Where(car => car.Name == this.txtSearchProductsForName.Text).ToList();
             }
             else
             {
@@ -87,7 +93,7 @@ namespace SinalVeiculos
         private void BtnSearchSalesForDate_Click(object sender, EventArgs e)
         {
             var requestRegister = new RequestRegister();
-            this.dgvSales.DataSource = requestRegister.GetAll().Where( sales => sales.Date == this.dateSales.Text).ToList();
+            this.dgvRequest.DataSource = requestRegister.GetAll().Where(sales => sales.Date == this.dateSales.Text).ToList();
         }
 
     }

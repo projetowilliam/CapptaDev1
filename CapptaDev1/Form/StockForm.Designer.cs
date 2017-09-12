@@ -269,7 +269,7 @@
             this.BtnClean.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BtnClean.TabIndex = 24;
             this.BtnClean.TabStop = false;
-            this.BtnClean.Click += new System.EventHandler(this.BtnClean_Click);
+            this.BtnClean.Click += new System.EventHandler(this.BtnFieldClean_Click);
             // 
             // btnExit
             // 

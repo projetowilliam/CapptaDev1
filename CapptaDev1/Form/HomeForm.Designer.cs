@@ -68,7 +68,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textoMarca = new System.Windows.Forms.TextBox();
+            this.txtBrand = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.comboBoxProduct = new System.Windows.Forms.ComboBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
@@ -477,7 +477,7 @@
             this.panel4.Controls.Add(this.label15);
             this.panel4.Controls.Add(this.txtQuantity);
             this.panel4.Controls.Add(this.label14);
-            this.panel4.Controls.Add(this.textoMarca);
+            this.panel4.Controls.Add(this.txtBrand);
             this.panel4.Controls.Add(this.label13);
             this.panel4.Controls.Add(this.comboBoxProduct);
             this.panel4.Controls.Add(this.txtPrice);
@@ -550,11 +550,11 @@
             // 
             // textoMarca
             // 
-            this.textoMarca.Location = new System.Drawing.Point(46, 118);
-            this.textoMarca.Margin = new System.Windows.Forms.Padding(2);
-            this.textoMarca.Name = "textoMarca";
-            this.textoMarca.Size = new System.Drawing.Size(132, 22);
-            this.textoMarca.TabIndex = 14;
+            this.txtBrand.Location = new System.Drawing.Point(46, 118);
+            this.txtBrand.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBrand.Name = "textoMarca";
+            this.txtBrand.Size = new System.Drawing.Size(132, 22);
+            this.txtBrand.TabIndex = 14;
             // 
             // label13
             // 
@@ -936,7 +936,7 @@
         private System.Windows.Forms.TabPage tabEstoque;
         private System.Windows.Forms.TextBox textoSaida;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textoMarca;
+        private System.Windows.Forms.TextBox txtBrand;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.PictureBox botaoPesquisaCliente;

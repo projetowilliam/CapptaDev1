@@ -46,6 +46,37 @@ namespace SinalVeiculos
             this.Close();
         }
 
+        private void BtnSearcheEmployeer_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(this.txtSearch.Text))
+            {
+                var employeerRegister = new EmployeerRegister();
+                var employee = new Employee();
+                employee = employeerRegister.SearchPersonByName(this.txtSearch.Text);
+                this.txtName.Text = employee.Name;
+                this.txtCity.Text = employee.City;
+                this.txtCpf.Text = employee.Cpf;
+                this.txtState.Text = employee.State;
+                this.txtNumber.Text = Convert.ToString(employee.Number);
+                this.txtStreet.Text = employee.Street;
+                this.txtPhone.Text = employee.Phone;
+            }
+            else
+            {
+                MessageBox.Show("Por favor escolha um nome para pesquisa");
+            }
+        }
+
+        private bool ValidadeInputFieldEmployee()
+        {
+            if (this.txtCity.Text == string.Empty || this.txtCpf.Text == string.Empty || this.txtName.Text == string.Empty
+                || this.txtNumber.Text == string.Empty || this.txtPhone.Text == string.Empty || this.txtState.Text == string.Empty
+                || this.txtStreet.Text == string.Empty)
+            { return false; }
+            else
+            { return true; }
+        }
+
         public void FieldClean()
         {
             this.txtCity.Text = string.Empty;
@@ -57,40 +88,9 @@ namespace SinalVeiculos
             this.txtPhone.Text = string.Empty;
         }
 
-        private void BtnSearcheEmployeer_Click(object sender, EventArgs e)
+        private void EmployeeForm_Load(object sender, EventArgs e)
         {
-            if (this.ValidateIfTxtSearchEmployeerIsEmpty() == true)
-            {
-                var employeerRegister = new EmployeerRegister();
-                var employee = new Employee();
-                employee = employeerRegister.SearchPersonByName(this.txtSearch.Text);
-                this.txtName.Text = employee.Name;
-                this.txtCity.Text = employee.City;
-                this.txtCpf.Text = employee.Cpf;
-                this.txtState.Text = employee.State;
-                this.txtNumber.Text =Convert.ToString( employee.Number);
-                this.txtStreet.Text = employee.Street;
-                this.txtPhone.Text = employee.Phone;
-            }
-            else
-            {
-                MessageBox.Show("Por favor escolha um nome para pesquisa");
-            }
-        }
 
-        private bool ValidateIfTxtSearchEmployeerIsEmpty()
-        {
-            if (this.txtSearch.Text == "") { return false; } else { return true; }
-        }
-
-        private bool ValidadeInputFieldEmployee()
-        {
-            if (this.txtCity.Text == string.Empty || this.txtCpf.Text == string.Empty || this.txtName.Text == string.Empty
-                || this.txtNumber.Text == string.Empty || this.txtPhone.Text == string.Empty || this.txtState.Text == string.Empty
-                || this.txtStreet.Text == string.Empty)
-            { return false; }
-            else
-            { return true; }
         }
     }
 }
