@@ -12,12 +12,12 @@ namespace SinalVeiculos
             InitializeComponent();
         }
 
-        private void BtnClean_Click(object sender, EventArgs e)
+        private void BtnFieldClean_Click(object sender, EventArgs e)
         {
             this.FieldClean();
         }
 
-        private void BtnSave_Click(object sender, EventArgs e)
+        private void BtnAddEmployeerRegister_Click(object sender, EventArgs e)
         {
             if (ValidadeInputFieldEmployee() == true)
             {
@@ -46,7 +46,7 @@ namespace SinalVeiculos
             this.Close();
         }
 
-        private void BtnSearcheEmployeer_Click(object sender, EventArgs e)
+        private void BtnSearcheEmployeerByName_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(this.txtSearch.Text))
             {
@@ -86,11 +86,6 @@ namespace SinalVeiculos
             this.txtNumber.Text = string.Empty;
             this.txtStreet.Text = string.Empty;
             this.txtPhone.Text = string.Empty;
-        }
-
-        private void EmployeeForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

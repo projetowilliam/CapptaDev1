@@ -12,7 +12,7 @@ namespace SinalVeiculos
             InitializeComponent();
         }
 
-        private void BtnRegisterClient_Click(object sender, EventArgs e)
+        private void BtnAddClientRegister_Click(object sender, EventArgs e)
         {
             if (this.ValidadeInputFieldClient() == true)
             {
@@ -41,7 +41,7 @@ namespace SinalVeiculos
             this.Close();
         }
 
-        private void BtnSearchClient_Click(object sender, EventArgs e)
+        private void BtnSearchClientByName_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(this.txtSearch.Text))
             {
@@ -62,7 +62,7 @@ namespace SinalVeiculos
             }
         }
 
-        private void BbtnClean_Click(object sender, EventArgs e)
+        private void BbtnFieldClean_Click(object sender, EventArgs e)
         {
             FieldClean();
         }

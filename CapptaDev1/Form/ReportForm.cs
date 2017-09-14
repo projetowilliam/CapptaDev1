@@ -27,6 +27,7 @@ namespace SinalVeiculos
             var carRegister = new CarRegister();
             this.dgvCar.DataSource = carRegister.GetAll().ToList();
         }
+
         private void UpdateCustomerGridView()
         {
             var customerRegister = new CustomerRegiser();
@@ -64,7 +65,7 @@ namespace SinalVeiculos
             }
         }
 
-        private void BtnSarcheEmloyeerForName(object sender, EventArgs e)
+        private void BtnSarcheEmloyeerForName_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtSearchEmployeerForName.Text))
             {

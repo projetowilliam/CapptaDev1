@@ -98,7 +98,7 @@
             this.btnClean_.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnClean_.TabIndex = 31;
             this.btnClean_.TabStop = false;
-            this.btnClean_.Click += new System.EventHandler(this.BtnClean_Click);
+            this.btnClean_.Click += new System.EventHandler(this.BtnFieldClean_Click);
             // 
             // btnAddEmployeer
             // 
@@ -111,7 +111,7 @@
             this.btnAddEmployeer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnAddEmployeer.TabIndex = 30;
             this.btnAddEmployeer.TabStop = false;
-            this.btnAddEmployeer.Click += new System.EventHandler(this.BtnSave_Click);
+            this.btnAddEmployeer.Click += new System.EventHandler(this.BtnAddEmployeerRegister_Click);
             // 
             // BtnSearcheEmployeer
             // 
@@ -124,7 +124,7 @@
             this.BtnSearcheEmployeer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BtnSearcheEmployeer.TabIndex = 28;
             this.BtnSearcheEmployeer.TabStop = false;
-            this.BtnSearcheEmployeer.Click += new System.EventHandler(this.BtnSearcheEmployeer_Click);
+            this.BtnSearcheEmployeer.Click += new System.EventHandler(this.BtnSearcheEmployeerByName_Click);
             // 
             // label8
             // 
@@ -294,7 +294,7 @@
             this.Name = "EmployeeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Funcionario";
-            this.Load += new System.EventHandler(this.EmployeeForm_Load);
+    //        this.Load += new System.EventHandler(this.EmployeeForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit_)).EndInit();

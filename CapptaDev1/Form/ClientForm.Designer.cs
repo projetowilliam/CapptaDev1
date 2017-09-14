@@ -223,7 +223,7 @@
             this.btnClean.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnClean.TabIndex = 31;
             this.btnClean.TabStop = false;
-            this.btnClean.Click += new System.EventHandler(this.BbtnClean_Click);
+            this.btnClean.Click += new System.EventHandler(this.BbtnFieldClean_Click);
             // 
             // btnExit_
             // 
@@ -247,7 +247,7 @@
             this.btnAddCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnAddCustomer.TabIndex = 29;
             this.btnAddCustomer.TabStop = false;
-            this.btnAddCustomer.Click += new System.EventHandler(this.BtnRegisterClient_Click);
+            this.btnAddCustomer.Click += new System.EventHandler(this.BtnAddClientRegister_Click);
             // 
             // pictureBox1
             // 
@@ -259,7 +259,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.BtnSearchClient_Click);
+            this.pictureBox1.Click += new System.EventHandler(this.BtnSearchClientByName_Click);
             // 
             // ClientForm
             // 

@@ -42,7 +42,7 @@ namespace SinalVeiculos
             comboBoxSalesman.Items.AddRange(employeerRegister.GetAll().Select(salesman => salesman.Name).ToArray());
         }
 
-        private void BtnComfirmSalesRegister(object sender, EventArgs e)
+        private void BtnAddmSalesRegister_Click(object sender, EventArgs e)
         {
             if (ValidateInputFieldsSales() == true)
             {
@@ -68,7 +68,7 @@ namespace SinalVeiculos
             }
         }
 
-        private void BtnSearchClient(object sender, EventArgs e)
+        private void BtnSearchClient_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(this.comboBoxClient.Text))
             {

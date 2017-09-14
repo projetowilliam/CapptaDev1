@@ -18,7 +18,7 @@ namespace SinalVeiculos
             FieldClean();
         }
 
-        private void BtnSave_Click(object sender, EventArgs e)
+        private void BtnAddVehiculeRegister_Click(object sender, EventArgs e)
         {
             if (ValidateInputFieldStock() == true)
             {
@@ -41,7 +41,7 @@ namespace SinalVeiculos
             }
         }
 
-        private void BtnSearch_Click(object sender, EventArgs e)
+        private void BtnSearchVehiculeByName_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtSearch.Text))
             {
@@ -50,7 +50,6 @@ namespace SinalVeiculos
                 car = carRegister.SearchVehicleByName(txtSearch.Text);
                 if (carRegister != null)
                 {
-                    txtId.Text = Convert.ToString(car.Id);
                     txtName.Text = car.Name;
                     txtYear.Text = car.Year;
                     txtModel.Text = car.Model;

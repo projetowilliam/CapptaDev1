@@ -288,7 +288,7 @@
             this.pictureBoxPesquisaFuncionario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxPesquisaFuncionario.TabIndex = 2;
             this.pictureBoxPesquisaFuncionario.TabStop = false;
-            this.pictureBoxPesquisaFuncionario.Click += new System.EventHandler(this.BtnSarcheEmloyeerForName);
+            this.pictureBoxPesquisaFuncionario.Click += new System.EventHandler(this.BtnSarcheEmloyeerForName_Click);
             // 
             // textBox1
             // 

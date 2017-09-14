@@ -826,7 +826,7 @@
             this.btnAddRequest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnAddRequest.TabIndex = 36;
             this.btnAddRequest.TabStop = false;
-            this.btnAddRequest.Click += new System.EventHandler(this.BtnComfirmSalesRegister);
+            this.btnAddRequest.Click += new System.EventHandler(this.BtnAddmSalesRegister_Click);
             // 
             // botaoPesquisaCliente
             // 
@@ -839,7 +839,7 @@
             this.botaoPesquisaCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.botaoPesquisaCliente.TabIndex = 28;
             this.botaoPesquisaCliente.TabStop = false;
-            this.botaoPesquisaCliente.Click += new System.EventHandler(this.BtnSearchClient);
+            this.botaoPesquisaCliente.Click += new System.EventHandler(this.BtnSearchClient_Click);
             // 
             // pictureBoxBuscarVeiculo
             // 
