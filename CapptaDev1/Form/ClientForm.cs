@@ -69,12 +69,16 @@ namespace SinalVeiculos
 
         private bool ValidadeInputFieldClient()
         {
-            if (this.txtCity.Text == string.Empty || this.txtCpf.Text == string.Empty || this.txtName.Text == string.Empty
+            if (string.IsNullOrEmpty(this.txtCity.Text) || this.txtCpf.Text == string.Empty || this.txtName.Text == string.Empty
                 || this.txtNumber.Text == string.Empty || this.txtPhone.Text == string.Empty || this.txtState.Text == string.Empty
                 || this.txtStreet.Text == string.Empty)
-            { return false; }
+            {
+                return false;
+            }
             else
-            { return true; }
+            {
+                return true;
+            }
         }
 
         private void FieldClean()

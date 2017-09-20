@@ -59,7 +59,7 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.dgvCar = new System.Windows.Forms.DataGridView();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.txtSearchProductsForName = new System.Windows.Forms.TextBox();
+            this.txtSearchCarForName = new System.Windows.Forms.TextBox();
             this.BtnSearcheProduct = new System.Windows.Forms.PictureBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -364,7 +364,7 @@
             // panel9
             // 
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel9.Controls.Add(this.txtSearchProductsForName);
+            this.panel9.Controls.Add(this.txtSearchCarForName);
             this.panel9.Controls.Add(this.BtnSearcheProduct);
             this.panel9.Location = new System.Drawing.Point(-1, 3);
             this.panel9.Name = "panel9";
@@ -373,11 +373,11 @@
             // 
             // txtSearchProductsForName
             // 
-            this.txtSearchProductsForName.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchProductsForName.Location = new System.Drawing.Point(60, 12);
-            this.txtSearchProductsForName.Name = "txtSearchProductsForName";
-            this.txtSearchProductsForName.Size = new System.Drawing.Size(461, 26);
-            this.txtSearchProductsForName.TabIndex = 5;
+            this.txtSearchCarForName.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchCarForName.Location = new System.Drawing.Point(60, 12);
+            this.txtSearchCarForName.Name = "txtSearchProductsForName";
+            this.txtSearchCarForName.Size = new System.Drawing.Size(461, 26);
+            this.txtSearchCarForName.TabIndex = 5;
             // 
             // BtnSearcheProduct
             // 
@@ -389,7 +389,7 @@
             this.BtnSearcheProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BtnSearcheProduct.TabIndex = 4;
             this.BtnSearcheProduct.TabStop = false;
-            this.BtnSearcheProduct.Click += new System.EventHandler(this.BtnSearcheProductForName_Click);
+            this.BtnSearcheProduct.Click += new System.EventHandler(this.BtnSearcheCarForName_Click);
             // 
             // tabPage4
             // 
@@ -473,7 +473,7 @@
             this.btnSalesSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnSalesSearch.TabIndex = 6;
             this.btnSalesSearch.TabStop = false;
-            this.btnSalesSearch.Click += new System.EventHandler(this.BtnSearchSalesForDate_Click);
+            this.btnSalesSearch.Click += new System.EventHandler(this.BtnSearchRequestForDate_Click);
             // 
             // ReportForm
             // 
@@ -546,7 +546,7 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.DataGridView dgvCar;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox txtSearchProductsForName;
+        private System.Windows.Forms.TextBox txtSearchCarForName;
         private System.Windows.Forms.PictureBox BtnSearcheProduct;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel13;

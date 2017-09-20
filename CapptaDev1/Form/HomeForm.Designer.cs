@@ -30,47 +30,33 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnClean = new System.Windows.Forms.PictureBox();
+            this.btnAddRequest = new System.Windows.Forms.PictureBox();
             this.btnReport = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
             this.btnEmployee = new System.Windows.Forms.Button();
             this.btnClient = new System.Windows.Forms.Button();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.botaoPesquisaCliente = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.comboBoxClient = new System.Windows.Forms.ComboBox();
             this.venda = new System.Windows.Forms.Label();
             this.comboBoxSalesman = new System.Windows.Forms.ComboBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabSaida = new System.Windows.Forms.TabPage();
-            this.textoBuscarArquivo = new System.Windows.Forms.TextBox();
-            this.botaoBuscarArquivoPedidos = new System.Windows.Forms.Button();
-            this.textoSaida = new System.Windows.Forms.TextBox();
-            this.tabEstoque = new System.Windows.Forms.TabPage();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.dgvEstoqueVeiculos = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.carro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.model = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ano = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mark = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvEstoque = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.date = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.units = new System.Windows.Forms.TextBox();
+            this.quantity = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.textBoxTipoVeiculo = new System.Windows.Forms.TextBox();
+            this.pictureBoxBuscarVeiculo = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtBrand = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBoxProduct = new System.Windows.Forms.ComboBox();
+            this.comboBoxCar = new System.Windows.Forms.ComboBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtYear = new System.Windows.Forms.TextBox();
             this.txtModel = new System.Windows.Forms.TextBox();
@@ -100,27 +86,16 @@
             this.atualizarDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnAddRequest = new System.Windows.Forms.PictureBox();
-            this.botaoPesquisaCliente = new System.Windows.Forms.PictureBox();
-            this.pictureBoxBuscarVeiculo = new System.Windows.Forms.PictureBox();
-            this.btnClean = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClean)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddRequest)).BeginInit();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabSaida.SuspendLayout();
-            this.tabEstoque.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEstoqueVeiculos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEstoque)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.botaoPesquisaCliente)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAddRequest)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.botaoPesquisaCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBuscarVeiculo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClean)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -138,14 +113,39 @@
             this.panel1.Controls.Add(this.comboBoxClient);
             this.panel1.Controls.Add(this.venda);
             this.panel1.Controls.Add(this.comboBoxSalesman);
-            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(898, 466);
+            this.panel1.Size = new System.Drawing.Size(490, 466);
             this.panel1.TabIndex = 0;
+            // 
+            // btnClean
+            // 
+            this.btnClean.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnClean.Image = global::CapptaDev1.Properties.Resources.if_broom_stick_3_896656;
+            this.btnClean.Location = new System.Drawing.Point(229, 407);
+            this.btnClean.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClean.Name = "btnClean";
+            this.btnClean.Size = new System.Drawing.Size(53, 52);
+            this.btnClean.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnClean.TabIndex = 37;
+            this.btnClean.TabStop = false;
+            this.btnClean.Click += new System.EventHandler(this.BtnFieldClean_Click);
+            // 
+            // btnAddRequest
+            // 
+            this.btnAddRequest.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnAddRequest.Image = global::CapptaDev1.Properties.Resources.if_icon_33_clipboard_add_314289;
+            this.btnAddRequest.Location = new System.Drawing.Point(171, 408);
+            this.btnAddRequest.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddRequest.Name = "btnAddRequest";
+            this.btnAddRequest.Size = new System.Drawing.Size(53, 52);
+            this.btnAddRequest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnAddRequest.TabIndex = 36;
+            this.btnAddRequest.TabStop = false;
+            this.btnAddRequest.Click += new System.EventHandler(this.BtnAddmRequestRegister_Click);
             // 
             // btnReport
             // 
@@ -219,6 +219,19 @@
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // botaoPesquisaCliente
+            // 
+            this.botaoPesquisaCliente.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.botaoPesquisaCliente.Image = global::CapptaDev1.Properties.Resources.if_search_173095;
+            this.botaoPesquisaCliente.Location = new System.Drawing.Point(440, 49);
+            this.botaoPesquisaCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.botaoPesquisaCliente.Name = "botaoPesquisaCliente";
+            this.botaoPesquisaCliente.Size = new System.Drawing.Size(32, 22);
+            this.botaoPesquisaCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.botaoPesquisaCliente.TabIndex = 28;
+            this.botaoPesquisaCliente.TabStop = false;
+            this.botaoPesquisaCliente.Click += new System.EventHandler(this.BtnSearchClient_Click);
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -257,171 +270,6 @@
             this.comboBoxSalesman.Name = "comboBoxSalesman";
             this.comboBoxSalesman.Size = new System.Drawing.Size(110, 24);
             this.comboBoxSalesman.TabIndex = 25;
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.tabControl1);
-            this.panel3.Controls.Add(this.dgvEstoque);
-            this.panel3.Location = new System.Drawing.Point(490, 74);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(396, 328);
-            this.panel3.TabIndex = 1;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabSaida);
-            this.tabControl1.Controls.Add(this.tabEstoque);
-            this.tabControl1.Location = new System.Drawing.Point(-2, -2);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(390, 329);
-            this.tabControl1.TabIndex = 1;
-            // 
-            // tabSaida
-            // 
-            this.tabSaida.Controls.Add(this.textoBuscarArquivo);
-            this.tabSaida.Controls.Add(this.botaoBuscarArquivoPedidos);
-            this.tabSaida.Controls.Add(this.textoSaida);
-            this.tabSaida.Location = new System.Drawing.Point(4, 25);
-            this.tabSaida.Margin = new System.Windows.Forms.Padding(2);
-            this.tabSaida.Name = "tabSaida";
-            this.tabSaida.Padding = new System.Windows.Forms.Padding(2);
-            this.tabSaida.Size = new System.Drawing.Size(382, 300);
-            this.tabSaida.TabIndex = 0;
-            this.tabSaida.Text = "Saída";
-            this.tabSaida.UseVisualStyleBackColor = true;
-            // 
-            // textoBuscarArquivo
-            // 
-            this.textoBuscarArquivo.Location = new System.Drawing.Point(148, 278);
-            this.textoBuscarArquivo.Margin = new System.Windows.Forms.Padding(2);
-            this.textoBuscarArquivo.Name = "textoBuscarArquivo";
-            this.textoBuscarArquivo.Size = new System.Drawing.Size(218, 22);
-            this.textoBuscarArquivo.TabIndex = 16;
-            // 
-            // botaoBuscarArquivoPedidos
-            // 
-            this.botaoBuscarArquivoPedidos.Location = new System.Drawing.Point(2, 278);
-            this.botaoBuscarArquivoPedidos.Margin = new System.Windows.Forms.Padding(2);
-            this.botaoBuscarArquivoPedidos.Name = "botaoBuscarArquivoPedidos";
-            this.botaoBuscarArquivoPedidos.Size = new System.Drawing.Size(142, 23);
-            this.botaoBuscarArquivoPedidos.TabIndex = 30;
-            this.botaoBuscarArquivoPedidos.Text = "Buscar Pedidos";
-            this.botaoBuscarArquivoPedidos.UseVisualStyleBackColor = true;
-            // 
-            // textoSaida
-            // 
-            this.textoSaida.Location = new System.Drawing.Point(2, 4);
-            this.textoSaida.Margin = new System.Windows.Forms.Padding(2);
-            this.textoSaida.Multiline = true;
-            this.textoSaida.Name = "textoSaida";
-            this.textoSaida.Size = new System.Drawing.Size(384, 269);
-            this.textoSaida.TabIndex = 0;
-            // 
-            // tabEstoque
-            // 
-            this.tabEstoque.Controls.Add(this.panel5);
-            this.tabEstoque.Location = new System.Drawing.Point(4, 25);
-            this.tabEstoque.Margin = new System.Windows.Forms.Padding(2);
-            this.tabEstoque.Name = "tabEstoque";
-            this.tabEstoque.Padding = new System.Windows.Forms.Padding(2);
-            this.tabEstoque.Size = new System.Drawing.Size(382, 300);
-            this.tabEstoque.TabIndex = 1;
-            this.tabEstoque.Text = "Estoque";
-            this.tabEstoque.UseVisualStyleBackColor = true;
-            // 
-            // panel5
-            // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel5.Controls.Add(this.dgvEstoqueVeiculos);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(2, 2);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(378, 296);
-            this.panel5.TabIndex = 0;
-            // 
-            // dgvEstoqueVeiculos
-            // 
-            this.dgvEstoqueVeiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEstoqueVeiculos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.carro,
-            this.model,
-            this.ano,
-            this.preco,
-            this.mark,
-            this.quantity,
-            this.type});
-            this.dgvEstoqueVeiculos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEstoqueVeiculos.Location = new System.Drawing.Point(0, 0);
-            this.dgvEstoqueVeiculos.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvEstoqueVeiculos.Name = "dgvEstoqueVeiculos";
-            this.dgvEstoqueVeiculos.Size = new System.Drawing.Size(374, 292);
-            this.dgvEstoqueVeiculos.TabIndex = 0;
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "Código";
-            this.id.Name = "id";
-            this.id.Visible = false;
-            // 
-            // carro
-            // 
-            this.carro.DataPropertyName = "name";
-            this.carro.HeaderText = "Nome";
-            this.carro.Name = "carro";
-            // 
-            // model
-            // 
-            this.model.DataPropertyName = "model";
-            this.model.HeaderText = "Modelo";
-            this.model.Name = "model";
-            // 
-            // ano
-            // 
-            this.ano.DataPropertyName = "year";
-            this.ano.HeaderText = "Ano";
-            this.ano.Name = "ano";
-            // 
-            // preco
-            // 
-            this.preco.DataPropertyName = "price";
-            this.preco.HeaderText = "Preço";
-            this.preco.Name = "preco";
-            // 
-            // mark
-            // 
-            this.mark.DataPropertyName = "marca";
-            this.mark.HeaderText = "Marca";
-            this.mark.Name = "mark";
-            // 
-            // quantity
-            // 
-            this.quantity.DataPropertyName = "quantidade";
-            this.quantity.HeaderText = "Quantidade";
-            this.quantity.Name = "quantity";
-            // 
-            // type
-            // 
-            this.type.DataPropertyName = "tipo";
-            this.type.HeaderText = "Tipo";
-            this.type.Name = "type";
-            // 
-            // dgvEstoque
-            // 
-            this.dgvEstoque.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEstoque.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEstoque.Location = new System.Drawing.Point(0, 0);
-            this.dgvEstoque.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvEstoque.Name = "dgvEstoque";
-            this.dgvEstoque.Size = new System.Drawing.Size(392, 324);
-            this.dgvEstoque.TabIndex = 0;
             // 
             // panel2
             // 
@@ -470,7 +318,7 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.units);
+            this.panel4.Controls.Add(this.quantity);
             this.panel4.Controls.Add(this.label17);
             this.panel4.Controls.Add(this.textBoxTipoVeiculo);
             this.panel4.Controls.Add(this.pictureBoxBuscarVeiculo);
@@ -479,7 +327,7 @@
             this.panel4.Controls.Add(this.label14);
             this.panel4.Controls.Add(this.txtBrand);
             this.panel4.Controls.Add(this.label13);
-            this.panel4.Controls.Add(this.comboBoxProduct);
+            this.panel4.Controls.Add(this.comboBoxCar);
             this.panel4.Controls.Add(this.txtPrice);
             this.panel4.Controls.Add(this.txtYear);
             this.panel4.Controls.Add(this.txtModel);
@@ -496,11 +344,11 @@
             // 
             // units
             // 
-            this.units.Location = new System.Drawing.Point(314, 121);
-            this.units.Margin = new System.Windows.Forms.Padding(2);
-            this.units.Name = "units";
-            this.units.Size = new System.Drawing.Size(40, 22);
-            this.units.TabIndex = 16;
+            this.quantity.Location = new System.Drawing.Point(314, 121);
+            this.quantity.Margin = new System.Windows.Forms.Padding(2);
+            this.quantity.Name = "units";
+            this.quantity.Size = new System.Drawing.Size(40, 22);
+            this.quantity.TabIndex = 16;
             // 
             // label17
             // 
@@ -519,6 +367,19 @@
             this.textBoxTipoVeiculo.Name = "textBoxTipoVeiculo";
             this.textBoxTipoVeiculo.Size = new System.Drawing.Size(70, 22);
             this.textBoxTipoVeiculo.TabIndex = 11;
+            // 
+            // pictureBoxBuscarVeiculo
+            // 
+            this.pictureBoxBuscarVeiculo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBoxBuscarVeiculo.Image = global::CapptaDev1.Properties.Resources.if_search_173095;
+            this.pictureBoxBuscarVeiculo.Location = new System.Drawing.Point(246, 29);
+            this.pictureBoxBuscarVeiculo.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxBuscarVeiculo.Name = "pictureBoxBuscarVeiculo";
+            this.pictureBoxBuscarVeiculo.Size = new System.Drawing.Size(32, 22);
+            this.pictureBoxBuscarVeiculo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBuscarVeiculo.TabIndex = 32;
+            this.pictureBoxBuscarVeiculo.TabStop = false;
+            this.pictureBoxBuscarVeiculo.Click += new System.EventHandler(this.BtnSearchVehiculeByName_Click);
             // 
             // label15
             // 
@@ -548,11 +409,11 @@
             this.label14.TabIndex = 26;
             this.label14.Text = "Marca";
             // 
-            // textoMarca
+            // txtBrand
             // 
             this.txtBrand.Location = new System.Drawing.Point(46, 118);
             this.txtBrand.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBrand.Name = "textoMarca";
+            this.txtBrand.Name = "txtBrand";
             this.txtBrand.Size = new System.Drawing.Size(132, 22);
             this.txtBrand.TabIndex = 14;
             // 
@@ -568,12 +429,12 @@
             // 
             // comboBoxProduct
             // 
-            this.comboBoxProduct.FormattingEnabled = true;
-            this.comboBoxProduct.Location = new System.Drawing.Point(68, 29);
-            this.comboBoxProduct.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxProduct.Name = "comboBoxProduct";
-            this.comboBoxProduct.Size = new System.Drawing.Size(174, 24);
-            this.comboBoxProduct.TabIndex = 8;
+            this.comboBoxCar.FormattingEnabled = true;
+            this.comboBoxCar.Location = new System.Drawing.Point(68, 29);
+            this.comboBoxCar.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxCar.Name = "comboBoxProduct";
+            this.comboBoxCar.Size = new System.Drawing.Size(174, 24);
+            this.comboBoxCar.TabIndex = 8;
             // 
             // txtPrice
             // 
@@ -815,63 +676,11 @@
             this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.AlwaysBlink;
             this.errorProvider1.ContainerControl = this;
             // 
-            // btnAddRequest
-            // 
-            this.btnAddRequest.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.btnAddRequest.Image = global::CapptaDev1.Properties.Resources.if_icon_33_clipboard_add_314289;
-            this.btnAddRequest.Location = new System.Drawing.Point(171, 408);
-            this.btnAddRequest.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddRequest.Name = "btnAddRequest";
-            this.btnAddRequest.Size = new System.Drawing.Size(53, 52);
-            this.btnAddRequest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnAddRequest.TabIndex = 36;
-            this.btnAddRequest.TabStop = false;
-            this.btnAddRequest.Click += new System.EventHandler(this.BtnAddmSalesRegister_Click);
-            // 
-            // botaoPesquisaCliente
-            // 
-            this.botaoPesquisaCliente.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.botaoPesquisaCliente.Image = global::CapptaDev1.Properties.Resources.if_search_173095;
-            this.botaoPesquisaCliente.Location = new System.Drawing.Point(440, 49);
-            this.botaoPesquisaCliente.Margin = new System.Windows.Forms.Padding(2);
-            this.botaoPesquisaCliente.Name = "botaoPesquisaCliente";
-            this.botaoPesquisaCliente.Size = new System.Drawing.Size(32, 22);
-            this.botaoPesquisaCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.botaoPesquisaCliente.TabIndex = 28;
-            this.botaoPesquisaCliente.TabStop = false;
-            this.botaoPesquisaCliente.Click += new System.EventHandler(this.BtnSearchClient_Click);
-            // 
-            // pictureBoxBuscarVeiculo
-            // 
-            this.pictureBoxBuscarVeiculo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBoxBuscarVeiculo.Image = global::CapptaDev1.Properties.Resources.if_search_173095;
-            this.pictureBoxBuscarVeiculo.Location = new System.Drawing.Point(246, 29);
-            this.pictureBoxBuscarVeiculo.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBoxBuscarVeiculo.Name = "pictureBoxBuscarVeiculo";
-            this.pictureBoxBuscarVeiculo.Size = new System.Drawing.Size(32, 22);
-            this.pictureBoxBuscarVeiculo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxBuscarVeiculo.TabIndex = 32;
-            this.pictureBoxBuscarVeiculo.TabStop = false;
-            this.pictureBoxBuscarVeiculo.Click += new System.EventHandler(this.BtnSearchVehiculeByName_Click);
-            // 
-            // btnClean
-            // 
-            this.btnClean.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.btnClean.Image = global::CapptaDev1.Properties.Resources.if_broom_stick_3_896656;
-            this.btnClean.Location = new System.Drawing.Point(229, 407);
-            this.btnClean.Margin = new System.Windows.Forms.Padding(2);
-            this.btnClean.Name = "btnClean";
-            this.btnClean.Size = new System.Drawing.Size(53, 52);
-            this.btnClean.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnClean.TabIndex = 37;
-            this.btnClean.TabStop = false;
-            this.btnClean.Click += new System.EventHandler(this.BtnFieldClean_Click);
-            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(898, 466);
+            this.ClientSize = new System.Drawing.Size(490, 466);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
@@ -882,27 +691,19 @@
             this.Load += new System.EventHandler(this.Home_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClean)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddRequest)).EndInit();
             this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
             this.toolStripContainer1.TopToolStripPanel.PerformLayout();
             this.toolStripContainer1.ResumeLayout(false);
             this.toolStripContainer1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.tabSaida.ResumeLayout(false);
-            this.tabSaida.PerformLayout();
-            this.tabEstoque.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEstoqueVeiculos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEstoque)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.botaoPesquisaCliente)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAddRequest)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.botaoPesquisaCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBuscarVeiculo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClean)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -910,12 +711,11 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBoxProduct;
+        private System.Windows.Forms.ComboBox comboBoxCar;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.TextBox txtYear;
         private System.Windows.Forms.TextBox txtModel;
@@ -927,14 +727,9 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem arquivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatórioToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dgvEstoque;
         private System.Windows.Forms.ComboBox comboBoxSalesman;
         private System.Windows.Forms.Label venda;
         private System.Windows.Forms.ToolStripMenuItem funcionarioToolStripMenuItem;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabSaida;
-        private System.Windows.Forms.TabPage tabEstoque;
-        private System.Windows.Forms.TextBox textoSaida;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtBrand;
         private System.Windows.Forms.Label label15;
@@ -942,25 +737,13 @@
         private System.Windows.Forms.PictureBox botaoPesquisaCliente;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox comboBoxClient;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.DataGridView dgvEstoqueVeiculos;
         private System.Windows.Forms.ToolStripMenuItem estoqueToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem atualizarDadosToolStripMenuItem;
         private System.Windows.Forms.DateTimePicker date;
-        private System.Windows.Forms.TextBox textoBuscarArquivo;
-        private System.Windows.Forms.Button botaoBuscarArquivoPedidos;
         private System.Windows.Forms.PictureBox pictureBoxBuscarVeiculo;
         private System.Windows.Forms.TextBox textBoxTipoVeiculo;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox units;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn carro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn model;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ano;
-        private System.Windows.Forms.DataGridViewTextBoxColumn preco;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mark;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn type;
+        private System.Windows.Forms.TextBox quantity;
         private System.Windows.Forms.TextBox txtState;
         private System.Windows.Forms.TextBox txtNumber;
         private System.Windows.Forms.TextBox txtCity;
